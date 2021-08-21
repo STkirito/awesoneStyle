@@ -37,7 +37,7 @@ class BottomNaviBarItem extends StatelessWidget {
               SizedBox(
                 height: 2,
               ),
-              Material(
+              Container(
                 child: Text(
                   text ?? ' ',
                   style: TextStyle(
