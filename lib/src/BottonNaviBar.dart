@@ -2,7 +2,7 @@ import 'package:awesonestyle/src/bottomNaviBarItem.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
-class BottomNaviBar extends StatefulWidget {
+class BottonNaviBar extends StatefulWidget {
   Function(int)? onTap;
   final double height;
   final int index;
@@ -11,7 +11,7 @@ class BottomNaviBar extends StatefulWidget {
   final Color? backgroundColor;
   final Curve? animationCurve;
   final Duration? animationDuration;
-  BottomNaviBar(
+  BottonNaviBar(
       {this.height = 55,
       required this.index,
       required this.onTap,
@@ -21,14 +21,13 @@ class BottomNaviBar extends StatefulWidget {
       this.animationCurve,
       this.animationDuration});
   @override
-  _BottomNaviBarState createState() => _BottomNaviBarState();
+  _BottonNaviBarState createState() => _BottonNaviBarState();
 }
 
-class _BottomNaviBarState extends State<BottomNaviBar> {
+class _BottonNaviBarState extends State<BottonNaviBar> {
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      child: Container(
+    return Container(
         child: CurvedNavigationBar(
           buttonBackgroundColor: widget.buttonBackgroundColor,
           backgroundColor: widget.backgroundColor ?? Colors.blueAccent,
@@ -39,8 +38,6 @@ class _BottomNaviBarState extends State<BottomNaviBar> {
           index: widget.index,
           items: widget.items,
         ),
-      ),
-      onTap: () => setState(() {}),
-    );
+      );
   }
 }

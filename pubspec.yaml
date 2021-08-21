@@ -12,10 +12,11 @@ dependencies:
     sdk: flutter
   font_awesome_flutter: ^9.1.0
   curved_navigation_bar: ^1.0.1
+  motion_tab_bar_v2: ^0.2.4
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  lint: ^1.6.0
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
