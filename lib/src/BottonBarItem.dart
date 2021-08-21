@@ -19,8 +19,8 @@ class BottonBarItem extends StatefulWidget {
       this.backgroundColor,
       this.iconColor});
   /* */
-  get text=> text;
-  get icon=> icon;
+  get gettext=> text;
+  get geticon=> icon;
   @override
   _BottonBarItemState createState() => _BottonBarItemState();
 }
