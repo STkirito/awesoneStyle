@@ -59,5 +59,6 @@ class _BottonBarItemState extends State<BottonBarItem> {
       ),
     );
   }
-
+  String get text()=> widget.text;
+  IconData get icon()=> widget.icon;
 }
