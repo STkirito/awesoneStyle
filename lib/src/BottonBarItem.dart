@@ -18,8 +18,7 @@ class BottonBarItem extends StatefulWidget {
       this.backgroundColor,
       this.iconColor});
 
-String get text()=> widget.text;
-  IconData get icon()=> widget.icon;
+
   @override
   _BottonBarItemState createState() => _BottonBarItemState();
 }
@@ -28,6 +27,8 @@ class _BottonBarItemState extends State<BottonBarItem> {
 
   @override
   Widget build(BuildContext context) {
+    String get text()=> widget.text;
+  IconData get icon()=> widget.icon;
     return Container(
       height: widget.height ?? 40,
       width: widget.weight ?? double.infinity,
@@ -63,3 +64,4 @@ class _BottonBarItemState extends State<BottonBarItem> {
   }
   
 }
+

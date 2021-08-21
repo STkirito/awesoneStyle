@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class BottonNaviBar extends StatefulWidget {
   final double height;
   final int index;
-  final List<BottonNaviBarItem> items;
+  final List<BottonBarItem> items;
   final Color? buttonBackgroundColor;
   final Color? backgroundColor;
   final Curve? animationCurve;
