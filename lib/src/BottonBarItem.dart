@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 class BottonBarItem extends StatefulWidget {
   final double? height;
   final double? weight;
-  final IconData? icon;
+  final IconData icon;
   final String? text;
   final Color? textcolor;
   final Color? backgroundColor;
