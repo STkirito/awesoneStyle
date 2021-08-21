@@ -23,8 +23,8 @@ class BottonBarItem extends StatefulWidget {
 }
 
 class _BottonBarItemState extends State<BottonBarItem> {
-  /* return String get text()=> widget.text;
-  return IconData get icon()=> widget.icon;  */
+  get text()=> widget.text;
+  get icon()=> widget.icon;
   @override
   Widget build(BuildContext context) {
     
