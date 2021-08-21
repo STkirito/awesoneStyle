@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:awesonestyle/aux/Constantes.dart';
+import 'package:awesonestyle/services/Constantes.dart';
 import 'package:flutter/material.dart';
 
 class FondoBorroso extends StatelessWidget {
