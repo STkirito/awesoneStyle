@@ -17,9 +17,8 @@ class BottonBarItem extends StatefulWidget {
       this.textcolor,
       this.backgroundColor,
       this.iconColor});
-
   String get text()=> widget.text;
-    IconData get icon()=> widget.icon;
+  IconData get icon()=> widget.icon;
   @override
   _BottonBarItemState createState() => _BottonBarItemState();
 }
