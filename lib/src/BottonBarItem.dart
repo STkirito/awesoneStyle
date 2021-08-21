@@ -47,7 +47,7 @@ class _BottonBarItemState extends State<BottonBarItem> {
               ),
               Container(
                 child: Text(
-                  widget.text ?? ' ',
+                  widget.text,
                   style: TextStyle(
                     fontSize: widget.fontSize ?? 10,
                     color: widget.textcolor,
