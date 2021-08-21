@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class BottomNaviBarItem extends StatelessWidget {
+class BottomNaviBarItem extends StatefulWidget {
   final double? height;
   final double? weight;
   final IconData? icon;
@@ -18,11 +18,17 @@ class BottomNaviBarItem extends StatelessWidget {
       this.textcolor,
       this.backgroundColor,
       this.iconColor});
+
+  @override
+  _BottomNaviBarItemState createState() => _BottomNaviBarItemState();
+}
+
+class _BottomNaviBarItemState extends State<BottomNaviBarItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height ?? 40,
-      width: weight ?? double.infinity,
+      height: widget.height ?? 40,
+      width: widget.weight ?? double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -31,19 +37,19 @@ class BottomNaviBarItem extends StatelessWidget {
             crossAxisAlignment: WrapCrossAlignment.center,
             children: [
               Icon(
-                icon,
-                color: iconColor,
+                widget.icon,
+                color: widget.iconColor,
               ),
               SizedBox(
                 height: 2,
               ),
               Container(
                 child: Text(
-                  text ?? ' ',
+                  widget.text ?? ' ',
                   style: TextStyle(
-                    fontSize: fontSize ?? 10,
-                    color: textcolor,
-                    backgroundColor: backgroundColor,
+                    fontSize: widget.fontSize ?? 10,
+                    color: widget.textcolor,
+                    backgroundColor: widget.backgroundColor,
                   ),
                 ),
               ),
