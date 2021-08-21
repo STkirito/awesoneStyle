@@ -3,7 +3,7 @@ class BottonBarItem extends StatefulWidget {
   final double? height;
   final double? weight;
   final IconData icon;
-  final String? text;
+  final String text;
   final Color? textcolor;
   final Color? backgroundColor;
   final Color? iconColor;
