@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-class BottonNaviBarItem extends StatefulWidget {
+class BottonBarItem extends StatefulWidget {
   final double? height;
   final double? weight;
   final IconData? icon;
@@ -8,7 +8,7 @@ class BottonNaviBarItem extends StatefulWidget {
   final Color? backgroundColor;
   final Color? iconColor;
   final double? fontSize;
-  BottonNaviBarItem(
+  BottonBarItem(
       {this.height,
       this.weight,
       required this.icon,
@@ -19,10 +19,10 @@ class BottonNaviBarItem extends StatefulWidget {
       this.iconColor});
 
   @override
-  _BottonNaviBarItemState createState() => _BottonNaviBarItemState();
+  _BottonBarItemState createState() => _BottonBarItemState();
 }
 
-class _BottonNaviBarItemState extends State<BottonNaviBarItem> {
+class _BottonBarItemState extends State<BottonBarItem> {
 
   @override
   Widget build(BuildContext context) {

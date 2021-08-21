@@ -3,7 +3,6 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 class BottonNaviBar extends StatefulWidget {
-  Function(int)? onTap;
   final double height;
   final int index;
   final List<BottonNaviBarItem> items;
@@ -14,7 +13,6 @@ class BottonNaviBar extends StatefulWidget {
   BottonNaviBar(
       {this.height = 55,
       required this.index,
-      required this.onTap,
       required this.items,
       this.buttonBackgroundColor,
       this.backgroundColor,
