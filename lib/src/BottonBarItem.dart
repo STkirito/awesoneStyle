@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 class BottonBarItem extends StatefulWidget {
   final double? height;
   final double? weight;
-  final IconData icon;
+  final IconData? icon;
   final String? text;
   final Color? textcolor;
   final Color? backgroundColor;
@@ -17,13 +17,14 @@ class BottonBarItem extends StatefulWidget {
       this.textcolor,
       this.backgroundColor,
       this.iconColor});
-  
+  /* */
   @override
   _BottonBarItemState createState() => _BottonBarItemState();
 }
 
 class _BottonBarItemState extends State<BottonBarItem> {
-  
+  return String get text()=> widget.text;
+  return IconData get icon()=> widget.icon; 
   @override
   Widget build(BuildContext context) {
     

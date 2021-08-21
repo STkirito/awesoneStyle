@@ -1,4 +1,4 @@
-import 'package:awesonestyle/src/bottonBarItem.dart';
+import 'package:awesonestyle/src/BottonBarItem.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
