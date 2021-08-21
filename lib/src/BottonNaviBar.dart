@@ -6,7 +6,7 @@ class BottonNaviBar extends StatefulWidget {
   Function(int)? onTap;
   final double height;
   final int index;
-  final List<BottomNaviBarItem> items;
+  final List<BottonNaviBarItem> items;
   final Color? buttonBackgroundColor;
   final Color? backgroundColor;
   final Curve? animationCurve;
