@@ -7,11 +7,19 @@ class BottomNaviBar extends StatefulWidget {
   final double height;
   final int index;
   final List<BottomNaviBarItem> items;
+  final Color? buttonBackgroundColor;
+  final Color? backgroundColor;
+  final Curve? animationCurve;
+  final Duration? animationDuration;
   BottomNaviBar(
       {this.height = 55,
       required this.index,
       required this.onTap,
-      required this.items});
+      required this.items,
+      this.buttonBackgroundColor,
+      this.backgroundColor,
+      this.animationCurve,
+      this.animationDuration});
   @override
   _BottomNaviBarState createState() => _BottomNaviBarState();
 }
@@ -21,6 +29,11 @@ class _BottomNaviBarState extends State<BottomNaviBar> {
   Widget build(BuildContext context) {
     return Container(
       child: CurvedNavigationBar(
+        buttonBackgroundColor: widget.buttonBackgroundColor,
+        backgroundColor: widget.backgroundColor ?? Colors.blueAccent,
+        animationCurve: widget.animationCurve ?? Curves.easeOut,
+        animationDuration:
+            widget.animationDuration ?? const Duration(milliseconds: 600),
         height: widget.height,
         index: widget.index,
         items: widget.items,
