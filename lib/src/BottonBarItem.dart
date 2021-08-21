@@ -8,6 +8,8 @@ class BottonBarItem extends StatefulWidget {
   final Color? backgroundColor;
   final Color? iconColor;
   final double? fontSize;
+  get text()=> text;
+  get icon()=> icon;
   BottonBarItem(
       {this.height,
       this.weight,
@@ -23,8 +25,7 @@ class BottonBarItem extends StatefulWidget {
 }
 
 class _BottonBarItemState extends State<BottonBarItem> {
-  get text()=> widget.text;
-  get icon()=> widget.icon;
+  
   @override
   Widget build(BuildContext context) {
     
