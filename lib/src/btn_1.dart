@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: camel_case_types
 class Btn_1 extends StatelessWidget {
   final String texto;
   final Function()? onPressed;

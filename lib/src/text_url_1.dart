@@ -28,6 +28,7 @@ class Text_url_1 extends StatefulWidget {
   _Text_url_1State createState() => _Text_url_1State();
 }
 
+// ignore: camel_case_types
 class _Text_url_1State extends State<Text_url_1> {
   Widget checktext() {
     return Container(

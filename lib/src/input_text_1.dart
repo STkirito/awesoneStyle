@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class InputText1 extends StatefulWidget {
   final String? hintText;
   final IconData? icono;

@@ -1,11 +1,11 @@
-import 'package:awesonestyle/src/BottonBarItem.dart';
+import 'package:awesonestyle/src/BottonNaviBarItem.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 class BottonNaviBar extends StatefulWidget {
   final double height;
   final int index;
-  final List<BottonBarItem> items;
+  final List<BottonNaviBarItem> items;
   final Color? buttonBackgroundColor;
   final Color? backgroundColor;
   final Curve? animationCurve;

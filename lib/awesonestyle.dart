@@ -7,5 +7,7 @@ export 'package:awesonestyle/src/fondoBorroso.dart';
 export 'package:awesonestyle/src/input_text_1.dart';
 export 'package:awesonestyle/src/text_url_1.dart';
 export 'package:awesonestyle/src/BottonNaviBar.dart';
-export 'package:awesonestyle/src/BottonBarItem.dart';
-
+export 'package:awesonestyle/src/BottonNaviBarItem.dart';
+export 'package:awesonestyle/src/BadgetWidgets.dart';
+export 'package:awesonestyle/src/BottonTabBar.dart';
+export 'package:awesonestyle/src/BottonTabBarItem.dart';
