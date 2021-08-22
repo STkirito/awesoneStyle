@@ -4,6 +4,22 @@ AwesoneStyle widget pack
 
 ## Getting Started
 
+Widgets:
+-BadgeWidgets
+-BottonNaviBar
+-BottonNaviBarItem
+-BottonTabBar
+-BottonTabBarItem
+-Btn_1
+-BtnIconText1
+-DatePicker
+-FondoBorroso
+-InputText1
+-Text_url_1
+Animación:
+-animate_do
+
+
 This project is a starting point for a Dart
 [package](https://flutter.dev/developing-packages/),
 a library module containing code that can be shared easily across
