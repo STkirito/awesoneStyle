@@ -103,7 +103,7 @@ class BadgeCircular extends BadgetWidgets {
       alignment: Alignment.center,
       padding: EdgeInsets.all(3),
       decoration: new BoxDecoration(
-        color: disabled == false ? color : color!.withOpacity(0.6),
+        color: disabled == false ? color : color?.withOpacity(0.6), //cambio
         borderRadius:
             BorderRadius.circular(size ?? (isIndicator == true ? 5 : 20) / 2),
       ),
