@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
-class BadgeWidgets {
+abstract class BadgetWidgets extends StatelessWidget {}
+
+class BadgeBox extends BadgetWidgets {
   bool? isIndicator;
   Color? color;
   double? size;
   bool? disabled;
   bool? show;
   Widget? child;
-  BadgeWidgets({
+  BadgeBox({
     isIndicator = false,
     color = Colors.black,
     size,
@@ -15,7 +17,7 @@ class BadgeWidgets {
     show = true,
     required child,
   });
-  Widget get badgetBox => show == true && isIndicator == true
+  Widget _badgetBox() => show == true && isIndicator == true
       ? Container(
           alignment: Alignment.center,
           padding: EdgeInsets.all(3),
@@ -43,7 +45,28 @@ class BadgeWidgets {
             )
           : Container();
 
-  Widget get badgetCircular => show == true && isIndicator == true
+  @override
+  Widget build(BuildContext context) {
+    return _badgetBox();
+  }
+}
+
+class BadgeCircular extends BadgetWidgets {
+  bool? isIndicator;
+  Color? color;
+  double? size;
+  bool? disabled;
+  bool? show;
+  Widget? child;
+  BadgeCircular({
+    isIndicator = false,
+    color = Colors.black,
+    size,
+    disabled = false,
+    show = true,
+    required child,
+  });
+  Widget _badgetCircular() => show == true && isIndicator == true
       ? Container(
           alignment: Alignment.center,
           padding: EdgeInsets.all(3),
@@ -74,4 +97,8 @@ class BadgeWidgets {
               child: child,
             )
           : Container();
+  @override
+  Widget build(BuildContext context) {
+    return _badgetCircular();
+  }
 }
