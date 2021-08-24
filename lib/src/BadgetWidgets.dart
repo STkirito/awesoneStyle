@@ -15,7 +15,7 @@ class BadgeWidgets {
     show = true,
     required child,
   });
-  Widget badgetBox() => show == true && isIndicator == true
+  Widget get badgetBox => show == true && isIndicator == true
       ? Container(
           alignment: Alignment.center,
           padding: EdgeInsets.all(3),
@@ -43,7 +43,7 @@ class BadgeWidgets {
             )
           : Container();
 
-  Widget badgetCircular() => show == true && isIndicator == true
+  Widget get badgetCircular => show == true && isIndicator == true
       ? Container(
           alignment: Alignment.center,
           padding: EdgeInsets.all(3),
