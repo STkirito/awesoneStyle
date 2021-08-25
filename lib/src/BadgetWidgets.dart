@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
-abstract class BadgetWidgets extends StatelessWidget {}
+abstract class BadgetWidgets extends StatelessWidget {
+  late final bool isIndicator;
+  late final Color color;
+  late final double? size;
+  late final bool disabled;
+  late final bool show;
+  late final Widget child;
+}
 
 class BadgeBox extends BadgetWidgets {
-  bool? isIndicator;
-  Color? color;
-  double? size;
-  bool? disabled;
-  bool? show;
-  Widget? child;
   BadgeBox({
     isIndicator = false,
     color = Colors.black,
@@ -52,12 +53,6 @@ class BadgeBox extends BadgetWidgets {
 }
 
 class BadgeCircular extends BadgetWidgets {
-  bool? isIndicator;
-  Color? color;
-  double? size;
-  bool? disabled;
-  bool? show;
-  Widget? child;
   BadgeCircular({
     isIndicator = false,
     color = Colors.black,
