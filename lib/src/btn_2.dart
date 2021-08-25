@@ -5,7 +5,7 @@ class Btn_2 extends StatefulWidget {
   Function(bool?) onTap;
   final Widget child;
   bool? state;
-  final double size;
+  final double? size;
   final double border;
   final double padding;
   final Color firstbackgroundColor;
@@ -19,7 +19,7 @@ class Btn_2 extends StatefulWidget {
       required this.child,
       required this.onTap,
       this.firstbackgroundColor = Colors.transparent,
-      this.size = 100,
+      this.size,
       this.border = 10,
       this.firstborderColor = Colors.greenAccent,
       this.padding = 5,
@@ -38,6 +38,8 @@ class _Btn_2State extends State<Btn_2> {
     return GestureDetector(
       child: Container(
         padding: EdgeInsets.all(widget.padding),
+        height: widget.size ?? double.infinity,
+        width: widget.size ?? double.infinity,
         decoration: BoxDecoration(
           color: widget.state == true
               ? widget.firstbackgroundColor
