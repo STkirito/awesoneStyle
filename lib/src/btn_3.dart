@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
-class Btn_2 extends StatefulWidget {
+class Btn_3 extends StatefulWidget {
   Function(bool?) onTap;
   final Widget child;
   bool? state;
-  final double? size;
+  final double? height;
+  final double? width;
   final double border;
   final double padding;
   final Color firstbackgroundColor;
@@ -14,37 +15,38 @@ class Btn_2 extends StatefulWidget {
   final Color secondbackgroundColor;
   final Color secondborderColor;
   final Color secondcolor;
-  Btn_2(
+  Btn_3(
       {required this.state,
       required this.child,
       required this.onTap,
-      this.firstbackgroundColor = Colors.transparent,
-      this.size,
-      this.border = 10,
+      this.firstbackgroundColor = Colors.black12,
+      this.border = 2,
       this.firstborderColor = Colors.greenAccent,
       this.padding = 5,
       this.firstcolor = Colors.greenAccent,
-      this.secondbackgroundColor = Colors.transparent,
+      this.secondbackgroundColor = Colors.black12,
       this.secondborderColor = Colors.red,
-      this.secondcolor = Colors.red});
+      this.secondcolor = Colors.red,
+      this.height = 50,
+      this.width = 100});
 
   @override
-  _Btn_2State createState() => _Btn_2State();
+  _Btn_3State createState() => _Btn_3State();
 }
 
-class _Btn_2State extends State<Btn_2> {
+class _Btn_3State extends State<Btn_3> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Container(
         padding: EdgeInsets.all(widget.padding),
-        height: widget.size ?? double.infinity,
-        width: widget.size ?? double.infinity,
+        height: widget.height,
+        width: widget.width ?? double.infinity,
         decoration: BoxDecoration(
           color: widget.state == true
               ? widget.firstbackgroundColor
               : widget.secondbackgroundColor,
-          shape: BoxShape.circle,
+          borderRadius: BorderRadius.circular(20),
           border: Border.all(
             color: widget.state == true
                 ? widget.firstborderColor
@@ -52,18 +54,10 @@ class _Btn_2State extends State<Btn_2> {
             width: widget.border,
           ),
         ),
-        child: Container(
-          padding: EdgeInsets.all(5),
-          child: Material(
-              borderRadius: BorderRadius.circular(40),
-              color: Colors.transparent,
-              child: Center(child: widget.child)),
-          decoration: BoxDecoration(
-            color:
-                widget.state == true ? widget.firstcolor : widget.secondcolor,
-            shape: BoxShape.circle,
-          ),
-        ),
+        child: Material(
+            borderRadius: BorderRadius.circular(40),
+            color: Colors.transparent,
+            child: Center(child: widget.child)),
       ),
       onTap: () {
         setState(() {
