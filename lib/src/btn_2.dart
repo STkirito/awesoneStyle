@@ -53,13 +53,13 @@ class _Btn_2State extends State<Btn_2> {
           ),
         ),
         child: Container(
-          //height: widget.size,
+          height: double.infinity,
           width: double.infinity,
           padding: EdgeInsets.all(5),
           child: Material(
               borderRadius: BorderRadius.circular(40),
               color: Colors.transparent,
-              child: widget.child),
+              child: Center(child: widget.child)),
           decoration: BoxDecoration(
             color:
                 widget.state == true ? widget.firstcolor : widget.secondcolor,
