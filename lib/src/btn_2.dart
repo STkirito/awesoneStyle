@@ -39,7 +39,7 @@ class _Btn_2State extends State<Btn_2> {
       child: Container(
         padding: EdgeInsets.all(widget.padding),
         height: widget.size,
-        width: widget.size,
+        width: double.infinity,
         decoration: BoxDecoration(
           color: widget.state == true
               ? widget.firstbackgroundColor
