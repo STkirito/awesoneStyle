@@ -2,8 +2,8 @@ import 'package:awesonestyle/src/Badget.dart';
 import 'package:flutter/material.dart';
 
 /// Class [BottonTabBarItem]:
-/// [Badget]: BadgetWidgets without Animation
-/// [BadgetAnimation]: BadgetWidgets to animate, The parent has to be an animation if not its behavior is like Badget.
+/// [badget]: BadgetWidgets without Animation
+/// [badgetAnimation]: BadgetWidgets to animate, The parent has to be an animation if not its behavior is like Badget.
 
 class BottonTabBarItem {
   final String text;
