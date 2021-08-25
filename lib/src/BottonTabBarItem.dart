@@ -1,4 +1,4 @@
-import 'package:awesonestyle/src/BadgetWidgets.dart';
+import 'package:awesonestyle/src/Badget.dart';
 import 'package:flutter/material.dart';
 
 class BottonTabBarItem {
