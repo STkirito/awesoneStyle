@@ -6,8 +6,12 @@ class BottonTabBarItem {
   final IconData icon;
   final BadgetWidgets? badge;
   final Widget? badgeAnimation;
-  BottonTabBarItem(this.badgeAnimation,
-      {required this.text, required this.icon, this.badge});
+  BottonTabBarItem({
+    required this.text,
+    required this.icon,
+    this.badge,
+    this.badgeAnimation,
+  });
   String get labels => text;
   IconData get icons => icon;
   Widget? get badges {
