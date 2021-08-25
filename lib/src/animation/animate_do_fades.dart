@@ -10,7 +10,6 @@ import 'package:flutter/material.dart';
 /// [manualTrigger]: boolean that indicates if you want to trigger the animation manually with the controller
 /// [animate]: For a State controller property, if you re-render changing it from false to true, the animation will be fired inmediatelly
 class FadeIn extends BadgetWidgets {
-  final Key? key;
   final Widget child;
   final Duration duration;
   final Duration delay;
@@ -19,14 +18,12 @@ class FadeIn extends BadgetWidgets {
   final bool animate;
 
   FadeIn(
-      {this.key,
-      required this.child,
+      {required this.child,
       this.duration = const Duration(milliseconds: 300),
       this.delay = const Duration(milliseconds: 0),
       this.controller,
       this.manualTrigger = false,
-      this.animate = true})
-      : super(key: key) {
+      this.animate = true}) {
     if (manualTrigger == true && controller == null) {
       throw FlutterError('If you want to use manualTrigger:true, \n\n'
           'Then you must provide the controller property, that is a callback like:\n\n'
@@ -96,8 +93,7 @@ class _FadeInState extends State<FadeIn> with SingleTickerProviderStateMixin {
 /// [delay]: delay before the animation starts
 /// [controller]: optional/mandatory, exposes the animation controller created by Animate_do
 /// the controller can be use to repeat, reverse and anything you want, its just an animation controller
-class FadeInDown extends StatefulWidget {
-  final Key? key;
+class FadeInDown extends BadgetWidgets {
   final Widget child;
   final Duration duration;
   final Duration delay;
@@ -107,15 +103,13 @@ class FadeInDown extends StatefulWidget {
   final double from;
 
   FadeInDown(
-      {this.key,
-      required this.child,
+      {required this.child,
       this.duration = const Duration(milliseconds: 800),
       this.delay = const Duration(milliseconds: 0),
       this.controller,
       this.manualTrigger = false,
       this.animate = true,
-      this.from = 100})
-      : super(key: key) {
+      this.from = 100}) {
     if (manualTrigger == true && controller == null) {
       throw FlutterError('If you want to use manualTrigger:true, \n\n'
           'Then you must provide the controller property, that is a callback like:\n\n'
