@@ -79,21 +79,21 @@ class _BadgeBoxState extends State<BadgeBox> {
           decoration: new BoxDecoration(
             color: widget.disabled == false
                 ? widget.color
-                : widget.color!.withOpacity(0.6),
+                : widget.color.withOpacity(0.6),
           ),
           constraints: BoxConstraints(
             minWidth: widget.size ?? (widget.isIndicator == true ? 5 : 18),
             minHeight: widget.size ?? (widget.isIndicator == true ? 5 : 18),
           ),
         )
-      : widget.show == true && widget.child != null
+      : widget.show == true
           ? Container(
               alignment: Alignment.center,
               padding: EdgeInsets.all(3),
               decoration: new BoxDecoration(
                 color: widget.disabled == false
                     ? widget.color
-                    : widget.color!.withOpacity(0.6),
+                    : widget.color.withOpacity(0.6),
               ),
               constraints: BoxConstraints(
                 minWidth: widget.size ?? (widget.isIndicator == true ? 5 : 18),
@@ -189,7 +189,7 @@ class _BadgeCircularState extends State<BadgeCircular> {
           decoration: new BoxDecoration(
             color: widget.disabled == false
                 ? widget.color
-                : widget.color!.withOpacity(0.6),
+                : widget.color.withOpacity(0.6),
             borderRadius: BorderRadius.circular(
                 widget.size ?? (widget.isIndicator == true ? 5 : 20) / 2),
           ),
@@ -198,14 +198,14 @@ class _BadgeCircularState extends State<BadgeCircular> {
             minHeight: widget.size ?? (widget.isIndicator == true ? 5 : 18),
           ),
         )
-      : widget.show == true && widget.child != null
+      : widget.show == true
           ? Container(
               alignment: Alignment.center,
               padding: EdgeInsets.all(3),
               decoration: new BoxDecoration(
                 color: widget.disabled == false
                     ? widget.color
-                    : widget.color!.withOpacity(0.6),
+                    : widget.color.withOpacity(0.6),
                 borderRadius: BorderRadius.circular(
                     widget.size ?? (widget.isIndicator == true ? 5 : 20) / 2),
               ),
