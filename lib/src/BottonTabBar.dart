@@ -44,7 +44,11 @@ class _BottonTabBarState extends State<BottonTabBar>
   void initState() {
     super.initState();
     widget.items.forEach(
-      (item) => {labels.add(item.labels), icons.add(item.icons)},
+      (item) => {
+        labels.add(item.labels),
+        icons.add(item.icons),
+        badges.add(item.badges)
+      },
     );
   }
 
