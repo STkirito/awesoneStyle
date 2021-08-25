@@ -53,6 +53,7 @@ class _Btn_2State extends State<Btn_2> {
           ),
         ),
         child: Container(
+          padding: EdgeInsets.all(1),
           child: Material(
               borderRadius: BorderRadius.circular(40),
               color: Colors.transparent,
