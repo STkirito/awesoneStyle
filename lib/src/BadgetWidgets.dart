@@ -52,7 +52,7 @@ class BadgeBox extends BadgetWidgets {
   }
 }
 
-abstract class BadgeCircular extends BadgetWidgets {
+class BadgeCircular extends BadgetWidgets {
   final bool isIndicator;
   final Color color;
   final double? size;
