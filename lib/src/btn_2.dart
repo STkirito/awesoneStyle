@@ -38,8 +38,6 @@ class _Btn_2State extends State<Btn_2> {
     return GestureDetector(
       child: Container(
         padding: EdgeInsets.all(widget.padding),
-        //height: widget.size,
-        //width: double.infinity,
         decoration: BoxDecoration(
           color: widget.state == true
               ? widget.firstbackgroundColor
@@ -53,8 +51,6 @@ class _Btn_2State extends State<Btn_2> {
           ),
         ),
         child: Container(
-          height: double.infinity,
-          width: double.infinity,
           padding: EdgeInsets.all(5),
           child: Material(
               borderRadius: BorderRadius.circular(40),
