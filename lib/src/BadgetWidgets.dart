@@ -1,6 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-abstract class BadgetWidgets extends StatelessWidget {
+abstract class BadgetWidgets extends Widget {
   late final bool isIndicator = false;
   late final Color color = Colors.black;
   late final double? size;
@@ -9,7 +10,7 @@ abstract class BadgetWidgets extends StatelessWidget {
   late final Widget child;
 }
 
-class BadgeBox extends BadgetWidgets {
+abstract class BadgeBox extends BadgetWidgets {
   BadgeBox({
     isIndicator,
     color,
@@ -18,6 +19,7 @@ class BadgeBox extends BadgetWidgets {
     show,
     required child,
   });
+
   Widget _badgetBox() => show == true && isIndicator == true
       ? Container(
           alignment: Alignment.center,
@@ -46,13 +48,13 @@ class BadgeBox extends BadgetWidgets {
             )
           : Container();
 
-  @override
+  //@override
   Widget build(BuildContext context) {
     return _badgetBox();
   }
 }
 
-class BadgeCircular extends BadgetWidgets {
+abstract class BadgeCircular extends BadgetWidgets {
   BadgeCircular({
     isIndicator = false,
     color = Colors.black,
@@ -92,7 +94,7 @@ class BadgeCircular extends BadgetWidgets {
               child: child,
             )
           : Container();
-  @override
+
   Widget build(BuildContext context) {
     return _badgetCircular();
   }
