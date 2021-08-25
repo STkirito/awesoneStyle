@@ -57,7 +57,7 @@ class _Btn_2State extends State<Btn_2> {
           child: Material(
               borderRadius: BorderRadius.circular(40),
               color: Colors.transparent,
-              child: Center(child: widget.child)),
+              child: widget.child),
           decoration: BoxDecoration(
             color:
                 widget.state == true ? widget.firstcolor : widget.secondcolor,
