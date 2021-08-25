@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
 
-abstract class BadgetWidgets extends Widget {
-  late final bool isIndicator = false;
-  late final Color color = Colors.black;
-  late final double? size;
-  late final bool disabled = false;
-  late final bool show = true;
-  late final Widget child;
-}
+abstract class BadgetWidgets extends StatelessWidget {}
 
-abstract class BadgeBox extends BadgetWidgets {
+class BadgeBox extends BadgetWidgets {
+  final bool isIndicator;
+  final Color color;
+  final double? size;
+  final bool disabled;
+  final bool show;
+  final Widget child;
   BadgeBox({
-    isIndicator,
-    color,
-    size,
-    disabled,
-    show,
-    required child,
+    this.isIndicator = false,
+    this.color = Colors.black,
+    this.size,
+    this.disabled = false,
+    this.show = true,
+    required this.child,
   });
 
   Widget _badgetBox() => show == true && isIndicator == true
@@ -47,20 +46,26 @@ abstract class BadgeBox extends BadgetWidgets {
             )
           : Container();
 
-  //@override
+  @override
   Widget build(BuildContext context) {
     return _badgetBox();
   }
 }
 
 abstract class BadgeCircular extends BadgetWidgets {
+  final bool isIndicator;
+  final Color color;
+  final double? size;
+  final bool disabled;
+  final bool show;
+  final Widget child;
   BadgeCircular({
-    isIndicator = false,
-    color = Colors.black,
-    size,
-    disabled = false,
-    show = true,
-    required child,
+    this.isIndicator = false,
+    this.color = Colors.black,
+    this.size,
+    this.disabled = false,
+    this.show = true,
+    required this.child,
   });
   Widget _badgetCircular() => show == true && isIndicator == true
       ? Container(
@@ -93,7 +98,7 @@ abstract class BadgeCircular extends BadgetWidgets {
               child: child,
             )
           : Container();
-
+  @override
   Widget build(BuildContext context) {
     return _badgetCircular();
   }
