@@ -12,3 +12,4 @@ export 'package:awesonestyle/src/BadgetWidgets.dart';
 export 'package:awesonestyle/src/BottonTabBar.dart';
 export 'package:awesonestyle/src/BottonTabBarItem.dart';
 //export 'package:animate_do/animate_do.dart';
+export 'package:awesonestyle/src/animation/animate_do_fades.dart';
