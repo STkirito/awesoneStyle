@@ -21,7 +21,7 @@ class _DatePickerState extends State<DatePicker> {
     showCupertinoModalPopup(
         context: context,
         builder: (_) => Container(
-              height: 500,
+              height: 350, //500
               color: Colors.white,
               child: Column(
                 children: [
