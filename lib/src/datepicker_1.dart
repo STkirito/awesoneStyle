@@ -26,7 +26,7 @@ class _DatePickerState extends State<DatePicker> {
               child: Column(
                 children: [
                   Container(
-                    height: 400,
+                    height: 250, //400
                     child: CupertinoDatePicker(
                         mode: CupertinoDatePickerMode.date,
                         initialDateTime: DateTime.now(),
