@@ -14,4 +14,7 @@ export 'package:awesonestyle/src/BottonTabBarItem.dart';
 export 'package:awesonestyle/src/btn_2.dart';
 export 'package:awesonestyle/src/btn_3.dart';
 export 'package:awesonestyle/src/icon_text_1.dart';
+export 'package:awesonestyle/src/floatingWindow.dart';
+export 'package:awesonestyle/src/listItem.dart';
+export 'package:awesonestyle/src/listScrollView.dart';
 export 'package:animate_do/animate_do.dart';
