@@ -9,11 +9,11 @@ class Medidas {
     _heigth = MediaQuery.of(context).size.height;
   }
 
-  static double width(double porsentaje) {
-    return _width * (porsentaje / 100);
+  static double width(double? porsentaje) {
+    return _width * (porsentaje! / 100);
   }
 
-  static double heigth(double porsentaje) {
-    return _heigth * (porsentaje / 100);
+  static double heigth(double? porsentaje) {
+    return _heigth * (porsentaje! / 100);
   }
 }
