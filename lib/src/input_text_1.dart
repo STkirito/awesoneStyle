@@ -3,17 +3,25 @@ import 'package:flutter/material.dart';
 // ignore: must_be_immutable
 class InputText1 extends StatefulWidget {
   final String? hintText;
-  final IconData? icono;
+  final IconData? icon;
   final bool obscureText;
   final TextInputType? textInputTipe;
+  final int? maxLength;
+  final bool expands;
+  final int? minLines;
+  final int? maxLines;
   TextEditingController? controller;
 
   InputText1(
       {this.hintText,
-      this.icono,
+      this.icon,
       this.obscureText = false,
       this.textInputTipe = TextInputType.text,
-      this.controller});
+      this.controller,
+      this.maxLength,
+      this.expands = false,
+      this.minLines,
+      this.maxLines});
 
   @override
   _InputText1State createState() => _InputText1State();
@@ -36,16 +44,22 @@ class _InputText1State extends State<InputText1> {
           fontWeight: FontWeight.bold,
         ),
         textAlign: TextAlign.justify,
+        maxLength: widget.maxLength, //500
+        minLines: widget.minLines,
+        maxLines: widget.maxLines,
+        expands: widget.expands,
         decoration: InputDecoration(
             hintText: widget.hintText,
             hintStyle: TextStyle(
               fontWeight: FontWeight.w400,
               color: Colors.white,
             ),
-            prefixIcon: Icon(
-              widget.icono,
-              color: Colors.white,
-            ),
+            prefixIcon: widget.icon != null
+                ? Icon(
+                    widget.icon,
+                    color: Colors.white,
+                  )
+                : null,
             border: InputBorder.none),
       ),
     );
