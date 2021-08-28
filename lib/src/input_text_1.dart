@@ -10,6 +10,7 @@ class InputText1 extends StatefulWidget {
   final bool expands;
   final int? minLines;
   final int? maxLines;
+  final EdgeInsetsGeometry? padding;
   TextEditingController? controller;
 
   InputText1(
@@ -21,7 +22,8 @@ class InputText1 extends StatefulWidget {
       this.maxLength,
       this.expands = false,
       this.minLines,
-      this.maxLines});
+      this.maxLines,
+      this.padding});
 
   @override
   _InputText1State createState() => _InputText1State();
@@ -34,6 +36,7 @@ class _InputText1State extends State<InputText1> {
         color: Colors.black12,
         borderRadius: BorderRadius.circular(34),
       ),
+      padding: widget.padding ?? EdgeInsets.all(10),
       width: double.infinity,
       child: TextField(
         controller: widget.controller,
