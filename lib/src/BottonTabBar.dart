@@ -62,6 +62,9 @@ class _BottonTabBarState extends State<BottonTabBar>
   Widget build(BuildContext context) {
     return Material(
       child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+        ),
         child: MotionTabBar(
           initialSelectedTab: labels[widget.initialSelectedTab],
           labels: labels,
