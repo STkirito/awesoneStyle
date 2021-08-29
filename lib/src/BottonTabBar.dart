@@ -61,30 +61,28 @@ class _BottonTabBarState extends State<BottonTabBar>
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Container(
-        child: MotionTabBar(
-          initialSelectedTab: labels[widget.initialSelectedTab],
-          labels: labels,
-          icons: icons,
-          // optional badges, length must be same with labels
-          badges: badges,
-          tabSize: widget.tabSize ?? 50,
-          tabBarHeight: widget.tabBarHeight ?? 55,
-          textStyle: widget.textStyle ??
-              const TextStyle(
-                fontSize: 12,
-                color: Colors.black,
-                fontWeight: FontWeight.w500,
-              ),
-          tabIconColor: widget.tabIconColor ?? Colors.blue[600],
-          tabIconSize: widget.tabIconSize ?? 28.0,
-          tabIconSelectedSize: widget.tabIconSelectedSize ?? 26.0,
-          tabSelectedColor: widget.tabSelectedColor ?? Colors.blue[900],
-          tabIconSelectedColor: widget.tabSelectedColor ?? Colors.white,
-          tabBarColor:
-              widget.tabBarColor ?? Colors.white, //const Color(0xFFAFAFAF)
-          onTabItemSelected: widget.onTabItemSelected,
-        ),
+      child: MotionTabBar(
+        initialSelectedTab: labels[widget.initialSelectedTab],
+        labels: labels,
+        icons: icons,
+        // optional badges, length must be same with labels
+        badges: badges,
+        tabSize: widget.tabSize ?? 50,
+        tabBarHeight: widget.tabBarHeight ?? 55,
+        textStyle: widget.textStyle ??
+            const TextStyle(
+              fontSize: 12,
+              color: Colors.black,
+              fontWeight: FontWeight.w500,
+            ),
+        tabIconColor: widget.tabIconColor ?? Colors.blue[600],
+        tabIconSize: widget.tabIconSize ?? 28.0,
+        tabIconSelectedSize: widget.tabIconSelectedSize ?? 26.0,
+        tabSelectedColor: widget.tabSelectedColor ?? Colors.blue[900],
+        tabIconSelectedColor: widget.tabSelectedColor ?? Colors.white,
+        tabBarColor:
+            widget.tabBarColor ?? Colors.white, //const Color(0xFFAFAFAF)
+        onTabItemSelected: widget.onTabItemSelected,
       ),
     );
   }
