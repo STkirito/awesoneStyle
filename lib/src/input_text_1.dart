@@ -13,6 +13,7 @@ class InputText1 extends StatefulWidget {
   final int? maxLines;
   final double? width;
   final double? height;
+  final TextStyle? textStyle;
   final EdgeInsetsGeometry? padding;
   TextEditingController? controller;
 
@@ -28,7 +29,8 @@ class InputText1 extends StatefulWidget {
       this.maxLines,
       this.padding,
       this.width,
-      this.height});
+      this.height,
+      this.textStyle});
 
   @override
   _InputText1State createState() => _InputText1State();
@@ -59,10 +61,11 @@ class _InputText1State extends State<InputText1> {
         expands: widget.expands,
         decoration: InputDecoration(
             hintText: widget.hintText,
-            hintStyle: TextStyle(
-              fontWeight: FontWeight.w400,
-              color: Colors.white,
-            ),
+            hintStyle: widget.textStyle ??
+                TextStyle(
+                  fontWeight: FontWeight.w400,
+                  color: Colors.white,
+                ),
             prefixIcon: widget.icon != null
                 ? Icon(
                     widget.icon,
