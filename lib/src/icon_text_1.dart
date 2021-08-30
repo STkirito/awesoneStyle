@@ -21,8 +21,8 @@ class IconText1 extends StatefulWidget {
 class _IconText1State extends State<IconText1> {
   Widget textdat() {
     return Container(
-      height: double.infinity,
-      width: double.infinity,
+      height: Medidas.heigth(100),
+      width: Medidas.width(100),
 
       //width: double.infinity,
       child: Row(

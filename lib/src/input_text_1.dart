@@ -1,3 +1,4 @@
+import 'package:awesonestyle/services/Constantes.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -37,7 +38,7 @@ class _InputText1State extends State<InputText1> {
         borderRadius: BorderRadius.circular(34),
       ),
       padding: widget.padding ?? EdgeInsets.all(10),
-      width: double.infinity,
+      width: Medidas.width(100),
       child: TextField(
         controller: widget.controller,
         keyboardType: widget.textInputTipe,

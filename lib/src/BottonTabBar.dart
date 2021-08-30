@@ -1,7 +1,7 @@
 import 'package:awesonestyle/awesonestyle.dart';
-import 'package:awesonestyle/src/BottonTabBarItem.dart';
+import 'package:awesonestyle/services/Constantes.dart';
+import 'package:awesonestyle/src/MotionTabBar.dart';
 import 'package:flutter/material.dart';
-import 'package:motion_tab_bar_v2/motion-tab-bar.dart';
 
 class BottonTabBar extends StatefulWidget {
   final List<BottonTabBarItem> items;
@@ -67,8 +67,8 @@ class _BottonTabBarState extends State<BottonTabBar>
         icons: icons,
         // optional badges, length must be same with labels
         badges: badges,
-        tabSize: widget.tabSize ?? 50,
-        tabBarHeight: widget.tabBarHeight ?? 55,
+        tabSize: widget.tabSize ?? 50, //tiene Medidas
+        tabBarHeight: Medidas.heigth(widget.tabBarHeight ?? 55),
         textStyle: widget.textStyle ??
             const TextStyle(
               fontSize: 12,

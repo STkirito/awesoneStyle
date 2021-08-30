@@ -1,3 +1,4 @@
+import 'package:awesonestyle/services/Constantes.dart';
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
@@ -16,7 +17,7 @@ class Btn_1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: width,
+      width: Medidas.width(width),
       decoration: BoxDecoration(
           color: backgroundColor,
           borderRadius: BorderRadius.only(

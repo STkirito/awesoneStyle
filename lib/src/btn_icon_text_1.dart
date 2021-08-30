@@ -1,12 +1,13 @@
+import 'package:awesonestyle/services/Constantes.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class BtnIconText1 extends StatefulWidget {
   String? text;
-  final IconData? icono;
+  final IconData? icon;
   Function()? onPressed;
 
-  BtnIconText1({this.text, this.icono, this.onPressed});
+  BtnIconText1({this.text, this.icon, this.onPressed});
 
   @override
   _BtnIconText1State createState() => _BtnIconText1State();
@@ -15,7 +16,7 @@ class BtnIconText1 extends StatefulWidget {
 class _BtnIconText1State extends State<BtnIconText1> {
   Widget textdat() {
     return Container(
-      width: double.infinity,
+      width: Medidas.width(100),
       decoration: BoxDecoration(
         color: Colors.black12,
         borderRadius: BorderRadius.circular(34),
@@ -28,7 +29,7 @@ class _BtnIconText1State extends State<BtnIconText1> {
             padding: EdgeInsetsDirectional.only(start: 5),
             child: TextButton.icon(
               icon: Icon(
-                widget.icono,
+                widget.icon,
                 color: Colors.white,
               ),
               label: Text(

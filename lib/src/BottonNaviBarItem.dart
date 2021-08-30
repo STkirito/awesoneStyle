@@ -1,4 +1,6 @@
+import 'package:awesonestyle/services/Constantes.dart';
 import 'package:flutter/material.dart';
+
 class BottonNaviBarItem extends StatefulWidget {
   final double? height;
   final double? weight;
@@ -8,7 +10,7 @@ class BottonNaviBarItem extends StatefulWidget {
   final Color? backgroundColor;
   final Color? iconColor;
   final double? fontSize;
-  
+
   BottonNaviBarItem(
       {this.height,
       this.weight,
@@ -19,20 +21,18 @@ class BottonNaviBarItem extends StatefulWidget {
       this.backgroundColor,
       this.iconColor});
   /* */
-  get gettext=> text;
-  get geticon=> icon;
+  get gettext => text;
+  get geticon => icon;
   @override
   _BottonNaviBarItemState createState() => _BottonNaviBarItemState();
 }
 
 class _BottonNaviBarItemState extends State<BottonNaviBarItem> {
-  
   @override
   Widget build(BuildContext context) {
-    
     return Container(
-      height: widget.height ?? 40,
-      width: widget.weight ?? double.infinity,
+      height: Medidas.heigth(widget.height ?? 40),
+      width: Medidas.width(widget.weight ?? 100),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -63,6 +63,4 @@ class _BottonNaviBarItemState extends State<BottonNaviBarItem> {
       ),
     );
   }
-  
 }
-

@@ -49,7 +49,7 @@ class _DatePickerState extends State<DatePicker> {
   Widget build(BuildContext context) {
     return Container(
       child: BtnIconText1(
-        icono: widget.icon,
+        icon: widget.icon,
         text: widget.text,
         onPressed: () => _showDatePicker(context),
       ),

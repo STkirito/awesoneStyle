@@ -1,3 +1,4 @@
+import 'package:awesonestyle/services/Constantes.dart';
 import 'package:awesonestyle/src/BottonNaviBarItem.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
@@ -26,16 +27,16 @@ class _BottonNaviBarState extends State<BottonNaviBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: CurvedNavigationBar(
-          buttonBackgroundColor: widget.buttonBackgroundColor,
-          backgroundColor: widget.backgroundColor ?? Colors.blueAccent,
-          animationCurve: widget.animationCurve ?? Curves.easeOut,
-          animationDuration:
-              widget.animationDuration ?? const Duration(milliseconds: 600),
-          height: widget.height,
-          index: widget.index,
-          items: widget.items,
-        ),
-      );
+      child: CurvedNavigationBar(
+        buttonBackgroundColor: widget.buttonBackgroundColor,
+        backgroundColor: widget.backgroundColor ?? Colors.blueAccent,
+        animationCurve: widget.animationCurve ?? Curves.easeOut,
+        animationDuration:
+            widget.animationDuration ?? const Duration(milliseconds: 600),
+        height: Medidas.heigth(widget.height),
+        index: widget.index,
+        items: widget.items,
+      ),
+    );
   }
 }

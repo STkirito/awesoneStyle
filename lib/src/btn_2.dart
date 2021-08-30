@@ -1,3 +1,4 @@
+import 'package:awesonestyle/services/Constantes.dart';
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
@@ -38,8 +39,9 @@ class _Btn_2State extends State<Btn_2> {
     return GestureDetector(
       child: Container(
         padding: EdgeInsets.all(widget.padding),
-        height: widget.size ?? double.infinity,
-        width: widget.size ?? double.infinity,
+        height: Medidas.heigth(widget.size ?? 100),
+        width:
+            Medidas.width(widget.size ?? 100), //widget.size ?? double.infinity
         decoration: BoxDecoration(
           color: widget.state == true
               ? widget.firstbackgroundColor
