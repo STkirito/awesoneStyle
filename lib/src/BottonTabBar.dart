@@ -1,6 +1,6 @@
 import 'package:awesonestyle/awesonestyle.dart';
-import 'package:awesonestyle/src/MotionTabBar.dart';
 import 'package:flutter/material.dart';
+import 'package:motion_tab_bar_v2/motion-tab-bar.dart';
 
 class BottonTabBar extends StatefulWidget {
   final List<BottonTabBarItem> items;
