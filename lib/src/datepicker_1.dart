@@ -9,11 +9,15 @@ class DatePicker extends StatefulWidget {
   final String? text;
   final void Function(DateTime) onDateTimeChanged;
   final IconData icon;
+  final TextStyle? textStyle;
+  final double? iconSize;
 
   DatePicker({
     this.text = 'Fecha',
     required this.onDateTimeChanged,
     this.icon = FontAwesomeIcons.calendar,
+    this.textStyle,
+    this.iconSize,
   });
   @override
   _DatePickerState createState() => _DatePickerState();
@@ -52,7 +56,9 @@ class _DatePickerState extends State<DatePicker> {
   Widget build(BuildContext context) {
     return Container(
       child: BtnIconText1(
+        textStyle: widget.textStyle,
         icon: widget.icon,
+        iconSize: widget.iconSize,
         text: widget.text,
         onPressed: () => _showDatePicker(context),
       ),

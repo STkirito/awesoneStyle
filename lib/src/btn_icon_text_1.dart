@@ -6,9 +6,11 @@ class BtnIconText1 extends StatefulWidget {
   final String? text;
   final IconData? icon;
   final TextStyle? textStyle;
+  final double? iconSize;
   final Function()? onPressed;
 
-  BtnIconText1({this.text, this.icon, this.onPressed, this.textStyle});
+  BtnIconText1(
+      {this.text, this.icon, this.onPressed, this.textStyle, this.iconSize});
 
   @override
   _BtnIconText1State createState() => _BtnIconText1State();
@@ -32,6 +34,7 @@ class _BtnIconText1State extends State<BtnIconText1> {
               icon: Icon(
                 widget.icon,
                 color: Colors.white,
+                size: widget.iconSize ?? null,
               ),
               label: Text(
                 widget.text.toString(),
