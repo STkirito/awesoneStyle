@@ -12,7 +12,6 @@ class InputText1 extends StatefulWidget {
   final int? minLines;
   final int? maxLines;
   final double? width;
-  final double? height;
   final TextStyle? textStyle;
   final EdgeInsetsGeometry? padding;
   TextEditingController? controller;
@@ -29,7 +28,6 @@ class InputText1 extends StatefulWidget {
       this.maxLines,
       this.padding,
       this.width,
-      this.height,
       this.textStyle});
 
   @override
@@ -45,7 +43,6 @@ class _InputText1State extends State<InputText1> {
       ),
       padding: widget.padding ?? EdgeInsets.all(10),
       width: Medidas.width(widget.width ?? 100),
-      height: Medidas.heigth(widget.height),
       child: TextField(
         controller: widget.controller,
         keyboardType: widget.textInputTipe,
