@@ -1,4 +1,3 @@
-import 'package:awesonestyle/services/Constantes.dart';
 import 'package:flutter/material.dart';
 
 class BottonNaviBarItem extends StatefulWidget {
@@ -31,8 +30,8 @@ class _BottonNaviBarItemState extends State<BottonNaviBarItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: Medidas.heigth(widget.height ?? 40),
-      width: Medidas.width(widget.weight ?? 100),
+      height: widget.height ?? 40,
+      width: widget.weight ?? 100,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

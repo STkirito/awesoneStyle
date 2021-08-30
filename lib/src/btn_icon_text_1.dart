@@ -1,4 +1,3 @@
-import 'package:awesonestyle/services/Constantes.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -19,7 +18,7 @@ class BtnIconText1 extends StatefulWidget {
 class _BtnIconText1State extends State<BtnIconText1> {
   Widget textdat() {
     return Container(
-      width: Medidas.width(100),
+      width: double.infinity,
       decoration: BoxDecoration(
         color: Colors.black12,
         borderRadius: BorderRadius.circular(34),

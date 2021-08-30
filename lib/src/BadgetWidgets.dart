@@ -1,4 +1,3 @@
-import 'package:awesonestyle/services/Constantes.dart';
 import 'package:awesonestyle/src/Badget.dart';
 import 'package:flutter/material.dart';
 
@@ -34,26 +33,11 @@ class _BadgeBoxState extends State<BadgeBox> {
                 : widget.color.withOpacity(0.6),
           ),
           constraints: BoxConstraints(
-            minWidth: Medidas.width(widget.size ?? _size2),
-            minHeight: Medidas.heigth(widget.size ?? _size2),
+            minWidth: widget.size ?? (widget.isIndicator == true ? 5 : 18),
+            minHeight: widget.size ?? (widget.isIndicator == true ? 5 : 18),
           ),
         )
-      : widget.show == true
-          ? Container(
-              alignment: Alignment.center,
-              padding: EdgeInsets.all(3),
-              decoration: new BoxDecoration(
-                color: widget.disabled == false
-                    ? widget.color
-                    : widget.color.withOpacity(0.6),
-              ),
-              constraints: BoxConstraints(
-                minWidth: Medidas.width(widget.size ?? _size2),
-                minHeight: Medidas.heigth(widget.size ?? _size2),
-              ),
-              child: widget.child,
-            )
-          : Container();
+      : Container();
   @override
   Widget build(BuildContext context) {
     return _badgetBox();
@@ -94,28 +78,11 @@ class _BadgeCircularState extends State<BadgeCircular> {
                 widget.size ?? (widget.isIndicator == true ? 5 : 20) / 2),
           ),
           constraints: BoxConstraints(
-            minWidth: Medidas.width(widget.size ?? _size2),
-            minHeight: Medidas.heigth(widget.size ?? _size2),
+            minWidth: widget.size ?? (widget.isIndicator == true ? 5 : 18),
+            minHeight: widget.size ?? (widget.isIndicator == true ? 5 : 18),
           ),
         )
-      : widget.show == true
-          ? Container(
-              alignment: Alignment.center,
-              padding: EdgeInsets.all(3),
-              decoration: new BoxDecoration(
-                color: widget.disabled == false
-                    ? widget.color
-                    : widget.color.withOpacity(0.6),
-                borderRadius: BorderRadius.circular(
-                    widget.size ?? (widget.isIndicator == true ? 5 : 20) / 2),
-              ),
-              constraints: BoxConstraints(
-                minWidth: Medidas.width(widget.size ?? _size2),
-                minHeight: Medidas.heigth(widget.size ?? _size2),
-              ),
-              child: widget.child,
-            )
-          : Container();
+      : Container();
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,4 @@
 import 'package:awesonestyle/awesonestyle.dart';
-import 'package:awesonestyle/services/Constantes.dart';
 import 'package:awesonestyle/src/MotionTabBar.dart';
 import 'package:flutter/material.dart';
 
@@ -68,7 +67,7 @@ class _BottonTabBarState extends State<BottonTabBar>
         // optional badges, length must be same with labels
         badges: badges,
         tabSize: widget.tabSize ?? 50, //tiene Medidas
-        tabBarHeight: Medidas.heigth(widget.tabBarHeight ?? 55),
+        tabBarHeight: widget.tabBarHeight ?? 55,
         textStyle: widget.textStyle ??
             const TextStyle(
               fontSize: 12,
