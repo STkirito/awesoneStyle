@@ -15,6 +15,7 @@ class InputText1 extends StatefulWidget {
   final double? iconSize;
   final TextStyle? textStyle;
   final EdgeInsetsGeometry? padding;
+  final bool? readOnly;
   TextEditingController? controller;
 
   InputText1(
@@ -30,7 +31,8 @@ class InputText1 extends StatefulWidget {
       this.padding,
       this.width,
       this.textStyle,
-      this.iconSize});
+      this.iconSize,
+      this.readOnly});
 
   @override
   _InputText1State createState() => _InputText1State();
@@ -46,6 +48,7 @@ class _InputText1State extends State<InputText1> {
       padding: widget.padding ?? EdgeInsets.all(10),
       width: Medidas.width(widget.width ?? 100),
       child: TextField(
+        readOnly: widget.readOnly ?? false,
         controller: widget.controller,
         keyboardType: widget.textInputTipe,
         obscureText: widget.obscureText,
