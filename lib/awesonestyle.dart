@@ -17,4 +17,8 @@ export 'package:awesonestyle/src/icon_text_1.dart';
 export 'package:awesonestyle/src/floatingWindow.dart';
 export 'package:awesonestyle/src/listItem.dart';
 export 'package:awesonestyle/src/listScrollView.dart';
+export 'package:awesonestyle/src/BarPageView.dart';
+export 'package:awesonestyle/src/DropdownInput.dart';
+
+//
 export 'package:animate_do/animate_do.dart';
