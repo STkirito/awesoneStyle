@@ -29,6 +29,7 @@ class InputText1 extends StatefulWidget {
   final TextStyle? labelStyle;
   final String? labelText;
   final InputBorder? disabledBorder;
+  final InputBorder? border;
   TextEditingController? controller;
 
   InputText1(
@@ -58,7 +59,8 @@ class InputText1 extends StatefulWidget {
       this.errorStyle,
       this.labelStyle,
       this.labelText,
-      this.disabledBorder});
+      this.disabledBorder,
+      this.border});
 
   @override
   _InputText1State createState() => _InputText1State();
@@ -114,7 +116,7 @@ class _InputText1State extends State<InputText1> {
                     size: widget.iconSize ?? null,
                   )
                 : null,
-            border: InputBorder.none),
+            border: widget.border ?? InputBorder.none),
       ),
     );
   }
