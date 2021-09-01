@@ -13,9 +13,19 @@ class InputText1 extends StatefulWidget {
   final int? maxLines;
   final double? width;
   final double? iconSize;
-  final TextStyle? textStyle;
+  final TextStyle? hintStyle;
+  final TextStyle? style;
   final EdgeInsetsGeometry? padding;
   final bool? readOnly;
+  final Function(String)? onChanged;
+  final Function()? onEditingComplete;
+  final Function(String)? onSubmitted;
+  final Function()? onTap;
+  final InputDecoration? decoration;
+  final InputBorder? errorBorder;
+  final String? errorText;
+  final TextStyle? errorStyle;
+  final String? helperText;
   TextEditingController? controller;
 
   InputText1(
@@ -30,9 +40,19 @@ class InputText1 extends StatefulWidget {
       this.maxLines,
       this.padding,
       this.width,
-      this.textStyle,
+      this.hintStyle,
       this.iconSize,
-      this.readOnly});
+      this.readOnly,
+      this.onChanged,
+      this.onEditingComplete,
+      this.onSubmitted,
+      this.onTap,
+      this.decoration,
+      this.style,
+      this.errorBorder,
+      this.errorText,
+      this.helperText,
+      this.errorStyle});
 
   @override
   _InputText1State createState() => _InputText1State();
@@ -48,22 +68,32 @@ class _InputText1State extends State<InputText1> {
       padding: widget.padding ?? EdgeInsets.all(10),
       width: Medidas.width(widget.width ?? 100),
       child: TextField(
+        onChanged: widget.onChanged,
+        onEditingComplete: widget.onEditingComplete,
+        onSubmitted: widget.onSubmitted,
+        onTap: widget.onTap,
         readOnly: widget.readOnly ?? false,
         controller: widget.controller,
         keyboardType: widget.textInputTipe,
         obscureText: widget.obscureText,
-        style: TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.bold,
-        ),
+        style: widget.style ??
+            TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
         textAlign: TextAlign.justify,
         maxLength: widget.maxLength, //500
         minLines: widget.minLines,
         maxLines: widget.maxLines,
         expands: widget.expands,
         decoration: InputDecoration(
+            helperText: widget.helperText,
+            helperStyle: widget.hintStyle,
+            errorStyle: widget.errorStyle,
+            errorText: widget.errorText,
+            errorBorder: widget.errorBorder,
             hintText: widget.hintText,
-            hintStyle: widget.textStyle ??
+            hintStyle: widget.hintStyle ??
                 TextStyle(
                   fontWeight: FontWeight.w400,
                   color: Colors.white,
