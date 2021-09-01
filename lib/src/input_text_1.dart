@@ -26,6 +26,8 @@ class InputText1 extends StatefulWidget {
   final String? errorText;
   final TextStyle? errorStyle;
   final String? helperText;
+  final TextStyle? labelStyle;
+  final String? labelText;
   TextEditingController? controller;
 
   InputText1(
@@ -52,7 +54,9 @@ class InputText1 extends StatefulWidget {
       this.errorBorder,
       this.errorText,
       this.helperText,
-      this.errorStyle});
+      this.errorStyle,
+      this.labelStyle,
+      this.labelText});
 
   @override
   _InputText1State createState() => _InputText1State();
@@ -87,6 +91,8 @@ class _InputText1State extends State<InputText1> {
         maxLines: widget.maxLines,
         expands: widget.expands,
         decoration: InputDecoration(
+            labelStyle: widget.labelStyle,
+            labelText: widget.labelText,
             helperText: widget.helperText,
             helperStyle: widget.hintStyle,
             errorStyle: widget.errorStyle,
