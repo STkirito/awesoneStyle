@@ -24,6 +24,7 @@ class _BadgeBoxState extends State<BadgeBox> {
   late final double _size2 = widget.isIndicator == true ? 5 : 18;
   Widget _badgetBox() => widget.show == true && widget.isIndicator == true
       ? Container(
+          child: widget.child,
           alignment: Alignment.center,
           padding: EdgeInsets.all(3),
           margin: EdgeInsets.all(7),
@@ -67,6 +68,7 @@ class _BadgeCircularState extends State<BadgeCircular> {
   late final double _size2 = widget.isIndicator == true ? 5 : 18;
   Widget _badgetCircular() => widget.show == true && widget.isIndicator == true
       ? Container(
+          child: widget.child,
           alignment: Alignment.center,
           padding: EdgeInsets.all(3),
           margin: EdgeInsets.all(7),
