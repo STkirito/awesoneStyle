@@ -6,13 +6,19 @@ class IconText1 extends StatefulWidget {
   final String? text;
   final IconData? icon;
   final TextStyle? textStyle;
+  final double? size;
+  final Color? colorIcon;
+  final EdgeInsetsGeometry? padding;
   IconText1(
       {this.text,
       this.icon,
       this.textStyle = const TextStyle(
         fontWeight: FontWeight.w400,
         color: Colors.white,
-      )});
+      ),
+      this.size,
+      this.colorIcon,
+      this.padding});
 
   @override
   _IconText1State createState() => _IconText1State();
@@ -29,12 +35,17 @@ class _IconText1State extends State<IconText1> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
-            padding: EdgeInsetsDirectional.only(start: 5),
+            padding: widget.padding ??
+                const EdgeInsets.only(top: 5, bottom: 5, left: 5, right: 5),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Icon(widget.icon),
+                Icon(
+                  widget.icon,
+                  size: widget.size,
+                  color: widget.colorIcon,
+                ),
                 SizedBox(
                   width: Medidas.width(2),
                 ),
