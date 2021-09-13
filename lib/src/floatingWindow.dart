@@ -11,6 +11,10 @@ class FloatingWindow extends StatefulWidget {
   final bool? singleChildScrollView;
   final double? singleChildScrollViewHeight;
   final double? singleChildScrollViewWidth;
+  final List<BoxShadow>? boxShadow;
+  final Gradient? gradient;
+  final BlendMode? backgroundBlendMode;
+  final BoxShape shape;
   FloatingWindow({
     required this.child,
     this.width,
@@ -21,6 +25,10 @@ class FloatingWindow extends StatefulWidget {
     this.singleChildScrollView = false,
     this.singleChildScrollViewHeight,
     this.singleChildScrollViewWidth,
+    this.boxShadow,
+    this.gradient,
+    this.backgroundBlendMode,
+    this.shape = BoxShape.rectangle,
   });
   @override
   _FloatingWindowState createState() => _FloatingWindowState();
@@ -38,6 +46,10 @@ class _FloatingWindowState extends State<FloatingWindow> {
           color: widget.colorBorder ?? Colors.black,
           width: widget.widthBorder ?? 1,
         ),
+        boxShadow: widget.boxShadow,
+        gradient: widget.gradient,
+        backgroundBlendMode: widget.backgroundBlendMode,
+        shape: widget.shape,
       ),
       child: widget.singleChildScrollView == false
           ? widget.child
