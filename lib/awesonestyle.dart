@@ -1,5 +1,9 @@
 library awesonestyle;
 
+export 'package:awesonestyle/src/TextFieldEdit.dart';
+export 'package:awesonestyle/src/btnSocial.dart';
+export 'package:awesonestyle/src/btn_4.dart';
+
 export 'package:awesonestyle/src/btn_1.dart';
 export 'package:awesonestyle/src/btn_icon_text_1.dart';
 export 'package:awesonestyle/src/datepicker_1.dart';
