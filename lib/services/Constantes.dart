@@ -17,3 +17,6 @@ class Medidas {
     return _heigth * (porsentaje! / 100);
   }
 }
+
+enum ChildrenOrientation { Row, Column }
+enum ButtonDialog { OK, CHANGE, CANCEL, CHANGEANDCANCEL }

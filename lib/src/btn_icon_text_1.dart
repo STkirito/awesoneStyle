@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class BtnIconText1 extends StatefulWidget {
+  final Key? key;
   final String? text;
   final IconData? icon;
   final TextStyle? textStyle;
@@ -9,7 +10,12 @@ class BtnIconText1 extends StatefulWidget {
   final Function()? onPressed;
 
   BtnIconText1(
-      {this.text, this.icon, this.onPressed, this.textStyle, this.iconSize});
+      {this.text,
+      this.icon,
+      this.onPressed,
+      this.textStyle,
+      this.iconSize,
+      this.key});
 
   @override
   _BtnIconText1State createState() => _BtnIconText1State();
