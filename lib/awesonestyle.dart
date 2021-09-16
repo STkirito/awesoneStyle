@@ -14,5 +14,7 @@ export 'package:awesonestyle/src/listItem.dart';
 export 'package:awesonestyle/src/listScrollView.dart';
 export 'package:awesonestyle/src/text_url_1.dart';
 export 'package:awesonestyle/src/TextFieldEdit.dart';
+export 'package:awesonestyle/src/AniWidget.dart';
+export 'package:awesonestyle/src/Notify.dart';
 //
 //export 'package:animate_do/animate_do.dart';
