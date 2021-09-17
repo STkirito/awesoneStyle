@@ -259,49 +259,47 @@ class _BTN4State extends State<BTN4> {
     return Container(
       key: widget.key,
       child: GestureDetector(
-        child: Center(
-          child: Container(
-            alignment: widget.alignment,
-            foregroundDecoration: widget.foregroundDecoration,
-            constraints: widget.constraints,
-            margin: widget.margin,
-            transform: widget.transform,
-            transformAlignment: widget.transformAlignment,
-            clipBehavior: widget.clipBehavior,
-            padding: EdgeInsets.all(5),
-            height: widget.height ?? Medidas.heigth(6),
-            width: widget.width ?? Medidas.width(35),
-            decoration: widget.decoration ??
-                BoxDecoration(
-                  color: Colors.black26,
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(
-                    color: Colors.red,
-                    width: 2,
-                  ),
+        child: Container(
+          alignment: widget.alignment,
+          foregroundDecoration: widget.foregroundDecoration,
+          constraints: widget.constraints,
+          margin: widget.margin,
+          transform: widget.transform,
+          transformAlignment: widget.transformAlignment,
+          clipBehavior: widget.clipBehavior,
+          padding: EdgeInsets.all(5),
+          height: widget.height ?? Medidas.heigth(6),
+          width: widget.width ?? Medidas.width(35),
+          decoration: widget.decoration ??
+              BoxDecoration(
+                color: Colors.black26,
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(
+                  color: Colors.red,
+                  width: 2,
                 ),
-            child: widget.childrenOrientation == ChildrenOrientation.Row
-                ? Row(
-                    mainAxisAlignment: widget.mainAxisAlignment,
-                    mainAxisSize: widget.mainAxisSize,
-                    crossAxisAlignment: widget.crossAxisAlignment,
-                    textDirection: widget.textDirection,
-                    verticalDirection: widget.verticalDirection,
-                    textBaseline: widget.textBaseline,
-                    children: widget.children,
-                  )
-                : widget.childrenOrientation == ChildrenOrientation.Column
-                    ? Column(
-                        mainAxisAlignment: widget.mainAxisAlignment,
-                        mainAxisSize: widget.mainAxisSize,
-                        crossAxisAlignment: widget.crossAxisAlignment,
-                        textDirection: widget.textDirection,
-                        verticalDirection: widget.verticalDirection,
-                        textBaseline: widget.textBaseline,
-                        children: widget.children,
-                      )
-                    : null,
-          ),
+              ),
+          child: widget.childrenOrientation == ChildrenOrientation.Row
+              ? Row(
+                  mainAxisAlignment: widget.mainAxisAlignment,
+                  mainAxisSize: widget.mainAxisSize,
+                  crossAxisAlignment: widget.crossAxisAlignment,
+                  textDirection: widget.textDirection,
+                  verticalDirection: widget.verticalDirection,
+                  textBaseline: widget.textBaseline,
+                  children: widget.children,
+                )
+              : widget.childrenOrientation == ChildrenOrientation.Column
+                  ? Column(
+                      mainAxisAlignment: widget.mainAxisAlignment,
+                      mainAxisSize: widget.mainAxisSize,
+                      crossAxisAlignment: widget.crossAxisAlignment,
+                      textDirection: widget.textDirection,
+                      verticalDirection: widget.verticalDirection,
+                      textBaseline: widget.textBaseline,
+                      children: widget.children,
+                    )
+                  : null,
         ),
         onTap: widget.onPressed,
       ),
