@@ -9,12 +9,11 @@ export 'package:awesonestyle/src/floatDialog.dart';
 export 'package:awesonestyle/src/floatingWindow.dart';
 export 'package:awesonestyle/src/fondoBorroso.dart';
 export 'package:awesonestyle/src/icon_text_1.dart';
-export 'package:awesonestyle/src/input_text_1.dart';
+export 'package:awesonestyle/src/input_text.dart';
 export 'package:awesonestyle/src/listItem.dart';
 export 'package:awesonestyle/src/listScrollView.dart';
 export 'package:awesonestyle/src/text_url_1.dart';
 export 'package:awesonestyle/src/TextFieldEdit.dart';
 export 'package:awesonestyle/src/AniWidget.dart';
 export 'package:awesonestyle/src/Notify.dart';
-//
-//export 'package:animate_do/animate_do.dart';
+export 'package:awesonestyle/src/checkBox.dart';
