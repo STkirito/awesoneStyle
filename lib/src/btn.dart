@@ -420,18 +420,20 @@ class BtnSocial extends StatelessWidget {
 class BtnIconText1 extends StatefulWidget {
   final Key? key;
   final String? text;
-  final IconData? icon;
+  final IconData preffixIcon;
+  final IconData? suffixIcon;
   final TextStyle? textStyle;
   final double? iconSize;
   final Function()? onPressed;
 
   BtnIconText1(
       {this.text,
-      this.icon,
       this.onPressed,
       this.textStyle,
       this.iconSize,
-      this.key});
+      this.key,
+      required this.preffixIcon,
+      this.suffixIcon});
 
   @override
   _BtnIconText1State createState() => _BtnIconText1State();
@@ -453,18 +455,28 @@ class _BtnIconText1State extends State<BtnIconText1> {
             padding: EdgeInsetsDirectional.only(start: 5),
             child: TextButton.icon(
               icon: Icon(
-                widget.icon,
+                widget.preffixIcon,
                 color: Colors.white,
                 size: widget.iconSize ?? null,
               ),
-              label: Text(
-                widget.text.toString(),
-                style: widget.textStyle ??
-                    TextStyle(
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white,
-                    ),
-                textAlign: TextAlign.center,
+              label: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    widget.text.toString(),
+                    style: widget.textStyle ??
+                        TextStyle(
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white,
+                        ),
+                    textAlign: TextAlign.center,
+                  ),
+                  Icon(
+                    widget.suffixIcon,
+                    color: Colors.white,
+                    size: widget.iconSize ?? null,
+                  )
+                ],
               ),
               onPressed: widget.onPressed,
             ),
