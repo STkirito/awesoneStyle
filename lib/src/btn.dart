@@ -471,6 +471,7 @@ class _BtnIconText1State extends State<BtnIconText1> {
                         ),
                     textAlign: TextAlign.center,
                   ),
+                  SizedBox.expand(),
                   Icon(
                     widget.suffixIcon,
                     color: Colors.white,
