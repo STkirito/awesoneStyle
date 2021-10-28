@@ -3,7 +3,31 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class ShowDatePicker extends StatefulWidget {
+void showDatePicker(BuildContext context,
+    {required void Function(DateTime) onDateTimeChanged,
+    required Widget child}) {
+  showCupertinoModalPopup(
+      context: context,
+      builder: (_) => Container(
+            height: 320, //500
+            color: Colors.white,
+            child: Column(
+              children: [
+                Container(
+                  height: 250, //400
+                  child: CupertinoDatePicker(
+                      mode: CupertinoDatePickerMode.date,
+                      initialDateTime: DateTime.now(),
+                      onDateTimeChanged: onDateTimeChanged),
+                ),
+                // Cerrar Dialogo
+                child,
+              ],
+            ),
+          ));
+}
+
+/* class ShowDatePicker extends StatefulWidget {
   const ShowDatePicker({Key? key}) : super(key: key);
 
   @override
@@ -45,7 +69,7 @@ class _ShowDatePickerState extends State<ShowDatePicker> {
     // TODO: implement build
     throw UnimplementedError();
   }
-}
+} */
 /* 
 class DatePicker extends StatefulWidget {
   final String? text;
