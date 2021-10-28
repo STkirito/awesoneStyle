@@ -43,7 +43,7 @@ class Notify extends StatelessWidget {
         child: IconText1(
           padding: EdgeInsets.only(left: 20),
           text: text,
-          icon: icon,
+          preffixIcon: icon,
         ),
       ),
     );

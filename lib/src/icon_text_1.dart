@@ -4,10 +4,16 @@ import 'package:flutter/material.dart';
 // ignore: must_be_immutable
 class IconText1 extends StatefulWidget {
   final Text text;
-  final Icon icon;
+  final Icon preffixIcon;
+  final Icon? suffixIcon;
   final EdgeInsetsGeometry? padding;
   final double? space;
-  IconText1({required this.text, required this.icon, this.padding, this.space});
+  IconText1(
+      {required this.text,
+      required this.preffixIcon,
+      this.suffixIcon,
+      this.padding,
+      this.space});
 
   @override
   _IconText1State createState() => _IconText1State();
@@ -28,11 +34,15 @@ class _IconText1State extends State<IconText1> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                widget.icon,
+                widget.preffixIcon,
                 SizedBox(
                   width: widget.space ?? Medidas.width(2),
                 ),
                 widget.text,
+                SizedBox(
+                  width: widget.space ?? Medidas.width(2),
+                ),
+                widget.suffixIcon!,
               ],
             ),
           ),
