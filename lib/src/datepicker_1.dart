@@ -3,6 +3,50 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+class ShowDatePicker extends StatefulWidget {
+  const ShowDatePicker({Key? key}) : super(key: key);
+
+  @override
+  State<ShowDatePicker> createState() => _ShowDatePickerState();
+}
+
+class _ShowDatePickerState extends State<ShowDatePicker> {
+  void showDatePicker(BuildContext context,
+      {required void Function(DateTime) onDateTimeChanged}) {
+    showCupertinoModalPopup(
+        context: context,
+        builder: (_) => Container(
+              height: 320, //500
+              color: Colors.white,
+              child: Column(
+                children: [
+                  Container(
+                    height: 250, //400
+                    child: CupertinoDatePicker(
+                        mode: CupertinoDatePickerMode.date,
+                        initialDateTime: DateTime.now(),
+                        onDateTimeChanged: onDateTimeChanged),
+                  ),
+                  // Cerrar Dialogo
+                  CupertinoButton(
+                    child: Text('OK'),
+                    onPressed: () {
+                      setState(() {});
+                      Navigator.of(context).pop();
+                    },
+                  )
+                ],
+              ),
+            ));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    throw UnimplementedError();
+  }
+}
+/* 
 class DatePicker extends StatefulWidget {
   final String? text;
   final void Function(DateTime) onDateTimeChanged;
@@ -22,33 +66,9 @@ class DatePicker extends StatefulWidget {
 }
 
 class _DatePickerState extends State<DatePicker> {
-  void _showDatePicker(BuildContext context) {
-    showCupertinoModalPopup(
-        context: context,
-        builder: (_) => Container(
-              height: 320, //500
-              color: Colors.white,
-              child: Column(
-                children: [
-                  Container(
-                    height: 250, //400
-                    child: CupertinoDatePicker(
-                        mode: CupertinoDatePickerMode.date,
-                        initialDateTime: DateTime.now(),
-                        onDateTimeChanged: widget.onDateTimeChanged),
-                  ),
-                  // Cerrar Dialogo
-                  CupertinoButton(
-                    child: Text('OK'),
-                    onPressed: () {
-                      setState(() {});
-                      Navigator.of(context).pop();
-                    },
-                  )
-                ],
-              ),
-            ));
-  }
+  final picker = ShowDatePicker(
+    onDateTimeChanged: widget.onDateTimeChanged,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -63,3 +83,4 @@ class _DatePickerState extends State<DatePicker> {
     );
   }
 }
+ */
