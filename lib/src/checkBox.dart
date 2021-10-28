@@ -41,7 +41,7 @@ class _CheckboxTwoRowState extends State<CheckboxTwoRow> {
                 });
               },
             ),
-            Text('Masculino'),
+            Text(widget.text[0]),
           ],
         ),
         Row(
@@ -61,7 +61,7 @@ class _CheckboxTwoRowState extends State<CheckboxTwoRow> {
                 });
               },
             ),
-            Text('Femenino'),
+            Text(widget.text[1]),
           ],
         ),
       ],
