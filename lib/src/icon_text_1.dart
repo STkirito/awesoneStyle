@@ -5,13 +5,12 @@ import 'package:flutter/material.dart';
 class IconText1 extends StatefulWidget {
   final Text text;
   final Icon preffixIcon;
-  final Icon? suffixIcon;
+
   final EdgeInsetsGeometry? padding;
   final double? space;
   IconText1(
       {required this.text,
       required this.preffixIcon,
-      this.suffixIcon,
       this.padding,
       this.space});
 
@@ -39,10 +38,6 @@ class _IconText1State extends State<IconText1> {
                   width: widget.space ?? Medidas.width(2),
                 ),
                 widget.text,
-                SizedBox(
-                  width: widget.space ?? Medidas.width(2),
-                ),
-                widget.suffixIcon!,
               ],
             ),
           ),
