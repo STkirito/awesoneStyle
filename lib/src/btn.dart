@@ -421,19 +421,18 @@ class BtnIconText1 extends StatefulWidget {
   final Key? key;
   final String? text;
   final IconData preffixIcon;
-  final IconData? suffixIcon;
   final TextStyle? textStyle;
   final double? iconSize;
   final Function()? onPressed;
 
-  BtnIconText1(
-      {this.text,
-      this.onPressed,
-      this.textStyle,
-      this.iconSize,
-      this.key,
-      required this.preffixIcon,
-      this.suffixIcon});
+  BtnIconText1({
+    this.text,
+    this.onPressed,
+    this.textStyle,
+    this.iconSize,
+    this.key,
+    required this.preffixIcon,
+  });
 
   @override
   _BtnIconText1State createState() => _BtnIconText1State();
@@ -459,27 +458,14 @@ class _BtnIconText1State extends State<BtnIconText1> {
                 color: Colors.white,
                 size: widget.iconSize ?? null,
               ),
-              label: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    widget.text.toString(),
-                    style: widget.textStyle ??
-                        TextStyle(
-                          fontWeight: FontWeight.w400,
-                          color: Colors.white,
-                        ),
-                    textAlign: TextAlign.center,
-                  ),
-                  Positioned(
-                    right: 2,
-                    child: Icon(
-                      widget.suffixIcon,
+              label: Text(
+                widget.text.toString(),
+                style: widget.textStyle ??
+                    TextStyle(
+                      fontWeight: FontWeight.w400,
                       color: Colors.white,
-                      size: widget.iconSize ?? null,
                     ),
-                  )
-                ],
+                textAlign: TextAlign.center,
               ),
               onPressed: widget.onPressed,
             ),
