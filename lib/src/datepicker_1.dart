@@ -5,7 +5,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void showDatePicker(BuildContext context,
     {required void Function(DateTime) onDateTimeChanged,
-    required Widget child}) {
+    required Widget child,
+    CupertinoDatePickerMode mode = CupertinoDatePickerMode.date}) {
   showCupertinoModalPopup(
       context: context,
       builder: (_) => Container(
@@ -16,7 +17,7 @@ void showDatePicker(BuildContext context,
                 Container(
                   height: 250, //400
                   child: CupertinoDatePicker(
-                      mode: CupertinoDatePickerMode.date,
+                      mode: mode,
                       initialDateTime: DateTime.now(),
                       onDateTimeChanged: onDateTimeChanged),
                 ),
