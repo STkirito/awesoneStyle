@@ -257,9 +257,12 @@ class FormInputText extends StatefulWidget {
   final InputBorder? disabledBorder;
   final InputBorder? border;
   TextEditingController? controller;
-
+  final bool autocorrect;
+  String? Function(String?)? validator;
   FormInputText(
-      {this.hintText,
+      {this.validator,
+      this.autocorrect = true,
+      this.hintText,
       this.icon,
       this.obscureText = false,
       this.textInputTipe = TextInputType.text,
@@ -303,6 +306,8 @@ class _FormInputTextState extends State<FormInputText> {
       padding: widget.padding ?? EdgeInsets.all(10),
       width: Medidas.width(widget.width ?? 100),
       child: TextFormField(
+        autocorrect: widget.autocorrect,
+        validator: widget.validator,
         onChanged: widget.onChanged,
         onEditingComplete: widget.onEditingComplete,
         onTap: widget.onTap,
