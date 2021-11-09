@@ -13,6 +13,7 @@ class DropdownInput extends StatefulWidget {
   final Color? dropdownColor;
   final List<String> values;
   final Decoration? decoration;
+  final Color? iconEnabledColor;
   DropdownInput(
       {this.padding,
       this.width,
@@ -23,7 +24,8 @@ class DropdownInput extends StatefulWidget {
       this.icon,
       this.dropdownColor,
       required this.values,
-      this.decoration});
+      this.decoration,
+      this.iconEnabledColor});
 
   @override
   _DropdownInputState createState() => _DropdownInputState();
@@ -44,10 +46,10 @@ class _DropdownInputState extends State<DropdownInput> {
           value: widget.dropdownValue,
           icon: Icon(widget.icon ?? Icons.arrow_drop_down),
           iconSize: widget.iconSize ?? 40,
-          iconEnabledColor: widget.dropdownColor ?? Colors.white,
+          iconEnabledColor: widget.iconEnabledColor ?? Colors.white,
           elevation: 16,
           style: widget.textStyle ?? const TextStyle(color: Colors.white),
-          dropdownColor: Colors.transparent,
+          dropdownColor: widget.dropdownColor ?? Colors.transparent,
           isExpanded: true,
           underline: Container(
             height: 0,
