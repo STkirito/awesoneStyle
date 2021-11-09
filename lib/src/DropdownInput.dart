@@ -12,6 +12,7 @@ class DropdownInput extends StatefulWidget {
   final EdgeInsetsGeometry? padding;
   final Color? dropdownColor;
   final List<String> values;
+  final Decoration? decoration;
   DropdownInput(
       {this.padding,
       this.width,
@@ -21,7 +22,8 @@ class DropdownInput extends StatefulWidget {
       required this.onChanged,
       this.icon,
       this.dropdownColor,
-      required this.values});
+      required this.values,
+      this.decoration});
 
   @override
   _DropdownInputState createState() => _DropdownInputState();
@@ -31,10 +33,11 @@ class _DropdownInputState extends State<DropdownInput> {
   //String dropdownValue = 'Asunto 1';
 
   Widget _dropdownButton() => Container(
-        decoration: BoxDecoration(
-          color: Colors.black12,
-          borderRadius: BorderRadius.circular(34),
-        ),
+        decoration: widget.decoration ??
+            BoxDecoration(
+              color: Colors.black12,
+              borderRadius: BorderRadius.circular(34),
+            ),
         padding: widget.padding ?? EdgeInsets.all(10),
         width: Medidas.width(widget.width ?? 100),
         child: DropdownButton<String>(
