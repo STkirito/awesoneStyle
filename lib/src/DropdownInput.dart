@@ -14,6 +14,7 @@ class DropdownInput extends StatefulWidget {
   final List<String> values;
   final Decoration? decoration;
   final Color? iconEnabledColor;
+  final BorderRadius? borderRadius;
   DropdownInput(
       {this.padding,
       this.width,
@@ -25,7 +26,8 @@ class DropdownInput extends StatefulWidget {
       this.dropdownColor,
       required this.values,
       this.decoration,
-      this.iconEnabledColor});
+      this.iconEnabledColor,
+      this.borderRadius});
 
   @override
   _DropdownInputState createState() => _DropdownInputState();
@@ -63,6 +65,7 @@ class _DropdownInputState extends State<DropdownInput> {
               ),
             );
           }).toList(),
+          borderRadius: widget.borderRadius,
         ),
       );
   @override
