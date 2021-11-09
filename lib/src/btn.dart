@@ -15,8 +15,10 @@ class BTN1 extends StatelessWidget {
   final Matrix4? transform;
   final AlignmentGeometry? transformAlignment;
   final Clip clipBehavior;
+  final Color? backgroundColor;
   final Text child;
   BTN1({
+    this.backgroundColor,
     this.width,
     this.key,
     this.alignment,
@@ -48,7 +50,7 @@ class BTN1 extends StatelessWidget {
       width: width ?? Medidas.width(30),
       decoration: decoration ??
           BoxDecoration(
-              color: Color(0xFFFF422C),
+              color: backgroundColor ?? Color(0xFFFF422C),
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20),
                 bottomRight: Radius.circular(20),
