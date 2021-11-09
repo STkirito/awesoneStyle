@@ -15,6 +15,8 @@ class DropdownInput extends StatefulWidget {
   final Decoration? decoration;
   final Color? iconEnabledColor;
   final BorderRadius? borderRadius;
+  final Widget? hint;
+  final Widget? disabledHint;
   DropdownInput(
       {this.padding,
       this.width,
@@ -27,7 +29,9 @@ class DropdownInput extends StatefulWidget {
       required this.values,
       this.decoration,
       this.iconEnabledColor,
-      this.borderRadius});
+      this.borderRadius,
+      this.hint,
+      this.disabledHint});
 
   @override
   _DropdownInputState createState() => _DropdownInputState();
@@ -45,6 +49,8 @@ class _DropdownInputState extends State<DropdownInput> {
         padding: widget.padding ?? EdgeInsets.all(10),
         width: Medidas.width(widget.width ?? 100),
         child: DropdownButton<String>(
+          hint: widget.hint,
+          disabledHint: widget.disabledHint,
           value: widget.dropdownValue,
           icon: Icon(widget.icon ?? Icons.arrow_drop_down),
           iconSize: widget.iconSize ?? 40,
