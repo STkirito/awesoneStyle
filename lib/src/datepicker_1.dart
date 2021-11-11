@@ -3,10 +3,22 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-void showDatePicker(BuildContext context,
-    {required void Function(DateTime) onDateTimeChanged,
-    required Widget child,
-    CupertinoDatePickerMode mode = CupertinoDatePickerMode.date}) {
+void showDatePicker(
+  BuildContext context, {
+  Key? key,
+  required void Function(DateTime) onDateTimeChanged,
+  required Widget child,
+  CupertinoDatePickerMode mode = CupertinoDatePickerMode.date,
+  DateTime? initialDateTime,
+  DateTime? minimumDate,
+  DateTime? maximumDate,
+  int minimumYear = 1,
+  int? maximumYear,
+  int minuteInterval = 1,
+  bool use24hFormat = false,
+  DatePickerDateOrder? dateOrder,
+  Color? backgroundColor,
+}) {
   showCupertinoModalPopup(
       context: context,
       builder: (_) => Container(
@@ -17,9 +29,18 @@ void showDatePicker(BuildContext context,
                 Container(
                   height: 250, //400
                   child: CupertinoDatePicker(
-                      mode: mode,
-                      initialDateTime: DateTime.now(),
-                      onDateTimeChanged: onDateTimeChanged),
+                    mode: mode,
+                    initialDateTime: initialDateTime ?? DateTime.now(),
+                    onDateTimeChanged: onDateTimeChanged,
+                    minimumDate: minimumDate,
+                    minimumYear: minimumYear,
+                    maximumYear: maximumYear,
+                    maximumDate: maximumDate,
+                    minuteInterval: minuteInterval,
+                    use24hFormat: use24hFormat,
+                    dateOrder: dateOrder,
+                    backgroundColor: backgroundColor,
+                  ),
                 ),
                 // Cerrar Dialogo
                 child,
