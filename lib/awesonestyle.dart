@@ -17,3 +17,5 @@ export 'package:awesonestyle/src/TextFieldEdit.dart';
 export 'package:awesonestyle/src/AniWidget.dart';
 export 'package:awesonestyle/src/Notify.dart';
 export 'package:awesonestyle/src/checkBox.dart';
+export 'package:awesonestyle/src/AllInterface.dart';
+export 'package:awesonestyle/src/list.dart';
