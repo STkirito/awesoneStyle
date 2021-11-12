@@ -33,16 +33,23 @@ Future floatDialog(BuildContext context,
             ? []
             : <Widget>[
                 if (buttonType == ButtonDialog.OK)
-                  TextButton(onPressed: onOk, child: const Text('OK')),
+                  Center(
+                      child:
+                          TextButton(onPressed: onOk, child: const Text('OK'))),
                 if (buttonType == ButtonDialog.CHANGE)
-                  TextButton(
-                      onPressed: onChanged, child: const Text('CAMBIAR')),
+                  Center(
+                    child: TextButton(
+                        onPressed: onChanged, child: const Text('CAMBIAR')),
+                  ),
                 if (buttonType == ButtonDialog.CANCEL)
-                  TextButton(
-                      onPressed: onCancel, child: const Text('CANCELAR')),
+                  Center(
+                    child: TextButton(
+                        onPressed: onCancel, child: const Text('CANCELAR')),
+                  ),
                 //
                 if (buttonType == ButtonDialog.CHANGEANDCANCEL)
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       TextButton(
                           onPressed: onCancel, child: const Text('CANCELAR')),
