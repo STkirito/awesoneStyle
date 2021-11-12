@@ -1,4 +1,5 @@
 import 'package:awesonestyle/services/Constantes.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 Future floatDialog(BuildContext context,
@@ -11,14 +12,14 @@ Future floatDialog(BuildContext context,
     Widget? title,
     Widget? notify,
     Widget? message,
-    ButtonDialog buttonType = ButtonDialog.OK}) {
+    ButtonDialog buttonType = ButtonDialog.NULL}) {
   if (value.toString().length != 0 && value != null) {
     buttonType = ButtonDialog.CHANGEANDCANCEL;
   }
   return showDialog<void>(
     context: context,
     builder: (BuildContext context) {
-      return AlertDialog(
+      return CupertinoAlertDialog(
         title: title != null ? title : const Text('Editar...'),
         content: content != null
             ? content
@@ -28,23 +29,29 @@ Future floatDialog(BuildContext context,
                 : message ??
                     Text(
                         'Esta seguro de cambiar "${valueInitial.toString()}" por "${value.toString()}".'),
-        actions: <Widget>[
-          if (buttonType == ButtonDialog.OK)
-            TextButton(onPressed: onOk, child: const Text('OK')),
-          if (buttonType == ButtonDialog.CHANGE)
-            TextButton(onPressed: onChanged, child: const Text('CAMBIAR')),
-          if (buttonType == ButtonDialog.CANCEL)
-            TextButton(onPressed: onCancel, child: const Text('CANCELAR')),
-          //
-          if (buttonType == ButtonDialog.CHANGEANDCANCEL)
-            Row(
-              children: [
-                TextButton(onPressed: onCancel, child: const Text('CANCELAR')),
-                SizedBox(width: Medidas.width(2)),
-                TextButton(onPressed: onChanged, child: const Text('CAMBIAR')),
+        actions: buttonType == ButtonDialog.NULL
+            ? []
+            : <Widget>[
+                if (buttonType == ButtonDialog.OK)
+                  TextButton(onPressed: onOk, child: const Text('OK')),
+                if (buttonType == ButtonDialog.CHANGE)
+                  TextButton(
+                      onPressed: onChanged, child: const Text('CAMBIAR')),
+                if (buttonType == ButtonDialog.CANCEL)
+                  TextButton(
+                      onPressed: onCancel, child: const Text('CANCELAR')),
+                //
+                if (buttonType == ButtonDialog.CHANGEANDCANCEL)
+                  Row(
+                    children: [
+                      TextButton(
+                          onPressed: onCancel, child: const Text('CANCELAR')),
+                      SizedBox(width: Medidas.width(2)),
+                      TextButton(
+                          onPressed: onChanged, child: const Text('CAMBIAR')),
+                    ],
+                  ),
               ],
-            ),
-        ],
       );
     },
   );
