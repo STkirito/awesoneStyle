@@ -19,6 +19,9 @@ Future floatDialog(BuildContext context,
     Icon okIcon = const Icon(Icons.check_circle),
     Icon changedIcon = const Icon(Icons.change_circle),
     Icon cancelIcon = const Icon(Icons.cancel),
+    TextStyle? okTextStyle,
+    TextStyle? changedTextStyle,
+    TextStyle? cancelTextStyle,
     List<Widget> actions = const <Widget>[],
     ButtonType buttonType = ButtonType.Text,
     ButtonDialog buttonDialog = ButtonDialog.NULL}) {
@@ -50,11 +53,18 @@ Future floatDialog(BuildContext context,
                             children: [
                               TextButton(
                                   onPressed: onCancel,
-                                  child: const Text('CANCELAR')),
+                                  child: Text(
+                                    'CANCELAR',
+                                    style: cancelTextStyle,
+                                  )),
                               SizedBox(width: Medidas.width(2)),
                               TextButton(
+                                  style: cancelStyle,
                                   onPressed: onChanged,
-                                  child: const Text('CAMBIAR')),
+                                  child: Text(
+                                    'CAMBIAR',
+                                    style: changedTextStyle,
+                                  )),
                             ],
                           ),
                         if (buttonType == ButtonType.IconText)
@@ -65,13 +75,19 @@ Future floatDialog(BuildContext context,
                                 style: cancelStyle,
                                 onPressed: onCancel,
                                 icon: cancelIcon,
-                                label: const Text('CANCELAR'),
+                                label: Text(
+                                  'CANCELAR',
+                                  style: cancelTextStyle,
+                                ),
                               ),
                               TextButton.icon(
                                 style: changedStyle,
                                 onPressed: onChanged,
                                 icon: changedIcon,
-                                label: const Text('CAMBIAR'),
+                                label: Text(
+                                  'CAMBIAR',
+                                  style: changedTextStyle,
+                                ),
                               )
                             ],
                           ),
@@ -84,11 +100,15 @@ Future floatDialog(BuildContext context,
                                       style: okStyle,
                                       onPressed: onOk,
                                       icon: okIcon,
-                                      label: const Text('OK'),
+                                      label: Text(
+                                        'OK',
+                                        style: okTextStyle,
+                                      ),
                                     )
                                   : TextButton(
+                                      style: okStyle,
                                       onPressed: onOk,
-                                      child: const Text('OK'))),
+                                      child: Text('OK', style: okTextStyle))),
                         if (buttonDialog == ButtonDialog.CHANGE)
                           Center(
                             child: buttonType != ButtonType.Text
@@ -96,11 +116,16 @@ Future floatDialog(BuildContext context,
                                     style: changedStyle,
                                     onPressed: onChanged,
                                     icon: changedIcon,
-                                    label: const Text('CAMBIAR'),
+                                    label: Text('CAMBIAR',
+                                        style: changedTextStyle),
                                   )
                                 : TextButton(
+                                    style: changedStyle,
                                     onPressed: onChanged,
-                                    child: const Text('CAMBIAR')),
+                                    child: Text(
+                                      'CAMBIAR',
+                                      style: changedTextStyle,
+                                    )),
                           ),
                         if (buttonDialog == ButtonDialog.CANCEL)
                           Center(
@@ -109,11 +134,18 @@ Future floatDialog(BuildContext context,
                                     style: cancelStyle,
                                     onPressed: onCancel,
                                     icon: cancelIcon,
-                                    label: const Text('CANCELAR'),
+                                    label: Text(
+                                      'CANCELAR',
+                                      style: cancelTextStyle,
+                                    ),
                                   )
                                 : TextButton(
+                                    style: cancelStyle,
                                     onPressed: onCancel,
-                                    child: const Text('CANCELAR')),
+                                    child: Text(
+                                      'CANCELAR',
+                                      style: cancelTextStyle,
+                                    )),
                           ),
                       ],
       );
