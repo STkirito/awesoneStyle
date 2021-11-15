@@ -82,32 +82,38 @@ Future floatDialog(BuildContext context,
                       ),
                     //
                     if (buttonDialog == ButtonDialog.CHANGEANDCANCEL)
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          if (buttonType == ButtonType.Text)
+                      if (buttonType == ButtonType.Text)
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
                             TextButton(
                                 onPressed: onCancel,
                                 child: const Text('CANCELAR')),
-                          SizedBox(width: Medidas.width(2)),
-                          TextButton(
-                              onPressed: onChanged,
-                              child: const Text('CAMBIAR')),
-                          if (buttonType == ButtonType.IconText)
+                            SizedBox(width: Medidas.width(2)),
+                            TextButton(
+                                onPressed: onChanged,
+                                child: const Text('CAMBIAR')),
+                          ],
+                        ),
+                    if (buttonDialog == ButtonDialog.CHANGEANDCANCEL)
+                      if (buttonType == ButtonType.IconText)
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
                             TextButton.icon(
                               style: cancelStyle,
                               onPressed: onCancel,
                               icon: cancelIcon,
                               label: const Text('CANCELAR'),
                             ),
-                          TextButton.icon(
-                            style: changedStyle,
-                            onPressed: onChanged,
-                            icon: changedIcon,
-                            label: const Text('CAMBIAR'),
-                          )
-                        ],
-                      ),
+                            TextButton.icon(
+                              style: changedStyle,
+                              onPressed: onChanged,
+                              icon: changedIcon,
+                              label: const Text('CAMBIAR'),
+                            )
+                          ],
+                        ),
                   ],
       );
     },
