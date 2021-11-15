@@ -42,79 +42,80 @@ Future floatDialog(BuildContext context,
             ? []
             : buttonDialog == ButtonDialog.ACTIONS
                 ? actions
-                : <Widget>[
-                    if (buttonDialog == ButtonDialog.OK)
-                      Center(
-                          child: buttonType != ButtonType.Text
-                              ? TextButton.icon(
-                                  style: okStyle,
-                                  onPressed: onOk,
-                                  icon: okIcon,
-                                  label: const Text('OK'),
-                                )
-                              : TextButton(
-                                  onPressed: onOk, child: const Text('OK'))),
-                    if (buttonDialog == ButtonDialog.CHANGE)
-                      Center(
-                        child: buttonType != ButtonType.Text
-                            ? TextButton.icon(
+                : buttonDialog == ButtonDialog.CHANGEANDCANCEL
+                    ? [
+                        if (buttonType == ButtonType.Text)
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              TextButton(
+                                  onPressed: onCancel,
+                                  child: const Text('CANCELAR')),
+                              SizedBox(width: Medidas.width(2)),
+                              TextButton(
+                                  onPressed: onChanged,
+                                  child: const Text('CAMBIAR')),
+                            ],
+                          ),
+                        if (buttonType == ButtonType.IconText)
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              TextButton.icon(
+                                style: cancelStyle,
+                                onPressed: onCancel,
+                                icon: cancelIcon,
+                                label: const Text('CANCELAR'),
+                              ),
+                              TextButton.icon(
                                 style: changedStyle,
                                 onPressed: onChanged,
                                 icon: changedIcon,
                                 label: const Text('CAMBIAR'),
                               )
-                            : TextButton(
-                                onPressed: onChanged,
-                                child: const Text('CAMBIAR')),
-                      ),
-                    if (buttonDialog == ButtonDialog.CANCEL)
-                      Center(
-                        child: buttonType != ButtonType.Text
-                            ? TextButton.icon(
-                                style: cancelStyle,
-                                onPressed: onCancel,
-                                icon: cancelIcon,
-                                label: const Text('CANCELAR'),
-                              )
-                            : TextButton(
-                                onPressed: onCancel,
-                                child: const Text('CANCELAR')),
-                      ),
-                    //
-                    if (buttonDialog == ButtonDialog.CHANGEANDCANCEL)
-                      if (buttonType == ButtonType.Text)
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            TextButton(
-                                onPressed: onCancel,
-                                child: const Text('CANCELAR')),
-                            SizedBox(width: Medidas.width(2)),
-                            TextButton(
-                                onPressed: onChanged,
-                                child: const Text('CAMBIAR')),
-                          ],
-                        ),
-                    if (buttonDialog == ButtonDialog.CHANGEANDCANCEL)
-                      if (buttonType == ButtonType.IconText)
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            TextButton.icon(
-                              style: cancelStyle,
-                              onPressed: onCancel,
-                              icon: cancelIcon,
-                              label: const Text('CANCELAR'),
-                            ),
-                            TextButton.icon(
-                              style: changedStyle,
-                              onPressed: onChanged,
-                              icon: changedIcon,
-                              label: const Text('CAMBIAR'),
-                            )
-                          ],
-                        ),
-                  ],
+                            ],
+                          ),
+                      ]
+                    : <Widget>[
+                        if (buttonDialog == ButtonDialog.OK)
+                          Center(
+                              child: buttonType != ButtonType.Text
+                                  ? TextButton.icon(
+                                      style: okStyle,
+                                      onPressed: onOk,
+                                      icon: okIcon,
+                                      label: const Text('OK'),
+                                    )
+                                  : TextButton(
+                                      onPressed: onOk,
+                                      child: const Text('OK'))),
+                        if (buttonDialog == ButtonDialog.CHANGE)
+                          Center(
+                            child: buttonType != ButtonType.Text
+                                ? TextButton.icon(
+                                    style: changedStyle,
+                                    onPressed: onChanged,
+                                    icon: changedIcon,
+                                    label: const Text('CAMBIAR'),
+                                  )
+                                : TextButton(
+                                    onPressed: onChanged,
+                                    child: const Text('CAMBIAR')),
+                          ),
+                        if (buttonDialog == ButtonDialog.CANCEL)
+                          Center(
+                            child: buttonType != ButtonType.Text
+                                ? TextButton.icon(
+                                    style: cancelStyle,
+                                    onPressed: onCancel,
+                                    icon: cancelIcon,
+                                    label: const Text('CANCELAR'),
+                                  )
+                                : TextButton(
+                                    onPressed: onCancel,
+                                    child: const Text('CANCELAR')),
+                          ),
+                      ],
       );
     },
   );
