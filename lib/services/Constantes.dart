@@ -19,7 +19,8 @@ class Medidas {
 }
 
 enum ChildrenOrientation { Row, Column }
-enum ButtonDialog { OK, CHANGE, CANCEL, CHANGEANDCANCEL, NULL }
+enum ButtonDialog { OK, CHANGE, CANCEL, CHANGEANDCANCEL, ACTIONS, NULL }
+enum ButtonType { Text, IconText }
 enum AnimationDo {
   FadeIn,
   FadeInDown,

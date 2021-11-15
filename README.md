@@ -1,48 +1,13 @@
+### v0.16.10
 # awesonestyle
 
 AwesoneStyle widget pack
-ss
-## Getting Started
 
-Widgets:
+## Widgets
 
--BadgeWidgets
 
--BottonNaviBar
 
--BottonNaviBarItem
 
--BottonTabBar
-
--BottonTabBarItem
-
--Btn_1
-
--Btn_2
-
--Btn_3
-
--BtnIconText1
-
--DatePicker
-
--FloatingWindow
-
--FondoBorroso
-
--IconText1
-
--InputText1
-
--ListItem
-
--ListScrollViewBuilder
-
--Text_url_1
-
-Animación:
-
--animate_do
 
 
 This project is a starting point for a Dart
