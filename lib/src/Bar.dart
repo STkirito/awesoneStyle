@@ -3,20 +3,27 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:motion_tab_bar_v2/motion-tab-bar.dart';
 
-class BarPageView extends StatefulWidget {
-  final TabController controller;
+/* class BarPageView extends StatefulWidget {
+  final TabController? controller;
+  final int index;
   final List<Widget> pages;
 
-  const BarPageView({required this.controller, required this.pages});
+  const BarPageView({required this.controller, required this.pages, this.index=0});
   @override
   _BarPageViewState createState() => _BarPageViewState();
-}
+} */
 
-class _BarPageViewState extends State<BarPageView> {
+class BarPageView extends StatelessWidget {
+  final TabController? controller;
+  final int index;
+  final List<Widget> pages;
+
+  const BarPageView(
+      {required this.controller, required this.pages, this.index = 0});
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: widget.pages[widget.controller.index],
+      child: this.pages[this.index],
     );
   }
 }
