@@ -14,12 +14,10 @@ import 'package:motion_tab_bar_v2/motion-tab-bar.dart';
 } */
 
 class BarPageView extends StatelessWidget {
-  final TabController? controller;
   final int index;
   final List<Widget> pages;
 
-  const BarPageView(
-      {required this.controller, required this.pages, this.index = 0});
+  const BarPageView({required this.pages, this.index = 0});
   @override
   Widget build(BuildContext context) {
     return Container(
