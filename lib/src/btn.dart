@@ -2,6 +2,7 @@ import 'package:awesonestyle/services/Constantes.dart';
 import 'package:flutter/material.dart';
 
 class BTN1 extends StatelessWidget {
+  final ButtonType buttonType;
   final Key? key;
   final Function()? onPressed;
   final AlignmentGeometry? alignment;
@@ -17,7 +18,8 @@ class BTN1 extends StatelessWidget {
   final Clip clipBehavior;
   final Color? backgroundColor;
   final Gradient? gradient;
-  final Text child;
+  final Text text;
+  final Widget? icon;
   BTN1({
     this.gradient,
     this.backgroundColor,
@@ -33,8 +35,10 @@ class BTN1 extends StatelessWidget {
     this.transform,
     this.transformAlignment,
     this.clipBehavior = Clip.none,
-    required this.child,
+    required this.text,
     required this.onPressed,
+    required this.buttonType,
+    this.icon,
   });
   @override
   Widget build(BuildContext context) {
@@ -59,10 +63,16 @@ class BTN1 extends StatelessWidget {
             ),
             gradient: this.gradient,
           ),
-      child: TextButton(
-        child: child,
-        onPressed: onPressed,
-      ),
+      child: buttonType == ButtonType.Text
+          ? TextButton(
+              child: text,
+              onPressed: onPressed,
+            )
+          : TextButton.icon(
+              onPressed: onPressed,
+              icon: icon ?? Icon(Icons.ac_unit),
+              label: text,
+            ),
     );
   }
 }
