@@ -241,7 +241,7 @@ class BTN4 extends StatefulWidget {
   final TextDirection? textDirection;
   final VerticalDirection verticalDirection;
   final TextBaseline? textBaseline;
-  final Function() onPressed;
+  final Function()? onPressed;
 
   BTN4(
       {this.key,
