@@ -28,6 +28,7 @@ class Dome extends StatelessWidget {
   final bool drawerEnableOpenDragGesture;
   final bool endDrawerEnableOpenDragGesture;
   final String? restorationId;
+  final bool? activeDecoration;
   final Key? key;
   const Dome({
     this.key,
@@ -55,29 +56,32 @@ class Dome extends StatelessWidget {
     this.endDrawerEnableOpenDragGesture = true,
     this.extendBuilder = false,
     this.extendBuilderBehindAppBar = false,
+    this.activeDecoration = true,
   });
 
   @override
   Widget build(BuildContext context) => Material(
         color: primaryColor ?? Colors.lightGreenAccent,
         child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              tileMode: TileMode.mirror,
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: secondaryColors ??
-                  [
-                    Color(0xfffbc8c8),
-                    Color(0xff259fff),
-                  ],
-              stops: [
-                0,
-                1,
-              ],
-            ),
-            backgroundBlendMode: BlendMode.difference,
-          ),
+          decoration: activeDecoration == true
+              ? BoxDecoration(
+                  gradient: LinearGradient(
+                    tileMode: TileMode.mirror,
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: secondaryColors ??
+                        [
+                          Color(0xfffbc8c8),
+                          Color(0xff259fff),
+                        ],
+                    stops: [
+                      0,
+                      1,
+                    ],
+                  ),
+                  backgroundBlendMode: BlendMode.difference,
+                )
+              : null,
           child: Scaffold(
             appBar: appBar,
             body: builder(),
