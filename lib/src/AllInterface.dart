@@ -29,6 +29,7 @@ class Dome extends StatelessWidget {
   final bool endDrawerEnableOpenDragGesture;
   final String? restorationId;
   final bool? activeDecoration;
+  final DecorationImage? image;
   final Key? key;
   const Dome({
     this.key,
@@ -57,6 +58,7 @@ class Dome extends StatelessWidget {
     this.extendBuilder = false,
     this.extendBuilderBehindAppBar = false,
     this.activeDecoration = true,
+    this.image,
   });
 
   @override
@@ -65,6 +67,7 @@ class Dome extends StatelessWidget {
         child: Container(
           decoration: activeDecoration == true
               ? BoxDecoration(
+                  image: image,
                   gradient: LinearGradient(
                     tileMode: TileMode.mirror,
                     begin: Alignment.topLeft,
