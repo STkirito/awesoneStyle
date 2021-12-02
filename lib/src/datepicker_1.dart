@@ -18,16 +18,18 @@ void showDatePicker(
   bool use24hFormat = false,
   DatePickerDateOrder? dateOrder,
   Color? backgroundColor,
+  double? height = 320,
+  double? pickerHeight = 250,
 }) {
   showCupertinoModalPopup(
       context: context,
       builder: (_) => Container(
-            height: 320, //500
+            height: height, //500
             color: Colors.white,
             child: Column(
               children: [
                 Container(
-                  height: 250, //400
+                  height: pickerHeight, //400
                   child: CupertinoDatePicker(
                     mode: mode,
                     initialDateTime: initialDateTime ?? DateTime.now(),
