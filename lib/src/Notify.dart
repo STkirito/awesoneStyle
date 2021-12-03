@@ -56,7 +56,7 @@ class Notify extends StatelessWidget {
   }
 }
 
-void getSnackbar(
+getSnackbar(
   String title, {
   String? message,
   Gradient? backgroundGradient,
@@ -79,9 +79,9 @@ void getSnackbar(
   double? borderWidth,
   Color? leftBarIndicatorColor,
   TextButton? mainButton,
-  void Function(GetBar<Object>)? onTap,
+  void Function(GetSnackBar)? onTap,
   bool? showProgressIndicator,
-  SnackDismissDirection? dismissDirection,
+  DismissDirection? dismissDirection,
   AnimationController? progressIndicatorController,
   Color? progressIndicatorBackgroundColor,
   Animation<Color>? progressIndicatorValueColor,
