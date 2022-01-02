@@ -1,4 +1,4 @@
-import 'package:awesonestyle/services/Constantes.dart';
+import 'package:awesonestyle/src/Constantes.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable

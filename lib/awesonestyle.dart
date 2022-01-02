@@ -1,5 +1,7 @@
 library awesonestyle;
 
+export 'package:awesonestyle/src/Constantes.dart';
+
 export 'package:awesonestyle/src/Badget.dart';
 export 'package:awesonestyle/src/Bar.dart';
 export 'package:awesonestyle/src/btn.dart';

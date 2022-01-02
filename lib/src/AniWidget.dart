@@ -1,5 +1,5 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:awesonestyle/services/Constantes.dart';
+import 'package:awesonestyle/src/Constantes.dart';
 import 'package:flutter/material.dart';
 
 class AniWidget extends StatefulWidget {

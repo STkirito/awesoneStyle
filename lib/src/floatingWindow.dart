@@ -1,4 +1,4 @@
-import 'package:awesonestyle/services/Constantes.dart';
+import 'package:awesonestyle/src/Constantes.dart';
 import 'package:flutter/material.dart';
 
 class FloatingWindow extends StatefulWidget {
@@ -57,7 +57,7 @@ class _FloatingWindowState extends State<FloatingWindow> {
               child: SizedBox(
                 child: widget.child,
                 height:
-                    Medidas.heigth(widget.singleChildScrollViewHeight ?? 75),
+                    Medidas.height(widget.singleChildScrollViewHeight ?? 75),
               ),
             ),
     );

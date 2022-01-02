@@ -1,5 +1,5 @@
 import 'package:awesonestyle/awesonestyle.dart';
-import 'package:awesonestyle/services/Constantes.dart';
+import 'package:awesonestyle/src/Constantes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -20,7 +20,7 @@ class Notify extends StatelessWidget {
 
   Widget _child() {
     return Container(
-      height: height ?? Medidas.heigth(8),
+      height: height ?? Medidas.height(8),
       width: width ?? Medidas.width(80),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
@@ -79,11 +79,11 @@ getSnackbar(
   double? borderWidth,
   Color? leftBarIndicatorColor,
   TextButton? mainButton,
-  void Function(GetBar<Object>)? onTap,
-  /* void Function(GetSnackBar)? onTap, */
+  /* void Function(GetBar<Object>)? onTap, */
+  void Function(GetSnackBar)? onTap,
   bool? showProgressIndicator,
-  /* DismissDirection? dismissDirection, */
-  SnackDismissDirection? dismissDirection,
+  DismissDirection? dismissDirection,
+  /* SnackDismissDirection? dismissDirection, */
   AnimationController? progressIndicatorController,
   Color? progressIndicatorBackgroundColor,
   Animation<Color>? progressIndicatorValueColor,

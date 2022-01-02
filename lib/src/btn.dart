@@ -1,4 +1,4 @@
-import 'package:awesonestyle/services/Constantes.dart';
+import 'package:awesonestyle/src/Constantes.dart';
 import 'package:flutter/material.dart';
 
 class BTN1 extends StatelessWidget {
@@ -52,7 +52,7 @@ class BTN1 extends StatelessWidget {
       transformAlignment: transformAlignment,
       clipBehavior: clipBehavior,
       padding: padding ?? EdgeInsets.all(5),
-      height: height ?? Medidas.heigth(6),
+      height: height ?? Medidas.height(6),
       width: width ?? Medidas.width(30),
       decoration: decoration ??
           BoxDecoration(
@@ -282,7 +282,7 @@ class _BTN4State extends State<BTN4> {
         transformAlignment: widget.transformAlignment,
         clipBehavior: widget.clipBehavior,
         padding: EdgeInsets.all(5),
-        height: widget.height ?? Medidas.heigth(6),
+        height: widget.height ?? Medidas.height(6),
         width: widget.width ?? Medidas.width(35),
         decoration: widget.decoration ??
             BoxDecoration(
