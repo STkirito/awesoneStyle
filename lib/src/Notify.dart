@@ -122,7 +122,7 @@ getSnackbar(
           BoxShadow(color: Colors.lightBlueAccent, blurRadius: 10),
         ],
     isDismissible: isDismissible,
-    duration: duration,
+    duration: duration ?? Duration(milliseconds: 2500),
     instantInit: instantInit,
     snackPosition: snackPosition,
     titleText: titleText,
