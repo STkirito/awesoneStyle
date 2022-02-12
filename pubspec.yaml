@@ -15,6 +15,7 @@ dependencies:
   motion_tab_bar_v2: ^0.2.4
   animate_do: ^2.0.0
   get: 4.6.1
+  connectivity_plus: ^2.0.3
 dev_dependencies:
   flutter_test:
     sdk: flutter
