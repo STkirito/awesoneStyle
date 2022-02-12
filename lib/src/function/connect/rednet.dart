@@ -5,15 +5,20 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 class RedNet {
   Timer? _timer;
   Duration delay;
+  bool _state = false;
   String url;
   RedNet(
       {this.url = 'www.google.com',
       this.delay = const Duration(milliseconds: 1)});
-  void check() {
+
+  bool check() {
     if (_timer != null) {
       _timer!.cancel();
     }
-    _timer = Timer(delay, () => this._connect());
+    _timer = Timer(delay, () async {
+      _state = await this._connect();
+    });
+    return _state;
   }
 
   Future<bool> _connect() async {
