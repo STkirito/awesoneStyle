@@ -5,7 +5,7 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 class RedNet {
   Timer? _timer;
   Duration delay;
-  bool _state = false;
+  bool state = false;
   String url;
   RedNet(
       {this.url = 'www.google.com',
@@ -16,9 +16,9 @@ class RedNet {
       _timer!.cancel();
     }
     _timer = Timer(delay, () async {
-      _state = await this._connect();
+      state = await this._connect();
     });
-    return _state;
+    return state;
   }
 
   Future<bool> _connect() async {

@@ -1,6 +1,6 @@
 
 # awesonestyle
-## v0.19.1
+## v0.19.2
 AwesoneStyle widget pack
 
 ### Widgets
