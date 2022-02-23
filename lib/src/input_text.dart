@@ -1,5 +1,9 @@
+import 'dart:ui';
+
 import 'package:awesonestyle/src/Constantes.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 // ignore: must_be_immutable
 class InputText1 extends StatefulWidget {
@@ -30,37 +34,115 @@ class InputText1 extends StatefulWidget {
   final String? labelText;
   final InputBorder? disabledBorder;
   final InputBorder? border;
-  TextEditingController? controller;
-
-  InputText1(
-      {this.hintText,
-      this.icon,
-      this.obscureText = false,
-      this.textInputTipe = TextInputType.text,
-      this.controller,
-      this.maxLength,
-      this.expands = false,
-      this.minLines,
-      this.maxLines,
-      this.padding,
-      this.width,
-      this.hintStyle,
-      this.iconSize,
-      this.readOnly,
-      this.onChanged,
-      this.onEditingComplete,
-      this.onSubmitted,
-      this.onTap,
-      this.decoration,
-      this.style,
-      this.errorBorder,
-      this.errorText,
-      this.helperText,
-      this.errorStyle,
-      this.labelStyle,
-      this.labelText,
-      this.disabledBorder,
-      this.border});
+  final TextEditingController? controller;
+  //
+  final FocusNode? focusNode;
+  final TextInputAction? textInputAction;
+  final TextCapitalization textCapitalization;
+  final StrutStyle? strutStyle;
+  final TextAlignVertical? textAlignVertical;
+  final TextDirection? textDirection;
+  final ToolbarOptions? toolbarOptions;
+  final bool? showCursor;
+  final bool autofocus;
+  final String obscuringCharacter;
+  final bool autocorrect;
+  final SmartDashesType? smartDashesType;
+  final SmartQuotesType? smartQuotesType;
+  final bool enableSuggestions;
+  final MaxLengthEnforcement? maxLengthEnforcement;
+  final void Function(String, Map<String, dynamic>)? onAppPrivateCommand;
+  final List<TextInputFormatter>? inputFormatters;
+  final bool? enabled;
+  final double cursorWidth;
+  final double? cursorHeight;
+  final Radius? cursorRadius;
+  final Color? cursorColor;
+  final BoxHeightStyle selectionHeightStyle;
+  final BoxWidthStyle selectionWidthStyle;
+  final Brightness? keyboardAppearance;
+  final EdgeInsets scrollPadding;
+  final DragStartBehavior dragStartBehavior;
+  final bool enableInteractiveSelection;
+  final TextSelectionControls? selectionControls;
+  final MouseCursor? mouseCursor;
+  final Widget? Function(BuildContext,
+      {required int currentLength,
+      required bool isFocused,
+      required int? maxLength})? buildCounter;
+  final ScrollController? scrollController;
+  final ScrollPhysics? scrollPhysics;
+  final Iterable<String>? autofillHints;
+  final Clip clipBehavior;
+  final String? restorationId;
+  final bool enableIMEPersonalizedLearning;
+  InputText1({
+    this.hintText,
+    this.icon,
+    this.obscureText = false,
+    this.textInputTipe = TextInputType.text,
+    this.controller,
+    this.maxLength,
+    this.expands = false,
+    this.minLines,
+    this.maxLines,
+    this.padding,
+    this.width,
+    this.hintStyle,
+    this.iconSize,
+    this.readOnly,
+    this.onChanged,
+    this.onEditingComplete,
+    this.onSubmitted,
+    this.onTap,
+    this.decoration,
+    this.style,
+    this.errorBorder,
+    this.errorText,
+    this.helperText,
+    this.errorStyle,
+    this.labelStyle,
+    this.labelText,
+    this.disabledBorder,
+    this.border,
+    this.focusNode,
+    this.textInputAction,
+    this.textCapitalization = TextCapitalization.none,
+    this.strutStyle,
+    this.textAlignVertical,
+    this.textDirection,
+    this.toolbarOptions,
+    this.showCursor,
+    this.autofocus = false,
+    this.obscuringCharacter = '•',
+    this.autocorrect = true,
+    this.smartDashesType,
+    this.smartQuotesType,
+    this.enableSuggestions = true,
+    this.maxLengthEnforcement,
+    this.onAppPrivateCommand,
+    this.inputFormatters,
+    this.enabled,
+    this.cursorWidth = 2.0,
+    this.cursorHeight,
+    this.cursorRadius,
+    this.cursorColor,
+    this.selectionHeightStyle = BoxHeightStyle.tight,
+    this.selectionWidthStyle = BoxWidthStyle.tight,
+    this.keyboardAppearance,
+    this.scrollPadding = const EdgeInsets.all(20.0),
+    this.dragStartBehavior = DragStartBehavior.start,
+    this.enableInteractiveSelection = true,
+    this.selectionControls,
+    this.mouseCursor,
+    this.buildCounter,
+    this.scrollController,
+    this.scrollPhysics,
+    this.autofillHints = const <String>[],
+    this.clipBehavior = Clip.hardEdge,
+    this.restorationId,
+    this.enableIMEPersonalizedLearning = true,
+  });
 
   @override
   _InputText1State createState() => _InputText1State();
@@ -76,6 +158,45 @@ class _InputText1State extends State<InputText1> {
       padding: widget.padding ?? EdgeInsets.all(10),
       width: Medidas.width(widget.width ?? 100),
       child: TextField(
+        focusNode: widget.focusNode,
+        textInputAction: widget.textInputAction,
+        textCapitalization: widget.textCapitalization,
+        strutStyle: widget.strutStyle,
+        textAlignVertical: widget.textAlignVertical,
+        textDirection: widget.textDirection,
+        toolbarOptions: widget.toolbarOptions,
+        showCursor: widget.showCursor,
+        autofocus: widget.autofocus,
+        obscuringCharacter: widget.obscuringCharacter,
+        autocorrect: widget.autocorrect,
+        smartDashesType: widget.smartDashesType,
+        smartQuotesType: widget.smartQuotesType,
+        enableSuggestions: widget.enableSuggestions,
+        //maxLengthEnforced: ,
+        maxLengthEnforcement: widget.maxLengthEnforcement,
+        onAppPrivateCommand: widget.onAppPrivateCommand,
+        inputFormatters: widget.inputFormatters,
+        enabled: widget.enabled,
+        cursorWidth: widget.cursorWidth,
+        cursorHeight: widget.cursorHeight,
+        cursorRadius: widget.cursorRadius,
+        cursorColor: widget.cursorColor,
+        selectionHeightStyle: widget.selectionHeightStyle, //
+        selectionWidthStyle: widget.selectionWidthStyle,
+        keyboardAppearance: widget.keyboardAppearance,
+        scrollPadding: widget.scrollPadding,
+        dragStartBehavior: widget.dragStartBehavior,
+        enableInteractiveSelection: widget.enableInteractiveSelection,
+        selectionControls: widget.selectionControls,
+        mouseCursor: widget.mouseCursor,
+        buildCounter: widget.buildCounter,
+        scrollController: widget.scrollController,
+        scrollPhysics: widget.scrollPhysics,
+        autofillHints: widget.autofillHints,
+        clipBehavior: widget.clipBehavior,
+        restorationId: widget.restorationId,
+        enableIMEPersonalizedLearning: widget.enableIMEPersonalizedLearning,
+        //
         onChanged: widget.onChanged,
         onEditingComplete: widget.onEditingComplete,
         onSubmitted: widget.onSubmitted,
@@ -150,7 +271,47 @@ class InputText2 extends StatefulWidget {
   final Function()? onTap;
   final InputDecoration? decoration;
   TextEditingController? controller;
-
+  //
+  final FocusNode? focusNode;
+  final TextInputAction? textInputAction;
+  final TextCapitalization textCapitalization;
+  final StrutStyle? strutStyle;
+  final TextAlignVertical? textAlignVertical;
+  final TextDirection? textDirection;
+  final ToolbarOptions? toolbarOptions;
+  final bool? showCursor;
+  final bool autofocus;
+  final String obscuringCharacter;
+  final bool autocorrect;
+  final SmartDashesType? smartDashesType;
+  final SmartQuotesType? smartQuotesType;
+  final bool enableSuggestions;
+  final MaxLengthEnforcement? maxLengthEnforcement;
+  final void Function(String, Map<String, dynamic>)? onAppPrivateCommand;
+  final List<TextInputFormatter>? inputFormatters;
+  final bool? enabled;
+  final double cursorWidth;
+  final double? cursorHeight;
+  final Radius? cursorRadius;
+  final Color? cursorColor;
+  final BoxHeightStyle selectionHeightStyle;
+  final BoxWidthStyle selectionWidthStyle;
+  final Brightness? keyboardAppearance;
+  final EdgeInsets scrollPadding;
+  final DragStartBehavior dragStartBehavior;
+  final bool enableInteractiveSelection;
+  final TextSelectionControls? selectionControls;
+  final MouseCursor? mouseCursor;
+  final Widget? Function(BuildContext,
+      {required int currentLength,
+      required bool isFocused,
+      required int? maxLength})? buildCounter;
+  final ScrollController? scrollController;
+  final ScrollPhysics? scrollPhysics;
+  final Iterable<String>? autofillHints;
+  final Clip clipBehavior;
+  final String? restorationId;
+  final bool enableIMEPersonalizedLearning;
   InputText2({
     this.hintText,
     this.prefix,
@@ -173,6 +334,43 @@ class InputText2 extends StatefulWidget {
     this.decoration,
     this.style,
     this.suffix,
+    this.focusNode,
+    this.textInputAction,
+    this.textCapitalization = TextCapitalization.none,
+    this.strutStyle,
+    this.textAlignVertical,
+    this.textDirection,
+    this.toolbarOptions,
+    this.showCursor,
+    this.autofocus = false,
+    this.obscuringCharacter = '•',
+    this.autocorrect = true,
+    this.smartDashesType,
+    this.smartQuotesType,
+    this.enableSuggestions = true,
+    this.maxLengthEnforcement,
+    this.onAppPrivateCommand,
+    this.inputFormatters,
+    this.enabled,
+    this.cursorWidth = 2.0,
+    this.cursorHeight,
+    this.cursorRadius,
+    this.cursorColor,
+    this.selectionHeightStyle = BoxHeightStyle.tight,
+    this.selectionWidthStyle = BoxWidthStyle.tight,
+    this.keyboardAppearance,
+    this.scrollPadding = const EdgeInsets.all(20.0),
+    this.dragStartBehavior = DragStartBehavior.start,
+    this.enableInteractiveSelection = true,
+    this.selectionControls,
+    this.mouseCursor,
+    this.buildCounter,
+    this.scrollController,
+    this.scrollPhysics,
+    this.autofillHints = const <String>[],
+    this.clipBehavior = Clip.hardEdge,
+    this.restorationId,
+    this.enableIMEPersonalizedLearning = true,
   });
 
   @override
@@ -189,6 +387,45 @@ class _InputText2State extends State<InputText2> {
       padding: widget.padding ?? EdgeInsets.all(10),
       width: Medidas.width(widget.width ?? 100),
       child: TextField(
+        focusNode: widget.focusNode,
+        textInputAction: widget.textInputAction,
+        textCapitalization: widget.textCapitalization,
+        strutStyle: widget.strutStyle,
+        textAlignVertical: widget.textAlignVertical,
+        textDirection: widget.textDirection,
+        toolbarOptions: widget.toolbarOptions,
+        showCursor: widget.showCursor,
+        autofocus: widget.autofocus,
+        obscuringCharacter: widget.obscuringCharacter,
+        autocorrect: widget.autocorrect,
+        smartDashesType: widget.smartDashesType,
+        smartQuotesType: widget.smartQuotesType,
+        enableSuggestions: widget.enableSuggestions,
+        //maxLengthEnforced: ,
+        maxLengthEnforcement: widget.maxLengthEnforcement,
+        onAppPrivateCommand: widget.onAppPrivateCommand,
+        inputFormatters: widget.inputFormatters,
+        enabled: widget.enabled,
+        cursorWidth: widget.cursorWidth,
+        cursorHeight: widget.cursorHeight,
+        cursorRadius: widget.cursorRadius,
+        cursorColor: widget.cursorColor,
+        selectionHeightStyle: widget.selectionHeightStyle, //
+        selectionWidthStyle: widget.selectionWidthStyle,
+        keyboardAppearance: widget.keyboardAppearance,
+        scrollPadding: widget.scrollPadding,
+        dragStartBehavior: widget.dragStartBehavior,
+        enableInteractiveSelection: widget.enableInteractiveSelection,
+        selectionControls: widget.selectionControls,
+        mouseCursor: widget.mouseCursor,
+        buildCounter: widget.buildCounter,
+        scrollController: widget.scrollController,
+        scrollPhysics: widget.scrollPhysics,
+        autofillHints: widget.autofillHints,
+        clipBehavior: widget.clipBehavior,
+        restorationId: widget.restorationId,
+        enableIMEPersonalizedLearning: widget.enableIMEPersonalizedLearning,
+        //
         onChanged: widget.onChanged,
         onEditingComplete: widget.onEditingComplete,
         onSubmitted: widget.onSubmitted,
