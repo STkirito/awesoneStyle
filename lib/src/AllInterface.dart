@@ -30,6 +30,7 @@ class Dome extends StatelessWidget {
   final String? restorationId;
   final bool? activeDecoration;
   final DecorationImage? image;
+  final BoxDecoration? decoration;
   final Key? key;
   const Dome({
     this.key,
@@ -59,6 +60,7 @@ class Dome extends StatelessWidget {
     this.extendBuilderBehindAppBar = false,
     this.activeDecoration = true,
     this.image,
+    this.decoration,
   });
 
   @override
@@ -66,24 +68,25 @@ class Dome extends StatelessWidget {
         color: primaryColor ?? Colors.lightGreenAccent,
         child: Container(
           decoration: activeDecoration == true
-              ? BoxDecoration(
-                  image: image,
-                  gradient: LinearGradient(
-                    tileMode: TileMode.mirror,
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: secondaryColors ??
-                        [
-                          Color(0xfffbc8c8),
-                          Color(0xff259fff),
-                        ],
-                    stops: [
-                      0,
-                      1,
-                    ],
-                  ),
-                  backgroundBlendMode: BlendMode.difference,
-                )
+              ? decoration ??
+                  BoxDecoration(
+                    image: image,
+                    gradient: LinearGradient(
+                      tileMode: TileMode.mirror,
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: secondaryColors ??
+                          [
+                            Color(0xfffbc8c8),
+                            Color(0xff259fff),
+                          ],
+                      stops: [
+                        0,
+                        1,
+                      ],
+                    ),
+                    backgroundBlendMode: BlendMode.difference,
+                  )
               : null,
           child: Scaffold(
             appBar: appBar,
