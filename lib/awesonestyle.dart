@@ -1,5 +1,11 @@
 library awesonestyle;
 
+export 'package:awesonestyle/src/Models/models.dart';
+export 'package:awesonestyle/src/Generators/generators.dart';
+export 'package:awesonestyle/src/Components/components.dart';
+export 'package:awesonestyle/src/Constant/constant.dart';
+export 'package:awesonestyle/src/services/services.dart';
+/* 
 export 'package:awesonestyle/src/Constantes.dart';
 
 export 'package:awesonestyle/src/Badget.dart';
@@ -16,9 +22,11 @@ export 'package:awesonestyle/src/listItem.dart';
 export 'package:awesonestyle/src/listScrollView.dart';
 export 'package:awesonestyle/src/text_url_1.dart';
 export 'package:awesonestyle/src/TextFieldEdit.dart';
-export 'package:awesonestyle/src/AniWidget.dart';
+/* export 'package:awesonestyle/src/Components/Animation/AniWidget/AniWidget.dart'; */
 export 'package:awesonestyle/src/Notify.dart';
 export 'package:awesonestyle/src/checkBox.dart';
 export 'package:awesonestyle/src/AllInterface.dart';
-export 'package:awesonestyle/src/list.dart';
-export 'package:awesonestyle/src/function/connect/rednet.dart';
+export 'package:awesonestyle/src/list.dart'; */
+
+///
+

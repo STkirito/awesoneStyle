@@ -1,5 +1,6 @@
 import 'package:awesonestyle/awesonestyle.dart';
 import 'package:awesonestyle/src/Constantes.dart';
+import 'package:awesonestyle/src/icon_text_1.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

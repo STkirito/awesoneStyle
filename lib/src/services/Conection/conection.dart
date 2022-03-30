@@ -2,12 +2,12 @@ import 'dart:async';
 import 'dart:io';
 import 'package:connectivity_plus/connectivity_plus.dart';
 
-class RedNet {
+class Conection {
   Timer? _timer;
   Duration delay;
   bool _states = false;
   String url;
-  RedNet(
+  Conection(
       {this.url = 'www.google.com',
       this.delay = const Duration(milliseconds: 1)});
 
