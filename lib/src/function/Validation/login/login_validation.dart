@@ -25,7 +25,7 @@ loginValidation(
     ));
     isLoading.call(RxBool(true));
     final String? errorMessage =
-        await authService.login(email.value.text, password.value.text);
+        await authService.login(email.text, password.text);
     if (errorMessage == null) {
       isLoading.call(RxBool(false));
       snack.close();

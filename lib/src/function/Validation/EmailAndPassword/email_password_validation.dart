@@ -8,7 +8,7 @@ validationEmailAndPassword(
     required TextEditingController password}) {
   RxBool _emailOk = false.obs;
   RxBool _passwordOk = false.obs;
-  if (email.value.text == '' && password.value.text == '') {
+  if (email.text == '' && password.value.text == '') {
     Get.showSnackbar(GetSnackBar(
       title: 'Login',
       message: 'Complete la información.',
@@ -20,7 +20,7 @@ validationEmailAndPassword(
       duration: Duration(milliseconds: 3500),
     ));
   } else {
-    if (!GetUtils.isEmail(email.value.text)) {
+    if (!GetUtils.isEmail(email.text)) {
       Get.showSnackbar(GetSnackBar(
         title: 'Login',
         message: 'Ingrese un Correo electrónico Valido.',
@@ -35,7 +35,7 @@ validationEmailAndPassword(
       print('email ok');
       _emailOk.value = true;
     }
-    if (!validationPassword(password.value.text)) {
+    if (!validationPassword(password.text)) {
       Get.showSnackbar(GetSnackBar(
         title: 'Login',
         message: 'Ingrese un Password Valido.',
