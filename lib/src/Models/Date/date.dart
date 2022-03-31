@@ -4,11 +4,11 @@ class Date {
   final String? year;
 
   Date(this.day, this.month, this.year);
-  bool isNotEmpty() {
+  bool isEmpty() {
     if (day == '' && month == '' && year == '') {
-      return false;
-    } else {
       return true;
+    } else {
+      return false;
     }
   }
 }
