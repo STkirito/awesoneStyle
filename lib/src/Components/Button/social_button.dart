@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class SocialButtom extends StatelessWidget {
+class SocialButton extends StatelessWidget {
   final Function()? onPressed;
 
   final AlignmentGeometry? alignment;
@@ -33,7 +33,7 @@ class SocialButtom extends StatelessWidget {
   final bool enableFeedback;
   final BoxConstraints? secondConstraints;
 
-  const SocialButtom({
+  const SocialButton({
     Key? key,
     this.width,
     this.alignment,
