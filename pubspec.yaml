@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  font_awesome_flutter: ^9.1.0
+  font_awesome_flutter: ^10.1.0
   curved_navigation_bar: ^1.0.1
   motion_tab_bar_v2: ^0.2.4
   animate_do: ^2.1.0
