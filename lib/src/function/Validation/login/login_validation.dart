@@ -1,5 +1,5 @@
 import 'package:awesonestyle/function.dart';
-import 'package:awesonestyle/services.dart';
+import 'package:awesonestyle/src/services/Auth/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -7,7 +7,7 @@ loginValidation(
     {required Rx<TextEditingController> email,
     required Rx<TextEditingController> password,
     required Function(RxBool) isLoading,
-    required AuthService authService,
+    required Auth authService,
     required Function(bool) result}) async {
   if (validationEmailAndPassword(email: email, password: password)) {
     final snack = Get.showSnackbar(GetSnackBar(
