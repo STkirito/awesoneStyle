@@ -1,5 +1,6 @@
 library awesonestyle;
 
+export 'package:awesonestyle/abstract.dart';
 export 'package:awesonestyle/function.dart';
 export 'package:awesonestyle/models.dart';
 export 'package:awesonestyle/generators.dart';

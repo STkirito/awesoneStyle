@@ -1,5 +1,6 @@
+import 'package:awesonestyle/abstract.dart';
 import 'package:awesonestyle/function.dart';
-import 'package:awesonestyle/src/services/Auth/auth.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
