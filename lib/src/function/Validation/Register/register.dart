@@ -1,18 +1,28 @@
 import 'package:awesonestyle/abstract.dart';
-import 'package:awesonestyle/function.dart';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-login(
-    {required String email,
-    required String password,
+register(
+    {required bool form,
     required Function(bool) isLoading,
     required Auth authService,
+    required String email,
+    required String password,
     required Function(bool) result}) async {
-  if (validationEmailAndPassword(email: email, password: password)) {
+  if (!form) {
+    Get.showSnackbar(GetSnackBar(
+      title: 'Crear una cuenta',
+      message: 'Ingrese datos Validos.',
+      icon: Icon(
+        Icons.email_outlined,
+        color: Colors.white,
+      ),
+      backgroundColor: Colors.white.withOpacity(0.1),
+      duration: Duration(milliseconds: 3500),
+    ));
+  } else {
     final snack = Get.showSnackbar(GetSnackBar(
-      title: 'Login',
+      title: 'Creando su cuenta',
       message: 'Espere un momento.',
       icon: Icon(
         Icons.email_outlined,
@@ -25,18 +35,18 @@ login(
       backgroundColor: Colors.white.withOpacity(0.1),
     ));
     isLoading.call(true);
-    final String? errorMessage = await authService.login(email, password);
+    final String? errorMessage = await authService.createUser(email, password);
     if (errorMessage == null) {
-      isLoading.call(true);
+      isLoading.call(false);
       snack.close();
       result.call(true);
     } else {
       result.call(false);
-      isLoading.call(true);
+      isLoading.call(false);
       snack.close();
       Get.showSnackbar(GetSnackBar(
-        title: 'Login',
-        message: 'El correo electrónico o la contraseña estan mal.',
+        title: 'Crear una cuenta',
+        message: 'Esta cuenta ya existe.',
         icon: Icon(
           Icons.email_outlined,
           color: Colors.white,

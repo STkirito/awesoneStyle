@@ -1,4 +1,4 @@
 abstract class LoginRegister {
-  validationLogin() {}
-  validationRegister() {}
+  login() {}
+  register() {}
 }
