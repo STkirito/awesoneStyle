@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:awesonestyle/src/Constantes.dart';
+import 'package:awesonestyle/awesonestyle.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -156,7 +156,7 @@ class _InputText1State extends State<InputText1> {
         borderRadius: BorderRadius.circular(34),
       ),
       padding: widget.padding ?? EdgeInsets.all(10),
-      width: Medidas.width(widget.width ?? 100),
+      width: ScreenSize.width(widget.width ?? 100),
       child: TextField(
         focusNode: widget.focusNode,
         textInputAction: widget.textInputAction,
@@ -385,7 +385,7 @@ class _InputText2State extends State<InputText2> {
         borderRadius: BorderRadius.circular(34),
       ),
       padding: widget.padding ?? EdgeInsets.all(10),
-      width: Medidas.width(widget.width ?? 100),
+      width: ScreenSize.width(widget.width ?? 100),
       child: TextField(
         focusNode: widget.focusNode,
         textInputAction: widget.textInputAction,
@@ -541,7 +541,7 @@ class _FormInputTextState extends State<FormInputText> {
         borderRadius: BorderRadius.circular(34),
       ),
       padding: widget.padding ?? EdgeInsets.all(10),
-      width: Medidas.width(widget.width ?? 100),
+      width: ScreenSize.width(widget.width ?? 100),
       child: TextFormField(
         autocorrect: widget.autocorrect,
         validator: widget.validator,

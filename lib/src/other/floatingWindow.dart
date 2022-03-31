@@ -1,4 +1,4 @@
-import 'package:awesonestyle/src/Constantes.dart';
+import 'package:awesonestyle/awesonestyle.dart';
 import 'package:flutter/material.dart';
 
 class FloatingWindow extends StatefulWidget {
@@ -38,7 +38,7 @@ class _FloatingWindowState extends State<FloatingWindow> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: Medidas.width(widget.width ?? 90),
+      width: ScreenSize.width(widget.width ?? 90),
       decoration: BoxDecoration(
         color: widget.color ?? Colors.lightBlue[50],
         borderRadius: BorderRadius.circular(widget.borderRadius ?? 20),
@@ -57,7 +57,7 @@ class _FloatingWindowState extends State<FloatingWindow> {
               child: SizedBox(
                 child: widget.child,
                 height:
-                    Medidas.height(widget.singleChildScrollViewHeight ?? 75),
+                    ScreenSize.height(widget.singleChildScrollViewHeight ?? 75),
               ),
             ),
     );

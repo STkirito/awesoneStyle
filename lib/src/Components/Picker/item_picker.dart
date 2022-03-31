@@ -1,5 +1,5 @@
-import 'package:awesonestyle/src/Generators/generators.dart';
-import 'package:awesonestyle/src/services/services.dart';
+import 'package:awesonestyle/generators.dart';
+import 'package:awesonestyle/services.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

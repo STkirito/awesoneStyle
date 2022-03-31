@@ -1,4 +1,4 @@
-import 'package:awesonestyle/src/Constantes.dart';
+import 'package:awesonestyle/awesonestyle.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -35,7 +35,7 @@ class _IconText1State extends State<IconText1> {
               children: [
                 widget.preffixIcon,
                 SizedBox(
-                  width: widget.space ?? Medidas.width(2),
+                  width: widget.space ?? ScreenSize.width(2),
                 ),
                 widget.text,
               ],

@@ -1,7 +1,7 @@
-import 'package:awesonestyle/src/Constantes.dart';
+import 'package:awesonestyle/constant.dart';
+import 'package:awesonestyle/services.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 Future floatDialog(BuildContext context,
     {var valueInitial,
@@ -57,7 +57,7 @@ Future floatDialog(BuildContext context,
                                     'CANCELAR',
                                     style: cancelTextStyle,
                                   )),
-                              SizedBox(width: Medidas.width(2)),
+                              SizedBox(width: ScreenSize.width(2)),
                               TextButton(
                                   style: cancelStyle,
                                   onPressed: onChanged,

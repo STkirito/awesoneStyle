@@ -1,4 +1,6 @@
-import 'package:awesonestyle/src/Constantes.dart';
+import 'package:awesonestyle/services.dart';
+import 'package:awesonestyle/src/Constant/buttom_type.dart';
+import 'package:awesonestyle/src/Constant/children_orientation.dart';
 import 'package:flutter/material.dart';
 
 class BTN1 extends StatelessWidget {
@@ -52,8 +54,8 @@ class BTN1 extends StatelessWidget {
       transformAlignment: transformAlignment,
       clipBehavior: clipBehavior,
       padding: padding ?? EdgeInsets.all(5),
-      height: height ?? Medidas.height(6),
-      width: width ?? Medidas.width(30),
+      height: height ?? ScreenSize.height(6),
+      width: width ?? ScreenSize.width(30),
       decoration: decoration ??
           BoxDecoration(
             color: backgroundColor ?? Color(0xFFFF422C),
@@ -282,8 +284,8 @@ class _BTN4State extends State<BTN4> {
         transformAlignment: widget.transformAlignment,
         clipBehavior: widget.clipBehavior,
         padding: EdgeInsets.all(5),
-        height: widget.height ?? Medidas.height(6),
-        width: widget.width ?? Medidas.width(35),
+        height: widget.height ?? ScreenSize.height(6),
+        width: widget.width ?? ScreenSize.width(35),
         decoration: widget.decoration ??
             BoxDecoration(
               color: Colors.black26,
@@ -397,8 +399,8 @@ class BtnSocial extends StatelessWidget {
       transform: transform,
       transformAlignment: transformAlignment,
       clipBehavior: clipBehavior,
-      height: height ?? Medidas.width(10),
-      width: width ?? Medidas.width(11),
+      height: height ?? ScreenSize.width(10),
+      width: width ?? ScreenSize.width(11),
       decoration: decoration ??
           BoxDecoration(
             color: Colors.white,

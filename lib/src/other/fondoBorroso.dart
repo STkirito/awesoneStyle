@@ -1,6 +1,5 @@
 import 'dart:ui';
-
-import 'package:awesonestyle/src/Constantes.dart';
+import 'package:awesonestyle/awesonestyle.dart';
 import 'package:flutter/material.dart';
 
 class FondoBorroso extends StatelessWidget {
@@ -31,8 +30,8 @@ class FondoBorroso extends StatelessWidget {
                       ),
                       borderRadius: BorderRadius.circular(40),
                       color: Colors.black12),
-                  height: Medidas.height(this.height),
-                  width: Medidas.width(this.weight),
+                  height: ScreenSize.height(this.height),
+                  width: ScreenSize.width(this.weight),
                 ),
               ),
             ),

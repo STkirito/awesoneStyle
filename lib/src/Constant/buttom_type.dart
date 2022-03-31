@@ -1,0 +1,1 @@
+enum ButtonType { Text, IconText }

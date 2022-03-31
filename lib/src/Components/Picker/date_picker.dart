@@ -1,6 +1,6 @@
 import 'package:awesonestyle/src/Components/Picker/item_picker.dart';
-import 'package:awesonestyle/src/Generators/generators.dart';
-import 'package:awesonestyle/src/Models/models.dart';
+import 'package:awesonestyle/generators.dart';
+import 'package:awesonestyle/models.dart';
 import 'package:flutter/material.dart';
 
 class DatePicker extends StatefulWidget {

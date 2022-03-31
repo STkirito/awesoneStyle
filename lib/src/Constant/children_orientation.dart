@@ -1,0 +1,1 @@
+enum ChildrenOrientation { Row, Column }

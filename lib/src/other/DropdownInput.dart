@@ -1,4 +1,4 @@
-import 'package:awesonestyle/src/Constantes.dart';
+import 'package:awesonestyle/services.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -47,7 +47,7 @@ class _DropdownInputState extends State<DropdownInput> {
               borderRadius: BorderRadius.circular(34),
             ),
         padding: widget.padding ?? EdgeInsets.all(10),
-        width: Medidas.width(widget.width ?? 100),
+        width: ScreenSize.width(widget.width ?? 100),
         child: DropdownButton<String>(
           hint: widget.hint,
           disabledHint: widget.disabledHint,

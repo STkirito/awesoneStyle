@@ -1,4 +1,4 @@
-import 'package:awesonestyle/src/Constantes.dart';
+import 'package:awesonestyle/awesonestyle.dart';
 import 'package:flutter/material.dart';
 
 class ListScrollViewBuilder extends StatefulWidget {
@@ -17,7 +17,7 @@ class _ListScrollViewBuilderState extends State<ListScrollViewBuilder> {
     return SingleChildScrollView(
       physics: BouncingScrollPhysics(),
       child: SizedBox(
-        height: Medidas.height(widget.height ?? 75),
+        height: ScreenSize.height(widget.height ?? 75),
         child: ListView.builder(
             physics: BouncingScrollPhysics(),
             itemCount: widget.itemCount,

@@ -1,6 +1,5 @@
-import 'package:awesonestyle/awesonestyle.dart';
-import 'package:awesonestyle/src/Constantes.dart';
-import 'package:awesonestyle/src/icon_text_1.dart';
+import 'package:awesonestyle/services.dart';
+import 'package:awesonestyle/src/other/icon_text_1.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -21,8 +20,8 @@ class Notify extends StatelessWidget {
 
   Widget _child() {
     return Container(
-      height: height ?? Medidas.height(8),
-      width: width ?? Medidas.width(80),
+      height: height ?? ScreenSize.height(8),
+      width: width ?? ScreenSize.width(80),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         gradient: gradient ??

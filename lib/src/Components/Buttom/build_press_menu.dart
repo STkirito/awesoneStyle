@@ -1,4 +1,5 @@
-import 'package:awesonestyle/src/Constant/constant.dart';
+import 'package:awesonestyle/constant.dart';
+import 'package:awesonestyle/src/Constant/widget_directions.dart';
 import 'package:flutter/material.dart';
 
 class BuildPressMenu {
@@ -15,7 +16,7 @@ class BuildPressMenu {
       this.color,
       this.boxShadow,
       this.physics,
-      this.direction = WidgetDirections.vertical,
+      this.direction = WidgetDirections.Vertical,
       required this.children});
   Widget build() {
     return ClipRRect(
@@ -36,7 +37,7 @@ class BuildPressMenu {
         ),
         child: SingleChildScrollView(
           physics: physics ?? const BouncingScrollPhysics(),
-          child: direction == WidgetDirections.vertical
+          child: direction == WidgetDirections.Vertical
               ? Column(
                   children: children,
                 )

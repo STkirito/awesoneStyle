@@ -1,10 +1,11 @@
 library awesonestyle;
 
-export 'package:awesonestyle/src/Models/models.dart';
-export 'package:awesonestyle/src/Generators/generators.dart';
-export 'package:awesonestyle/src/Components/components.dart';
-export 'package:awesonestyle/src/Constant/constant.dart';
-export 'package:awesonestyle/src/services/services.dart';
+export 'package:awesonestyle/models.dart';
+export 'package:awesonestyle/generators.dart';
+export 'package:awesonestyle/components.dart';
+export 'package:awesonestyle/constant.dart';
+export 'package:awesonestyle/services.dart';
+
 /* 
 export 'package:awesonestyle/src/Constantes.dart';
 
