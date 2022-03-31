@@ -1,10 +1,12 @@
 library awesonestyle;
 
+export 'package:awesonestyle/function.dart';
 export 'package:awesonestyle/models.dart';
 export 'package:awesonestyle/generators.dart';
 export 'package:awesonestyle/components.dart';
 export 'package:awesonestyle/constant.dart';
 export 'package:awesonestyle/services.dart';
+
 
 /* 
 export 'package:awesonestyle/src/Constantes.dart';
