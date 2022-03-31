@@ -3,9 +3,9 @@ import 'package:awesonestyle/src/services/Auth/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-loginValidation(
-    {required TextEditingController email,
-    required TextEditingController password,
+validationLogin(
+    {required String email,
+    required String password,
     required Function(RxBool) isLoading,
     required Auth authService,
     required Function(bool) result}) async {
@@ -24,8 +24,7 @@ loginValidation(
       backgroundColor: Colors.white.withOpacity(0.1),
     ));
     isLoading.call(RxBool(true));
-    final String? errorMessage =
-        await authService.login(email.text, password.text);
+    final String? errorMessage = await authService.login(email, password);
     if (errorMessage == null) {
       isLoading.call(RxBool(false));
       snack.close();

@@ -3,12 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
-validationEmailAndPassword(
-    {required TextEditingController email,
-    required TextEditingController password}) {
+validationEmailAndPassword({required String email, required String password}) {
   RxBool _emailOk = false.obs;
   RxBool _passwordOk = false.obs;
-  if (email.text == '' && password.value.text == '') {
+  if (email == '' && password == '') {
     Get.showSnackbar(GetSnackBar(
       title: 'Login',
       message: 'Complete la información.',
@@ -20,7 +18,7 @@ validationEmailAndPassword(
       duration: Duration(milliseconds: 3500),
     ));
   } else {
-    if (!GetUtils.isEmail(email.text)) {
+    if (!GetUtils.isEmail(email)) {
       Get.showSnackbar(GetSnackBar(
         title: 'Login',
         message: 'Ingrese un Correo electrónico Valido.',
@@ -35,7 +33,7 @@ validationEmailAndPassword(
       print('email ok');
       _emailOk.value = true;
     }
-    if (!validationPassword(password.text)) {
+    if (!validationPassword(password)) {
       Get.showSnackbar(GetSnackBar(
         title: 'Login',
         message: 'Ingrese un Password Valido.',
