@@ -4,8 +4,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
 validationEmailAndPassword(
-    {required Rx<TextEditingController> email,
-    required Rx<TextEditingController> password}) {
+    {required TextEditingController email,
+    required TextEditingController password}) {
   RxBool _emailOk = false.obs;
   RxBool _passwordOk = false.obs;
   if (email.value.text == '' && password.value.text == '') {

@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 loginValidation(
-    {required Rx<TextEditingController> email,
-    required Rx<TextEditingController> password,
+    {required TextEditingController email,
+    required TextEditingController password,
     required Function(RxBool) isLoading,
     required Auth authService,
     required Function(bool) result}) async {
