@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SocialButton extends StatelessWidget {
   final Function()? onPressed;
@@ -101,10 +102,7 @@ class SocialButton extends StatelessWidget {
         tooltip: tooltip,
         enableFeedback: enableFeedback,
         constraints: secondConstraints,
-        icon: child ??
-            const Image(
-              image: AssetImage('assets/Social/fb-128.png'),
-            ),
+        icon: child ?? Icon(FontAwesomeIcons.google),
         onPressed: onPressed,
       ),
     );
