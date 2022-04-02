@@ -1,17 +1,18 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:get/get.dart';
 
-class Conection {
+class Conection extends GetxController {
   Timer? _timer;
   Duration delay;
-  bool _states = false;
+  RxBool _states = false.obs;
   String url;
   Conection(
       {this.url = 'www.google.com',
       this.delay = const Duration(milliseconds: 1)});
 
-  bool check() {
+  RxBool check() {
     if (_timer != null) {
       _timer!.cancel();
     }
@@ -21,20 +22,20 @@ class Conection {
     return _states;
   }
 
-  get state => this._states;
-  Future<bool> _connect() async {
+  RxBool get state => this._states;
+  Future<RxBool> _connect() async {
     ConnectivityResult connectivityResult =
         await (Connectivity().checkConnectivity());
     if (connectivityResult == ConnectivityResult.mobile ||
         connectivityResult == ConnectivityResult.wifi) {
       final List<InternetAddress> result = await InternetAddress.lookup(url);
       if (result.isNotEmpty && result[0].rawAddress.isNotEmpty) {
-        return true;
+        return RxBool(true);
       } else {
-        return false;
+        return RxBool(false);
       }
     } else {
-      return false;
+      return RxBool(false);
     }
   }
 }
