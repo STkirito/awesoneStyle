@@ -11,7 +11,8 @@ login(
     required Auth authService,
     required Function(bool) result}) async {
   if (validationEmailAndPassword(email: email, password: password)) {
-    final snack = Get.showSnackbar(GetSnackBar(
+    SnackbarController? snack;
+    snack = Get.showSnackbar(GetSnackBar(
       title: 'Login',
       message: 'Espere un momento.',
       icon: Icon(
