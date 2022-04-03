@@ -37,7 +37,7 @@ class AniWidget extends StatefulWidget {
 
 class _AniWidgetState extends State<AniWidget> {
   Widget _animationChild() {
-    if (widget.animation == AnimationDo.FadeIn) {
+    if (widget.animation == AnimationDo.fadeIn) {
       return FadeIn(
         duration: widget.duration ?? const Duration(milliseconds: 300),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -47,7 +47,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.FadeInDown) {
+    if (widget.animation == AnimationDo.fadeInDown) {
       return FadeInDown(
         duration: widget.duration ?? const Duration(milliseconds: 200),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -58,7 +58,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.FadeInDownBig) {
+    if (widget.animation == AnimationDo.fadeInDownBig) {
       return FadeInDownBig(
         duration: widget.duration ?? const Duration(milliseconds: 1300),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -69,7 +69,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.FadeInUp) {
+    if (widget.animation == AnimationDo.fadeInUp) {
       return FadeInUp(
         duration: widget.duration ?? const Duration(milliseconds: 800),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -80,7 +80,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.FadeInUpBig) {
+    if (widget.animation == AnimationDo.fadeInUpBig) {
       return FadeInUpBig(
         duration: widget.duration ?? const Duration(milliseconds: 1300),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -91,7 +91,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.FadeInLeft) {
+    if (widget.animation == AnimationDo.fadeInLeft) {
       return FadeInLeft(
         duration: widget.duration ?? const Duration(milliseconds: 800),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -102,7 +102,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.FadeInLeftBig) {
+    if (widget.animation == AnimationDo.fadeInLeftBig) {
       return FadeInLeftBig(
         duration: widget.duration ?? const Duration(milliseconds: 1300),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -113,7 +113,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.FadeInRight) {
+    if (widget.animation == AnimationDo.fadeInRight) {
       return FadeInRight(
         duration: widget.duration ?? const Duration(milliseconds: 800),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -124,7 +124,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.FadeInRightBig) {
+    if (widget.animation == AnimationDo.fadeInRightBig) {
       return FadeInRightBig(
         duration: widget.duration ?? const Duration(milliseconds: 1200),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -136,7 +136,7 @@ class _AniWidgetState extends State<AniWidget> {
       );
     }
     //
-    if (widget.animation == AnimationDo.FadeOut) {
+    if (widget.animation == AnimationDo.fadeOut) {
       return FadeOut(
         duration: widget.duration ?? const Duration(milliseconds: 300),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -146,7 +146,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.FadeOutDown) {
+    if (widget.animation == AnimationDo.fadeOutDown) {
       return FadeOutDown(
         duration: widget.duration ?? const Duration(milliseconds: 800),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -157,7 +157,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.FadeOutDownBig) {
+    if (widget.animation == AnimationDo.fadeOutDownBig) {
       return FadeOutDownBig(
         duration: widget.duration ?? const Duration(milliseconds: 1300),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -168,7 +168,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.FadeOutUp) {
+    if (widget.animation == AnimationDo.fadeOutUp) {
       return FadeOutUp(
         duration: widget.duration ?? const Duration(milliseconds: 800),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -179,7 +179,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.FadeOutUpBig) {
+    if (widget.animation == AnimationDo.fadeOutUpBig) {
       return FadeOutUpBig(
         duration: widget.duration ?? const Duration(milliseconds: 1300),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -190,7 +190,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.FadeOutLeft) {
+    if (widget.animation == AnimationDo.fadeOutLeft) {
       return FadeOutLeft(
         duration: widget.duration ?? const Duration(milliseconds: 800),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -201,7 +201,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.FadeOutLeftBig) {
+    if (widget.animation == AnimationDo.fadeOutLeftBig) {
       return FadeOutLeftBig(
         duration: widget.duration ?? const Duration(milliseconds: 1300),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -212,7 +212,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.FadeOutRight) {
+    if (widget.animation == AnimationDo.fadeOutRight) {
       return FadeOutRight(
         duration: widget.duration ?? const Duration(milliseconds: 800),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -223,7 +223,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.FadeOutRightBig) {
+    if (widget.animation == AnimationDo.fadeOutRightBig) {
       return FadeOutRightBig(
         duration: widget.duration ?? const Duration(milliseconds: 1200),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -235,7 +235,7 @@ class _AniWidgetState extends State<AniWidget> {
       );
     }
     //
-    if (widget.animation == AnimationDo.BounceInDown) {
+    if (widget.animation == AnimationDo.bounceInDown) {
       return BounceInDown(
         duration: widget.duration ?? const Duration(milliseconds: 700),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -246,7 +246,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.BounceInUp) {
+    if (widget.animation == AnimationDo.bounceInUp) {
       return BounceInUp(
         duration: widget.duration ?? const Duration(milliseconds: 1000),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -257,7 +257,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.BounceInLeft) {
+    if (widget.animation == AnimationDo.bounceInLeft) {
       return BounceInLeft(
         duration: widget.duration ?? const Duration(milliseconds: 1000),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -268,7 +268,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.BounceInRight) {
+    if (widget.animation == AnimationDo.bounceInRight) {
       return BounceInRight(
         duration: widget.duration ?? const Duration(milliseconds: 600),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -280,7 +280,7 @@ class _AniWidgetState extends State<AniWidget> {
       );
     }
     //
-    if (widget.animation == AnimationDo.ElasticIn) {
+    if (widget.animation == AnimationDo.elasticIn) {
       return ElasticIn(
         duration: widget.duration ?? const Duration(milliseconds: 1000),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -290,7 +290,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.ElasticInDown) {
+    if (widget.animation == AnimationDo.elasticInDown) {
       return ElasticInDown(
         duration: widget.duration ?? const Duration(milliseconds: 600),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -302,7 +302,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.ElasticInUp) {
+    if (widget.animation == AnimationDo.elasticInUp) {
       return ElasticInUp(
         duration: widget.duration ?? const Duration(milliseconds: 1000),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -313,7 +313,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.ElasticInLeft) {
+    if (widget.animation == AnimationDo.elasticInLeft) {
       return ElasticInLeft(
         duration: widget.duration ?? const Duration(milliseconds: 1000),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -325,7 +325,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.ElasticInRight) {
+    if (widget.animation == AnimationDo.elasticInRight) {
       return ElasticInRight(
         duration: widget.duration ?? const Duration(milliseconds: 600),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -337,7 +337,7 @@ class _AniWidgetState extends State<AniWidget> {
       );
     }
     //
-    if (widget.animation == AnimationDo.SlideInDown) {
+    if (widget.animation == AnimationDo.slideInDown) {
       return SlideInDown(
         duration: widget.duration ?? const Duration(milliseconds: 600),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -348,7 +348,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.SlideInUp) {
+    if (widget.animation == AnimationDo.slideInUp) {
       return SlideInUp(
         duration: widget.duration ?? const Duration(milliseconds: 600),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -359,7 +359,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.SlideInLeft) {
+    if (widget.animation == AnimationDo.slideInLeft) {
       return SlideInLeft(
         duration: widget.duration ?? const Duration(milliseconds: 600),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -370,7 +370,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.SlideInRight) {
+    if (widget.animation == AnimationDo.slideInRight) {
       return SlideInRight(
         duration: widget.duration ?? const Duration(milliseconds: 600),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -382,7 +382,7 @@ class _AniWidgetState extends State<AniWidget> {
       );
     }
     //
-    if (widget.animation == AnimationDo.FlipInX) {
+    if (widget.animation == AnimationDo.flipInX) {
       return FlipInX(
         duration: widget.duration ?? const Duration(milliseconds: 800),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -392,7 +392,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.FlipInY) {
+    if (widget.animation == AnimationDo.flipInY) {
       return FlipInY(
         duration: widget.duration ?? const Duration(milliseconds: 400),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -403,7 +403,7 @@ class _AniWidgetState extends State<AniWidget> {
       );
     }
     //
-    if (widget.animation == AnimationDo.ZoomIn) {
+    if (widget.animation == AnimationDo.zoomIn) {
       return ZoomIn(
         duration: widget.duration ?? const Duration(milliseconds: 500),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -414,7 +414,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.ZoomOut) {
+    if (widget.animation == AnimationDo.zoomOut) {
       return ZoomOut(
         duration: widget.duration ?? const Duration(milliseconds: 500),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -426,7 +426,7 @@ class _AniWidgetState extends State<AniWidget> {
       );
     }
     //
-    if (widget.animation == AnimationDo.JelloIn) {
+    if (widget.animation == AnimationDo.jelloIn) {
       return JelloIn(
         duration: widget.duration ?? const Duration(milliseconds: 800),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -437,7 +437,7 @@ class _AniWidgetState extends State<AniWidget> {
       );
     }
     //
-    if (widget.animation == AnimationDo.Bounce) {
+    if (widget.animation == AnimationDo.bounce) {
       return Bounce(
         duration: widget.duration ?? const Duration(milliseconds: 900),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -449,7 +449,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.Flash) {
+    if (widget.animation == AnimationDo.flash) {
       return Flash(
         duration: widget.duration ?? const Duration(milliseconds: 1000),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -460,7 +460,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.Pulse) {
+    if (widget.animation == AnimationDo.pulse) {
       return Pulse(
         duration: widget.duration ?? const Duration(milliseconds: 1000),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -471,7 +471,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.Swing) {
+    if (widget.animation == AnimationDo.swing) {
       return Swing(
         duration: widget.duration ?? const Duration(milliseconds: 800),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -482,7 +482,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.Spin) {
+    if (widget.animation == AnimationDo.spin) {
       return Spin(
         duration: widget.duration ?? const Duration(milliseconds: 1000),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -494,7 +494,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.SpinPerfect) {
+    if (widget.animation == AnimationDo.spinPerfect) {
       return SpinPerfect(
         duration: widget.duration ?? const Duration(milliseconds: 1000),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -506,7 +506,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.Dance) {
+    if (widget.animation == AnimationDo.dance) {
       return Dance(
         duration: widget.duration ?? const Duration(milliseconds: 1000),
         delay: widget.delay ?? const Duration(milliseconds: 0),
@@ -517,7 +517,7 @@ class _AniWidgetState extends State<AniWidget> {
         child: widget.child,
       );
     }
-    if (widget.animation == AnimationDo.Roulette) {
+    if (widget.animation == AnimationDo.roulette) {
       return Roulette(
         duration: widget.duration ?? const Duration(milliseconds: 3500),
         delay: widget.delay ?? const Duration(milliseconds: 0),

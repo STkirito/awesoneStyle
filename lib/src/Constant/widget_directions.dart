@@ -1,1 +1,1 @@
-enum WidgetDirections { Horizontal, Vertical }
+enum WidgetDirections { horizontal, vertical }

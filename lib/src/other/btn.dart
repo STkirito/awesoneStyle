@@ -65,7 +65,7 @@ class BTN1 extends StatelessWidget {
             ),
             gradient: this.gradient,
           ),
-      child: buttonType == ButtonType.Text
+      child: buttonType == ButtonType.text
           ? TextButton(
               child: text,
               onPressed: onPressed,
@@ -295,7 +295,7 @@ class _BTN4State extends State<BTN4> {
                 width: 2,
               ),
             ),
-        child: widget.childrenOrientation == ChildrenOrientation.Row
+        child: widget.childrenOrientation == ChildrenOrientation.row
             ? Row(
                 mainAxisAlignment: widget.mainAxisAlignment,
                 mainAxisSize: widget.mainAxisSize,
@@ -305,7 +305,7 @@ class _BTN4State extends State<BTN4> {
                 textBaseline: widget.textBaseline,
                 children: widget.children,
               )
-            : widget.childrenOrientation == ChildrenOrientation.Column
+            : widget.childrenOrientation == ChildrenOrientation.column
                 ? Column(
                     mainAxisAlignment: widget.mainAxisAlignment,
                     mainAxisSize: widget.mainAxisSize,

@@ -1,1 +1,1 @@
-enum ChildrenOrientation { Row, Column }
+enum ChildrenOrientation { row, column }

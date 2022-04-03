@@ -1,1 +1,1 @@
-enum ButtonType { Text, IconText }
+enum ButtonType { text, iconText }

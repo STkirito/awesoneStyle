@@ -1,1 +1,1 @@
-enum ButtonDialog { OK, CHANGE, CANCEL, CHANGEANDCANCEL, ACTIONS, NULL }
+enum ButtonDialog { ok, change, cancel, changeAndCancel, actions, nulls }

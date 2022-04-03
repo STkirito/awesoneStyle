@@ -23,10 +23,10 @@ Future floatDialog(BuildContext context,
     TextStyle? changedTextStyle,
     TextStyle? cancelTextStyle,
     List<Widget> actions = const <Widget>[],
-    ButtonType buttonType = ButtonType.Text,
-    ButtonDialog buttonDialog = ButtonDialog.NULL}) {
+    ButtonType buttonType = ButtonType.text,
+    ButtonDialog buttonDialog = ButtonDialog.nulls}) {
   if (value.toString().length != 0 && value != null) {
-    buttonDialog = ButtonDialog.CHANGEANDCANCEL;
+    buttonDialog = ButtonDialog.changeAndCancel;
   }
   return showDialog<void>(
     context: context,
@@ -41,13 +41,13 @@ Future floatDialog(BuildContext context,
                 : message ??
                     Text(
                         'Esta seguro de cambiar "${valueInitial.toString()}" por "${value.toString()}".'),
-        actions: buttonDialog == ButtonDialog.NULL
+        actions: buttonDialog == ButtonDialog.nulls
             ? []
-            : buttonDialog == ButtonDialog.ACTIONS
+            : buttonDialog == ButtonDialog.actions
                 ? actions
-                : buttonDialog == ButtonDialog.CHANGEANDCANCEL
+                : buttonDialog == ButtonDialog.changeAndCancel
                     ? [
-                        if (buttonType == ButtonType.Text)
+                        if (buttonType == ButtonType.text)
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -67,7 +67,7 @@ Future floatDialog(BuildContext context,
                                   )),
                             ],
                           ),
-                        if (buttonType == ButtonType.IconText)
+                        if (buttonType == ButtonType.iconText)
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -93,9 +93,9 @@ Future floatDialog(BuildContext context,
                           ),
                       ]
                     : <Widget>[
-                        if (buttonDialog == ButtonDialog.OK)
+                        if (buttonDialog == ButtonDialog.ok)
                           Center(
-                              child: buttonType != ButtonType.Text
+                              child: buttonType != ButtonType.text
                                   ? TextButton.icon(
                                       style: okStyle,
                                       onPressed: onOk,
@@ -109,9 +109,9 @@ Future floatDialog(BuildContext context,
                                       style: okStyle,
                                       onPressed: onOk,
                                       child: Text('OK', style: okTextStyle))),
-                        if (buttonDialog == ButtonDialog.CHANGE)
+                        if (buttonDialog == ButtonDialog.change)
                           Center(
-                            child: buttonType != ButtonType.Text
+                            child: buttonType != ButtonType.text
                                 ? TextButton.icon(
                                     style: changedStyle,
                                     onPressed: onChanged,
@@ -127,9 +127,9 @@ Future floatDialog(BuildContext context,
                                       style: changedTextStyle,
                                     )),
                           ),
-                        if (buttonDialog == ButtonDialog.CANCEL)
+                        if (buttonDialog == ButtonDialog.cancel)
                           Center(
-                            child: buttonType != ButtonType.Text
+                            child: buttonType != ButtonType.text
                                 ? TextButton.icon(
                                     style: cancelStyle,
                                     onPressed: onCancel,

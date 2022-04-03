@@ -16,7 +16,7 @@ class BuildPressMenu {
       this.color,
       this.boxShadow,
       this.physics,
-      this.direction = WidgetDirections.Vertical,
+      this.direction = WidgetDirections.vertical,
       required this.children});
   Widget build() {
     return ClipRRect(
@@ -37,7 +37,7 @@ class BuildPressMenu {
         ),
         child: SingleChildScrollView(
           physics: physics ?? const BouncingScrollPhysics(),
-          child: direction == WidgetDirections.Vertical
+          child: direction == WidgetDirections.vertical
               ? Column(
                   children: children,
                 )
