@@ -33,7 +33,7 @@ login(
       result.call(true);
     } else {
       result.call(false);
-      isLoading.call(true);
+      isLoading.call(false);
       snack.close();
       Get.showSnackbar(GetSnackBar(
         title: 'Login',
