@@ -6,3 +6,4 @@ export 'package:awesonestyle/src/Components/Picker/date_picker.dart';
 export 'package:awesonestyle/src/Components/Picker/item_picker.dart';
 export 'package:awesonestyle/src/Components/Animation/AniWidget/AniWidget.dart';
 export 'package:awesonestyle/src/Components/Button/tc_button.dart';
+export 'package:awesonestyle/src/Components/Input/input_area.dart';
