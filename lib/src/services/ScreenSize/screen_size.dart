@@ -1,13 +1,12 @@
 import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
 
-class ScreenSize {
+class AwsScreenSize {
   static late double _width;
   static late double _heigth;
 
-  ScreenSize(BuildContext context) {
-    _width = Get.width;
-    _heigth = Get.height;
+  AwsScreenSize(BuildContext context) {
+    _width = context.size!.width;
+    _heigth = context.size!.height;
   }
 
   static double width(double? porsentaje) {

@@ -1,1 +1,1 @@
-export 'package:awesonestyle/src/Generators/DateGenerator/date_generator.dart';
+export 'package:awesonestyle/src/Generators/generator.dart';

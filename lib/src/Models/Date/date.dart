@@ -4,6 +4,7 @@ class Date {
   final String? year;
 
   Date(this.day, this.month, this.year);
+
   bool isEmpty() {
     if (day == '' && month == '' && year == '') {
       return true;

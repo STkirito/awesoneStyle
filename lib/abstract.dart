@@ -1,2 +1,2 @@
-export 'package:awesonestyle/src/Abstract%20/Auth/auth.dart';
-export 'package:awesonestyle/src/Abstract%20/LoginRegister/login_register.dart';
+export 'package:awesonestyle/src/Abstract/auth/auth.dart';
+export 'package:awesonestyle/src/Abstract/login_register/login_register.dart';
