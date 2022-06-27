@@ -1,3 +1,5 @@
+## [1.2.1] - Stable
+- Enlaces arreglados.
 ## [1.2.0] - Stable
 ### Abstract
 	#### - AwsAuth:
