@@ -1,3 +1,4 @@
+import 'package:awesonestyle/awesonestyle.dart';
 import 'package:flutter/widgets.dart';
 
 class AwsScreenSize {
@@ -5,8 +6,10 @@ class AwsScreenSize {
   static late double _heigth;
 
   AwsScreenSize(BuildContext context) {
-    _width = context.size!.width;
-    _heigth = context.size!.height;
+    /* _width = Get.width;
+    _heigth = Get.height; */
+    _width = context.mediaQuerySize.width;
+    _heigth = context.mediaQuerySize.height;
   }
 
   static double width(double? porsentaje) {
