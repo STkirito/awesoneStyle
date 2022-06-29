@@ -1,7 +1,8 @@
 name: awesonestyle
-description: AwesoneStyle widget pack.
-version: 1.2.2
-homepage: https://github.com/STkirito/AwesoneStyle
+description: "AwesoneStyle es un paquete multiplataforma que contiene un conjunto de herramientas de código abierto bajo la licencia Licencia Apache(Versión 2.0), para diseño de sitios, aplicaciones web, aplicaciones móviles y de escritorio. Contiene clases abstractas, constantes, funciones, generadores, modelos, clase router, services, style y widgets como: Widgets para form, botones, y otros elementos de diseño. AwesoneStyle solo se ocupa del desarrollo front-end.\n
+AwesoneStyle funciona en casi todas las plataformas sin problemas y trabaja con Getx."
+version: 1.2.3
+homepage: https://github.com/STkirito/awesoneStyle
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -17,6 +18,7 @@ dependencies:
   calendar_view: ^0.0.5
   http: ^0.13.4
   intl: ^0.17.0
+  dartdoc: ^5.1.2
 dev_dependencies:
   flutter_test:
     sdk: flutter

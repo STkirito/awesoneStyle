@@ -1,1 +1,1 @@
-export 'package:awesonestyle/src/function/validation/validation.dart';
+export 'package:awesonestyle/src/Function/validation/validation.dart';

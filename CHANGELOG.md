@@ -1,3 +1,6 @@
+## [1.2.3] - Stable
+- documentación corregida.
+- Enlaces arreglados.
 ## [1.2.2] - Stable
 - AwsScreenSize.
 ## [1.2.1] - Stable
