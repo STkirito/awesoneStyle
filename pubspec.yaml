@@ -1,6 +1,5 @@
 name: awesonestyle
-description: "AwesoneStyle es un paquete multiplataforma que contiene un conjunto de herramientas de código abierto bajo la licencia Licencia Apache(Versión 2.0), para diseño de sitios, aplicaciones web, aplicaciones móviles y de escritorio. Contiene clases abstractas, constantes, funciones, generadores, modelos, clase router, services, style y widgets como: Widgets para form, botones, y otros elementos de diseño. AwesoneStyle solo se ocupa del desarrollo front-end.\n
-AwesoneStyle funciona en casi todas las plataformas sin problemas y trabaja con Getx."
+description: "AwesoneStyle es un paquete multiplataforma que contiene un conjunto de herramientas de código abierto bajo la licencia Licencia Apache(Versión 2.0), para diseño de sitios, aplicaciones web, aplicaciones móviles y de escritorio."
 version: 1.2.3
 homepage: https://github.com/STkirito/awesoneStyle
 

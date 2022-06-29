@@ -1,4 +1,6 @@
 # AwesoneStyle
+AwesoneStyle es un paquete multiplataforma que contiene un conjunto de herramientas de código abierto bajo la licencia Licencia Apache(Versión 2.0), para diseño de sitios, aplicaciones web, aplicaciones móviles y de escritorio. Contiene clases abstractas, constantes, funciones, generadores, modelos, clase router, services, style y widgets como: Widgets para form, botones, y otros elementos de diseño. AwesoneStyle solo se ocupa del desarrollo front-end.
+AwesoneStyle funciona en casi todas las plataformas sin problemas y trabaja con Getx.
 ### Abstract
 	- AwsAuth:
 		Es una clase abstracta que sirve para crear un Auth que incluye los métodos `login()`, `createUser()`, logout y `readToken()`.
