@@ -1,3 +1,4 @@
+///Enlace Principal del paquete
 library awesonestyle;
 
 export 'package:awesonestyle/router.dart';
