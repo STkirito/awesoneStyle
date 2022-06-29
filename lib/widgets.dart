@@ -17,7 +17,7 @@ export 'package:awesonestyle/src/Widgets/input/user_input_field.dart';
 export 'package:awesonestyle/src/Widgets/input/user_input_second_field.dart';
 export 'package:awesonestyle/src/Widgets/picker/date_picker/date_picker.dart';
 export 'package:awesonestyle/src/Widgets/picker/date_picker/widgets/item_picker/item_picker.dart';
-export 'package:awesonestyle/src/Widgets/Animation/AniWidget/AniWidget.dart';
+export 'package:awesonestyle/src/Widgets/animation/AniWidget/AniWidget.dart';
 export 'package:awesonestyle/src/Widgets/buttons/tc_button.dart';
 export 'package:awesonestyle/src/Widgets/input/area_text_field.dart';
 export 'package:calendar_view/calendar_view.dart';

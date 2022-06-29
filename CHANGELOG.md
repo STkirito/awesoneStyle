@@ -1,3 +1,5 @@
+## [1.2.8] - Stable
+- documentación corregida.
 ## [1.2.7] - Stable
 - Widgets corregidos
 - Documentación corregida.
