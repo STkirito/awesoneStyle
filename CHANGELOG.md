@@ -1,5 +1,7 @@
 ## [1.2.5] - Stable
 - documentación corregida.
+## [1.2.5] - Stable
+- documentación corregida.
 ## [1.2.4] - Stable
 - documentación corregida.
 ## [1.2.3] - Stable

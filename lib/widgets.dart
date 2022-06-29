@@ -13,8 +13,8 @@ export 'package:awesonestyle/src/Widgets/calendar/header/calendar_page_header.da
 export 'package:awesonestyle/src/Widgets/buttons/get_button.dart';
 export 'package:awesonestyle/src/Widgets/buttons/build_press_menu.dart';
 export 'package:awesonestyle/src/Widgets/buttons/social_button.dart';
-export 'package:awesonestyle/src/Widgets/Input/user_input_field.dart';
-export 'package:awesonestyle/src/Widgets/Input/user_input_second_field.dart';
+export 'package:awesonestyle/src/Widgets/input/user_input_field.dart';
+export 'package:awesonestyle/src/Widgets/input/user_input_second_field.dart';
 export 'package:awesonestyle/src/Widgets/Picker/date_picker/date_picker.dart';
 export 'package:awesonestyle/src/Widgets/Picker/date_picker/widgets/item_picker/item_picker.dart';
 export 'package:awesonestyle/src/Widgets/Animation/AniWidget/AniWidget.dart';
