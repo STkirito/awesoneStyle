@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 
-//TODO: Future Fixe
 class AwsUserInputField extends StatelessWidget {
-  final TextEditingController controller;
-  final String hintTitle;
-  final TextInputType keyboardType;
-  final bool? obscureText;
-  const AwsUserInputField(
-      {Key? key,
-      required this.controller,
-      required this.hintTitle,
-      required this.keyboardType,
-      this.obscureText})
-      : super(key: key);
-
+  final TextEditingController _controller;
+  final String _hintTitle;
+  final TextInputType _keyboardType;
+  final bool? _obscureText;
+  AwsUserInputField({
+    Key? key,
+    required TextEditingController controller,
+    required String hintTitle,
+    required TextInputType keyboardType,
+    bool? obscureText,
+  })  : _controller = controller,
+        _hintTitle = hintTitle,
+        _keyboardType = keyboardType,
+        _obscureText = obscureText,
+        super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,16 +26,16 @@ class AwsUserInputField extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(left: 25.0, right: 25),
         child: TextField(
-          obscureText: obscureText ?? false,
-          controller: controller,
+          keyboardType: _keyboardType,
+          obscureText: _obscureText ?? false,
+          controller: _controller,
           decoration: InputDecoration(
-            hintText: hintTitle,
+            hintText: _hintTitle,
             hintStyle: const TextStyle(
                 fontSize: 18,
                 color: Colors.black87,
                 fontStyle: FontStyle.italic),
           ),
-          //keyboardType: keyboardType,
         ),
       ),
     );

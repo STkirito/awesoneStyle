@@ -1,4 +1,9 @@
-## [1.2.5] - Stable
+## [1.2.7] - Stable
+- Widgets corregidos
+- Documentación corregida.
+- Enlaces arreglados.
+- ItenPicker corregido
+## [1.2.6] - Stable
 - documentación corregida.
 ## [1.2.5] - Stable
 - documentación corregida.
@@ -8,7 +13,7 @@
 - documentación corregida.
 - Enlaces arreglados.
 ## [1.2.2] - Stable
-- AwsScreenSize.
+- AwsScreenSize corregido.
 ## [1.2.1] - Stable
 - Enlaces arreglados.
 ## [1.2.0] - Stable

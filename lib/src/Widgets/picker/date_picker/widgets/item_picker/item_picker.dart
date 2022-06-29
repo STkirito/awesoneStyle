@@ -2,52 +2,64 @@ import 'package:awesonestyle/awesonestyle.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-//TODO_Future fixe
 class AwsItemPicker extends StatelessWidget {
-  final double? height;
-  final double? width;
-  final EdgeInsets? padding;
-  final EdgeInsets? margin;
-  final BoxDecoration? decoration;
-  final String label;
-  final TextStyle? styleLabel;
-  final BuildContext context;
-  final int? length;
-  final bool year;
-  final TextStyle? itemStyle;
-  final double? itemExtent;
-  final double? itemHeight;
-  final void Function(int)? onSelectedItemChanged;
-  final String? initialLabel;
-  final TextStyle? initialStyle;
-  const AwsItemPicker(this.context,
-      {Key? key,
-      this.height,
-      this.width,
-      this.padding,
-      this.margin,
-      this.decoration,
-      this.length,
-      required this.label,
-      this.styleLabel,
-      this.itemStyle,
-      this.itemExtent,
-      this.onSelectedItemChanged,
-      this.year = false,
-      this.itemHeight,
-      this.initialLabel,
-      this.initialStyle})
-      : super(key: key);
+  final double? _height;
+  final double? _width;
+  final EdgeInsets? _padding;
+  final EdgeInsets? _margin;
+
+  final String _label;
+  final TextStyle? _styleLabel;
+  final int? _length;
+  final bool _year;
+  final TextStyle? _itemStyle;
+  final double? _itemExtent;
+  final double? _itemHeight;
+  final void Function(int)? _onSelectedItemChanged;
+  final String? _initialLabel;
+  final TextStyle? _initialStyle;
+
+  AwsItemPicker({
+    Key? key,
+    required String label,
+    double? height,
+    double? width,
+    EdgeInsets? padding,
+    EdgeInsets? margin,
+    TextStyle? styleLabel,
+    int? length,
+    bool year = false,
+    TextStyle? itemStyle,
+    double? itemExtent,
+    double? itemHeight,
+    void Function(int)? onSelectedItemChanged,
+    String? initialLabel,
+    TextStyle? initialStyle,
+  })  : _label = label,
+        _height = height,
+        _width = width,
+        _padding = padding,
+        _margin = margin,
+        _styleLabel = styleLabel,
+        _length = length,
+        _year = year,
+        _itemStyle = itemStyle,
+        _itemExtent = itemExtent,
+        _itemHeight = itemHeight,
+        _onSelectedItemChanged = onSelectedItemChanged,
+        _initialLabel = initialLabel,
+        _initialStyle = initialStyle,
+        super(key: key);
   @override
   Widget build(context) {
     AwsScreenSize(context);
     return GestureDetector(
       child: Container(
         alignment: Alignment.center,
-        height: AwsScreenSize.height(height ?? 5),
-        width: AwsScreenSize.width(width ?? 20),
-        padding: padding,
-        margin: margin ?? const EdgeInsets.all(10),
+        height: AwsScreenSize.height(_height ?? 5),
+        width: AwsScreenSize.width(_width ?? 20),
+        padding: _padding,
+        margin: _margin ?? const EdgeInsets.all(10),
         decoration: BoxDecoration(
             color: Colors.black.withOpacity(0.1),
             borderRadius: BorderRadius.circular(20)),
@@ -55,18 +67,18 @@ class AwsItemPicker extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              child: initialLabel != null
+              child: _initialLabel != null
                   ? Text(
-                      initialLabel!,
-                      style: initialStyle ??
+                      _initialLabel!,
+                      style: _initialStyle ??
                           TextStyle(color: Colors.white.withOpacity(0.5)),
                     )
                   : null,
             ),
             const SizedBox(width: 5),
             Text(
-              label,
-              style: styleLabel ?? const TextStyle(color: Colors.white),
+              _label,
+              style: _styleLabel ?? const TextStyle(color: Colors.white),
             )
           ],
         ),
@@ -74,23 +86,23 @@ class AwsItemPicker extends StatelessWidget {
       onTap: () => showCupertinoModalPopup<int>(
         context: context,
         builder: (context) => SizedBox(
-          height: itemHeight ?? 300,
+          height: _itemHeight ?? 300,
           child: CupertinoPicker(
-            itemExtent: itemExtent ?? 50,
-            onSelectedItemChanged: onSelectedItemChanged,
-            children: year
+            itemExtent: _itemExtent ?? 50,
+            onSelectedItemChanged: _onSelectedItemChanged,
+            children: _year
                 ? List.generate(
                     AwsGenerator.year().length,
                     (index) => Text(
                           AwsGenerator.year()[index].toString(),
-                          style:
-                              itemStyle ?? const TextStyle(color: Colors.white),
+                          style: _itemStyle ??
+                              const TextStyle(color: Colors.white),
                         ))
                 : List.generate(
-                    length ?? 31,
+                    _length ?? 31,
                     (index) => Text(
                       (index + 1).toString(),
-                      style: itemStyle ?? const TextStyle(color: Colors.white),
+                      style: _itemStyle ?? const TextStyle(color: Colors.white),
                     ),
                   ),
           ),

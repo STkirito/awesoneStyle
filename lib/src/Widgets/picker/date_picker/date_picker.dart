@@ -36,7 +36,6 @@ class _AwsDatePickerState extends State<AwsDatePicker> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         AwsItemPicker(
-          context,
           length: widget._day.length,
           initialLabel: _dayL.isEmpty ? null : widget._day.initialLabel,
           initialStyle: widget._day.styleInitial,
@@ -49,7 +48,6 @@ class _AwsDatePickerState extends State<AwsDatePicker> {
           },
         ),
         AwsItemPicker(
-          context,
           length: widget._month.length,
           initialLabel: _monthL.isEmpty ? null : widget._month.initialLabel,
           initialStyle: widget._month.styleInitial,
@@ -62,7 +60,6 @@ class _AwsDatePickerState extends State<AwsDatePicker> {
           },
         ),
         AwsItemPicker(
-          context,
           year: widget._year.year,
           initialLabel: _yearL.isEmpty ? null : widget._year.initialLabel,
           initialStyle: widget._year.styleInitial,

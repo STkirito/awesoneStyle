@@ -1,48 +1,54 @@
 import 'package:flutter/material.dart';
 
-//TODO: Future Fixe
 class AwsUserInputSecondField extends StatelessWidget {
-  final TextEditingController controller;
-  final String hintText;
-  final TextInputType keyboardType;
-  final bool? obscureText;
-  final IconData icon;
-  final EdgeInsets? margin;
-  final EdgeInsets? padding;
-  const AwsUserInputSecondField(
-      {Key? key,
-      required this.controller,
-      required this.hintText,
-      required this.keyboardType,
-      this.obscureText,
-      required this.icon,
-      this.margin,
-      this.padding})
-      : super(key: key);
+  final TextEditingController _controller;
+  final String _hintText;
+  final TextInputType _keyboardType;
+  final bool? _oscureText;
+  final IconData _icon;
+  final EdgeInsets? _margin;
+  final EdgeInsets? _padding;
+  AwsUserInputSecondField({
+    Key? key,
+    required TextEditingController controller,
+    required String hintText,
+    required TextInputType keyboardType,
+    bool? oscureText,
+    required IconData icon,
+    EdgeInsets? margin,
+    EdgeInsets? padding,
+  })  : _controller = controller,
+        _hintText = hintText,
+        _keyboardType = keyboardType,
+        _oscureText = oscureText,
+        _icon = icon,
+        _margin = margin,
+        _padding = padding,
+        super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      padding: padding ?? const EdgeInsets.only(right: 10),
-      margin: margin ?? const EdgeInsets.all(10),
+      padding: _padding ?? const EdgeInsets.only(right: 10),
+      margin: _margin ?? const EdgeInsets.all(10),
       decoration: BoxDecoration(
           color: Colors.black.withOpacity(0.1),
           borderRadius: BorderRadius.circular(20)),
       child: TextField(
-        controller: controller,
+        controller: _controller,
         style: TextStyle(
           color: Colors.white.withOpacity(0.9),
         ),
-        obscureText: obscureText ?? false,
-        keyboardType: keyboardType,
+        obscureText: _oscureText ?? false,
+        keyboardType: _keyboardType,
         decoration: InputDecoration(
           prefixIcon: Icon(
-            icon,
+            _icon,
             color: Colors.white.withOpacity(0.8),
           ),
           border: InputBorder.none,
           hintMaxLines: 1,
-          hintText: hintText,
+          hintText: _hintText,
           hintStyle:
               TextStyle(fontSize: 14, color: Colors.white.withOpacity(0.5)),
         ),

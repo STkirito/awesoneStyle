@@ -1,8 +1,8 @@
-import 'package:awesonestyle/awesonestyle.dart';
-import 'package:flutter/material.dart';
+/* import 'package:awesonestyle/awesonestyle.dart';
+import 'package:flutter/material.dart'; */
 
 //TODO: falta terminar
-class _AwsCalendarEventDetails extends StatelessWidget {
+/* class _AwsCalendarEventDetails extends StatelessWidget {
   final String title;
   final String description;
   final Object? event;
@@ -110,3 +110,4 @@ class _AwsCalendarEventDetails extends StatelessWidget {
     );
   }
 }
+ */
