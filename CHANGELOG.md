@@ -1,3 +1,7 @@
+## [1.2.10] - Stable
+- documentación corregida.
+## [1.2.9] - Stable
+- documentación corregida.
 ## [1.2.8] - Stable
 - documentación corregida.
 ## [1.2.7] - Stable

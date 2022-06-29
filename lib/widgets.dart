@@ -8,7 +8,6 @@ export 'package:awesonestyle/src/Widgets/picker/time_picker/time_picker.dart';
 export 'package:awesonestyle/src/Widgets/buttons/user_button.dart';
 export 'package:awesonestyle/src/Widgets/buttons/flat_button.dart';
 export 'package:awesonestyle/src/Widgets/buttons/gradient_button.dart';
-export 'package:awesonestyle/src/Widgets/calendar/event/calendar_event_details.dart';
 export 'package:awesonestyle/src/Widgets/calendar/header/calendar_page_header.dart';
 export 'package:awesonestyle/src/Widgets/buttons/get_button.dart';
 export 'package:awesonestyle/src/Widgets/buttons/build_press_menu.dart';
