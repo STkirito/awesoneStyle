@@ -1,3 +1,5 @@
+export 'package:awesonestyle/src/Widgets/calendar/details/calendar_details.dart';
+export 'package:awesonestyle/src/Widgets/calendar/week/week_page_header.dart';
 export 'package:awesonestyle/src/Widgets/buttons/link_text.dart';
 export 'package:awesonestyle/src/Widgets/buttons/outlined_button.dart';
 export 'package:awesonestyle/src/Widgets/calendar/header/calendar_page_header.dart';
@@ -19,4 +21,3 @@ export 'package:awesonestyle/src/Widgets/picker/date_picker/widgets/item_picker/
 export 'package:awesonestyle/src/Widgets/animation/AniWidget/AniWidget.dart';
 export 'package:awesonestyle/src/Widgets/buttons/tc_button.dart';
 export 'package:awesonestyle/src/Widgets/input/area_text_field.dart';
-export 'package:calendar_view/calendar_view.dart';

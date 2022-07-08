@@ -24,6 +24,8 @@ AwesoneStyle funciona en casi todas las plataformas sin problemas y trabaja con 
 			- `AwsFormatter.formatter`: Da como resultado (año/mes/dia).
 			- `AwsFormatter.formatterCard`: Da como resultado (año/mes).
 			- `AwsFormatter.formatterTime`: Da como resultado (hora/minutos/(am o pm)).
+			- `AwsFormatter.completTime`.
+			- `AwsFormatter.parseDateTime`.
 	- Orientation:
 		- AwsChildrenOrientation:
 			Es un enum que contiene: row y column.
@@ -131,6 +133,9 @@ AwesoneStyle funciona en casi todas las plataformas sin problemas y trabaja con 
 		- AwsUserButton:
 				Es un button que actualmente solo contiene `AwsUserButton.circleAvatar(…)`.
 	- Calendar:
+		- details:
+			- `AwsMultiCalendarEventDetails`.
+			- `AwsCalendarEventDetails`.
 			Contiene widgets para calendar_view, son similares o iguales y se pueden usar agregando `Aws`, antes del nombre del widget de calendar_view.
 	- Form:
 		- AwsDateFormField:

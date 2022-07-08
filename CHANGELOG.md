@@ -1,3 +1,9 @@
+## [1.3.0] - Stable
+- add completTime
+- add parseDateTime
+- add AwsMultiCalendarEventDetails
+- add AwsCalendarEventDetails
+- add AwsWeekPageHeader
 ## [1.2.10] - Stable
 - documentación corregida.
 ## [1.2.9] - Stable

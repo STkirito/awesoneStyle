@@ -2,6 +2,7 @@ import 'package:awesonestyle/awesonestyle.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+//TODO: cambiar de textStyle a titleStyle
 class AwsMonthPageHeader extends AwsCalendarPageHeader {
   const AwsMonthPageHeader({
     Key? key,
