@@ -1,3 +1,13 @@
+## [1.3.6] - Stable
+- add AwsAnimationButton
+- add AwsAnimationButtonStyle
+- add AwsDefAnimationButtonState
+- add AwsTextRowButton
+## [1.3.5] - Stable
+- add Animation Properties
+- add AwsAnimation
+- add AwsAnimationWidget
+- update AwsArguments
 ## [1.3.0] - Stable
 - add completTime
 - add parseDateTime

@@ -16,6 +16,8 @@ AwesoneStyle funciona en casi todas las plataformas sin problemas y trabaja con 
 			Es un enum que contiene: ok, change y cancel.
 		-AwsButtonType:
 			Es un enum que contiene: text y iconText.
+		-AwsDefAnimationButtonState:
+			Es un enum que contiene: nulls, actions, ok, error.
 	- Direction:
 		- AwsWidgetDirections
 			Es un en un que contiene: horizontal y vertical.
@@ -24,7 +26,7 @@ AwesoneStyle funciona en casi todas las plataformas sin problemas y trabaja con 
 			- `AwsFormatter.formatter`: Da como resultado (año/mes/dia).
 			- `AwsFormatter.formatterCard`: Da como resultado (año/mes).
 			- `AwsFormatter.formatterTime`: Da como resultado (hora/minutos/(am o pm)).
-			- `AwsFormatter.completTime`.
+			- `AwsFormatter.completTime`: es una funcion que retorna un formato (hora:minuto).
 			- `AwsFormatter.parseDateTime`.
 	- Orientation:
 		- AwsChildrenOrientation:
@@ -64,6 +66,15 @@ AwesoneStyle funciona en casi todas las plataformas sin problemas y trabaja con 
 		- route (String)
 		- id (String)
 		- file (File)
+		- map (Map)
+		- object (Object)
+		- type (Type)
+		- dinamic (dynamic)
+		- mudable (var)
+		- events (List<CalendarEventData>)
+		- email (String)
+		- password (String)
+		- result (Object)
 		se usa para enviar argumentos en el Navigator o con Getx.
 	- DateSettings:
 		 Es una clase que se usa en el widget AwsDatePicker.
@@ -77,6 +88,7 @@ AwesoneStyle funciona en casi todas las plataformas sin problemas y trabaja con 
 			es una clase que se usa para configurar el gradiente en el widget AwsGradientButton.
 	- BoxShadowSettings
 			es una clase que se usa para configurar el Shadow en el widget AwsGradientButton.
+	- AwsAnimationProperty: es establecedor de propiedades de AwsAnimationWidget.
 ---- 
 ### Router
 	- AwsRouter:
@@ -93,12 +105,13 @@ AwesoneStyle funciona en casi todas las plataformas sin problemas y trabaja con 
 		- `AwsScreenSize.height(60)`, Es el 60% de toda la pantalla en altura.
 ---- 
 ### Style
-	Contiene diferentes estilos que se pueden usar:
-	- BoxDecoration
-	- Random
-	- Color
-	- InputDecoration
-	- y otros.
+	-AwsStyle: Contiene diferentes estilos que se pueden usar:
+		- BoxDecoration
+		- Random
+		- Color
+		- InputDecoration
+		- y otros.
+	- AwsAnimationButtonStyle: contiene los estilos de nulls, actions, ok, error.
 ---- 
 ### Widgets
 	- Animation:
@@ -112,6 +125,8 @@ AwesoneStyle funciona en casi todas las plataformas sin problemas y trabaja con 
 					  onPressed: () \{},
 					),
 				  ),
+		- AwsAnimation: es un Widget de animacion que se actualiza si hay cambios en su controller.
+		- AwsAnimationWidget: es un widget de animacion que se actualiza si hay cambios en su controller sin la necesidad de usar un statefullwidget para iniciar el controlador ya que dispone de AwsAnimationProperty para su definición y para acceder a su propiedades se debe usar AwsAnimation(ejemplo:AwsAnimation.of.value) y para usarlo se usar un Anumation controller.
 
 	- Buttons:
 		- AwsBuildPressMenu:
@@ -132,6 +147,10 @@ AwesoneStyle funciona en casi todas las plataformas sin problemas y trabaja con 
 				Es un button que contiene un checkbox para verificar una aceptación del usuario de un tc(Términos y Condiciones) o otro similar.
 		- AwsUserButton:
 				Es un button que actualmente solo contiene `AwsUserButton.circleAvatar(…)`.
+		-AwsAnimationButton:
+				Es un button que se compone de 3 fases,cada fase tiene su animación, se puede usar para peticiones que requieran un tiempo de respuesta.
+		-AwsTextRowButton:
+				Es un widget que contiene un texto y un button
 	- Calendar:
 		- details:
 			- `AwsMultiCalendarEventDetails`.

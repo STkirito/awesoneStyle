@@ -1,3 +1,4 @@
+export 'package:awesonestyle/src/Models/animation_property/animation_property.dart';
 export 'package:awesonestyle/src/Models/shadow/box_shadow_settigns.dart';
 export 'package:awesonestyle/src/Models/gradient/gradient_settings.dart';
 export 'package:awesonestyle/src/Models/date/date.dart';
