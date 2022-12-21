@@ -40,6 +40,7 @@ class _AwsDatePickerState extends State<AwsDatePicker> {
           initialLabel: _dayL.isEmpty ? null : widget._day.initialLabel,
           initialStyle: widget._day.styleInitial,
           label: _dayL.isEmpty ? widget._day.label : _dayL,
+          styleLabel: widget._day.styleLabel,
           onSelectedItemChanged: (index) {
             setState(() {
               _dayL = (index + 1).toString();
@@ -52,6 +53,7 @@ class _AwsDatePickerState extends State<AwsDatePicker> {
           initialLabel: _monthL.isEmpty ? null : widget._month.initialLabel,
           initialStyle: widget._month.styleInitial,
           label: _monthL.isEmpty ? widget._month.label : _monthL,
+          styleLabel: widget._month.styleLabel,
           onSelectedItemChanged: (index) {
             setState(() {
               _monthL = (index + 1).toString();
@@ -64,6 +66,7 @@ class _AwsDatePickerState extends State<AwsDatePicker> {
           initialLabel: _yearL.isEmpty ? null : widget._year.initialLabel,
           initialStyle: widget._year.styleInitial,
           label: _yearL.isEmpty ? widget._year.label : _yearL,
+          styleLabel: widget._year.styleLabel,
           onSelectedItemChanged: (index) {
             setState(() {
               _yearL = (AwsGenerator.year()[index]).toString();

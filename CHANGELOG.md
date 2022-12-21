@@ -1,3 +1,6 @@
+## [1.3.7] - Stable
+- fixed AwsDatePicker
+
 ## [1.3.6] - Stable
 - add AwsAnimationButton
 - add AwsAnimationButtonStyle
