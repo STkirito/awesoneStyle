@@ -1,3 +1,5 @@
+## [1.3.8] - Stable
+- add AwsStorage
 ## [1.3.7] - Stable
 - fixed AwsDatePicker
 

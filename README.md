@@ -103,6 +103,7 @@ AwesoneStyle funciona en casi todas las plataformas sin problemas y trabaja con 
 		Después de crear `AwsScreenSize(context)`, puedes usar.
 		- `AwsScreenSize.width(100)`, Es similar a un double.infinity
 		- `AwsScreenSize.height(60)`, Es el 60% de toda la pantalla en altura.
+	- AwsStorage: crea, copia y elimina directorios o files.
 ---- 
 ### Style
 	-AwsStyle: Contiene diferentes estilos que se pueden usar:
