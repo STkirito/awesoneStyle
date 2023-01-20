@@ -72,7 +72,7 @@ class AwsStorage {
         await Link(copyTo).create(await file.target(), recursive: true);
       }
     }
-    return Directory(copyTo);
+    return Directory(to);
   }
 
   static Future<File> _copyPathFile(String from, String to) async {

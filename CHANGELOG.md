@@ -1,3 +1,5 @@
+## [1.3.8+1] - Stable
+- fixed AwsStorage
 ## [1.3.8] - Stable
 - add AwsStorage
 ## [1.3.7] - Stable
