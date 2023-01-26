@@ -179,4 +179,5 @@ AwesoneStyle funciona en casi todas las plataformas sin problemas y trabaja con 
 se puede acceder los componentes de AwesoneStyle desde el enlace principal o desde el enlace de su categoría.		
 ---- 
 ### Nota Importante
+calendar_view fue eliminado de este paquete.
 Los paquetes como animate_do, calendar_view y sus widgets o otros dependientes puede quedar fuera del paquete en futuras actualizaciones de momento no hay un plan inmediato de reemplazo pero sí se asegura que tendrán un reemplazo.

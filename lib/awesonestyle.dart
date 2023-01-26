@@ -13,6 +13,3 @@ export 'package:awesonestyle/services.dart';
 
 ///getx Incluido
 export 'package:get/get.dart';
-
-///calendar_view
-export 'package:calendar_view/calendar_view.dart';

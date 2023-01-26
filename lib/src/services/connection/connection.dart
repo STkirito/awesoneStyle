@@ -8,6 +8,7 @@ class AwsConnection extends GetxController {
   Duration _delay;
   RxBool _states = false.obs;
   String _url;
+
   AwsConnection(
       {String url = 'www.google.com',
       Duration delay = const Duration(milliseconds: 1)})

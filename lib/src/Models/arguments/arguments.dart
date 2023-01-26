@@ -1,7 +1,5 @@
 import 'dart:io';
 
-import 'package:awesonestyle/awesonestyle.dart';
-
 class AwsArguments {
   String? string;
   int? index;
@@ -14,7 +12,6 @@ class AwsArguments {
   Type? type;
   dynamic dinamic;
   var mudable;
-  List<CalendarEventData>? events;
   String? email;
   String? password;
   Object? result;
@@ -31,7 +28,6 @@ class AwsArguments {
     this.type,
     this.dinamic,
     this.mudable,
-    this.events,
     this.email,
     this.password,
     this.result,

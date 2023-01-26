@@ -1,7 +1,52 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:awesonestyle/awesonestyle.dart';
-
 import 'package:flutter/material.dart';
+
+enum AwsAnimationDo {
+  fadeIn,
+  fadeInDown,
+  fadeInDownBig,
+  fadeInUp,
+  fadeInUpBig,
+  fadeInLeft,
+  fadeInLeftBig,
+  fadeInRight,
+  fadeInRightBig,
+  fadeOut,
+  fadeOutDown,
+  fadeOutDownBig,
+  fadeOutUp,
+  fadeOutUpBig,
+  fadeOutLeft,
+  fadeOutLeftBig,
+  fadeOutRight,
+  fadeOutRightBig,
+  bounceInDown,
+  bounceInUp,
+  bounceInLeft,
+  bounceInRight,
+  elasticIn,
+  elasticInDown,
+  elasticInUp,
+  elasticInLeft,
+  elasticInRight,
+  slideInDown,
+  slideInUp,
+  slideInLeft,
+  slideInRight,
+  flipInX,
+  flipInY,
+  zoomIn,
+  zoomOut,
+  jelloIn,
+  bounce,
+  flash,
+  pulse,
+  swing,
+  spin,
+  spinPerfect,
+  dance,
+  roulette
+}
 
 class AwsAniWidget extends StatefulWidget {
   final AwsAnimationDo _animation;
@@ -15,20 +60,20 @@ class AwsAniWidget extends StatefulWidget {
   final bool _infinite;
   final double? _spins;
   final double _to;
-  AwsAniWidget(
-      {Key? key,
-      required AwsAnimationDo animation,
-      required Widget child,
-      Duration? duration,
-      Duration? delay,
-      dynamic Function(AnimationController)? controller,
-      bool manualTrigger = false,
-      bool? animate,
-      double? from,
-      bool infinite = false,
-      double? spins,
-      double to = 100})
-      : _animation = animation,
+  AwsAniWidget({
+    Key? key,
+    required AwsAnimationDo animation,
+    required Widget child,
+    Duration? duration,
+    Duration? delay,
+    dynamic Function(AnimationController)? controller,
+    bool manualTrigger = false,
+    bool? animate,
+    double? from,
+    bool infinite = false,
+    double? spins,
+    double to = 100,
+  })  : _animation = animation,
         _child = child,
         _duration = duration,
         _delay = delay,
