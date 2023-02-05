@@ -1,3 +1,5 @@
+## [1.3.9+2] - Stable
+- fixed
 ## [1.3.9+1] - Stable
 - fixed
 ## [1.3.9] - Stable
