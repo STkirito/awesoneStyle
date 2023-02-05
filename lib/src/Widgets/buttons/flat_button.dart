@@ -20,7 +20,7 @@ class AwsFlatButton extends StatelessWidget {
     return TextButton(
       style: TextButton.styleFrom(
         padding: const EdgeInsets.all(10),
-        primary: _color,
+        foregroundColor: _color,
       ),
       onPressed: _onPressed,
       child: _text,

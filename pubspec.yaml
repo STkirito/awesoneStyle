@@ -1,6 +1,6 @@
 name: awesonestyle
 description: "AwesoneStyle es un paquete multiplataforma que contiene un conjunto de herramientas para diseño de sitios, aplicaciones web, aplicaciones móviles y de escritorio."
-version: 1.3.9
+version: 1.3.9+1
 homepage: https://github.com/STkirito/awesoneStyle
 
 environment:
@@ -16,11 +16,11 @@ dependencies:
   font_awesome_flutter: ^10.1.0
   get: ^4.6.5
   http: ^0.13.4
-  intl: ^0.18.0
-  dartdoc: ^6.1.5
+  intl: ^0.17.0
+  
   path: ^1.8.3
 dev_dependencies:
-  
+  dartdoc: ^6.1.5
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter.

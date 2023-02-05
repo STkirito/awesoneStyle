@@ -40,7 +40,8 @@ class AwsAreaTextField extends StatelessWidget {
   final StrutStyle? _strutStyle;
   final TextAlignVertical? _textAlignVertical;
   final TextDirection? _textDirection;
-  final ToolbarOptions? _toolbarOptions;
+
+  final Widget Function(BuildContext, EditableTextState)? _contextMenuBuilder;
   final bool? _showCursor;
   final bool _autofocus;
   final String _obscuringCharacter;
@@ -123,7 +124,7 @@ class AwsAreaTextField extends StatelessWidget {
       StrutStyle? strutStyle,
       TextAlignVertical? textAlignVertical,
       TextDirection? textDirection,
-      ToolbarOptions? toolbarOptions,
+      Widget Function(BuildContext, EditableTextState)? contextMenuBuilder,
       bool? showCursor,
       SmartDashesType? smartDashesType,
       SmartQuotesType? smartQuotesType,
@@ -181,7 +182,7 @@ class AwsAreaTextField extends StatelessWidget {
         _strutStyle = strutStyle,
         _textAlignVertical = textAlignVertical,
         _textDirection = textDirection,
-        _toolbarOptions = toolbarOptions,
+        _contextMenuBuilder = contextMenuBuilder,
         _showCursor = showCursor,
         _autofocus = autofocus,
         _obscuringCharacter = obscuringCharacter,
@@ -231,7 +232,7 @@ class AwsAreaTextField extends StatelessWidget {
         strutStyle: _strutStyle,
         textAlignVertical: _textAlignVertical,
         textDirection: _textDirection,
-        toolbarOptions: _toolbarOptions,
+        contextMenuBuilder: _contextMenuBuilder,
         showCursor: _showCursor,
         autofocus: _autofocus,
         obscuringCharacter: _obscuringCharacter,
