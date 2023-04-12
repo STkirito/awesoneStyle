@@ -1,1 +1,0 @@
-enum AwsButtonType { text, iconText }

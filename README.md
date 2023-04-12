@@ -1,64 +1,21 @@
-# AwesoneStyle
-AwesoneStyle es un paquete multiplataforma que contiene un conjunto de herramientas de código abierto bajo la licencia Licencia Apache(Versión 2.0), para diseño de sitios, aplicaciones web, aplicaciones móviles y de escritorio. Contiene clases abstractas, constantes, funciones, generadores, modelos, clase router, services, style y widgets como: Widgets para form, botones, y otros elementos de diseño. AwesoneStyle solo se ocupa del desarrollo front-end.
-AwesoneStyle funciona en casi todas las plataformas sin problemas y trabaja con Getx.
-### Abstract
-	- AwsAuth:
-		Es una clase abstracta que sirve para crear un Auth que incluye los métodos `login()`, `createUser()`, logout y `readToken()`.
-	- AwsLoginRegister:
-		Es una clase Abstracta que sirve para crear una clase con los métodos `validationLogin()` y `validationRegister()`.
----- 
-### Constant
-	- Animation:
-		Contiene todas las animaciones del paquete [animate_do: 2.1.0] en un enum.
-		_Nota: puede cambiar de nombre y contenido en una futura actualización._
-	- Button:
-		-AwsButtonDialog:
-			Es un enum que contiene: ok, change y cancel.
-		-AwsButtonType:
-			Es un enum que contiene: text y iconText.
-		-AwsDefAnimationButtonState:
-			Es un enum que contiene: nulls, actions, ok, error.
-	- Direction:
-		- AwsWidgetDirections
-			Es un en un que contiene: horizontal y vertical.
+AwesoneStyle es un paquete multiplataforma que contiene un conjunto de herramientas de código abierto bajo la Licencia Apache(Versión 2.0), para diseño de sitios, aplicaciones web, aplicaciones móviles y de escritorio.
+
+## nota: funciona en casi todas las plataformas sin problemas.
+
+### Formatter
 	- formatter
 		- AwsFormatter:
 			- `AwsFormatter.formatter`: Da como resultado (año/mes/dia).
 			- `AwsFormatter.formatterCard`: Da como resultado (año/mes).
 			- `AwsFormatter.formatterTime`: Da como resultado (hora/minutos/(am o pm)).
 			- `AwsFormatter.completTime`: es una funcion que retorna un formato (hora:minuto).
-			- `AwsFormatter.parseDateTime`.
-	- Orientation:
-		- AwsChildrenOrientation:
-			Es un enum que contiene: row y column.
----- 
-### Function
-	- Validation:
-		- AwsValidation: es una clase que contiene métodos estáticos de validación.
-			- `AwsValidation.validationEmailAndPassword(...)`: Este método valida el email y él password y retorna un bool o ejecuta un GetSnackBar.
-			- `AwsValidation.login(...)`: Este método realiza el login y espera unos parámetros como:
-					- email (String)
-					- password (String)
-					- isLoading (Function(bool))
-					- authService (AwsAuth)
-					- result (Function(bool))
-					regresa los resultados en los paramento indicados y ejecuta un GetSnackBar dependiendo de las validaciones internas realizadas.
-			- `AwsValidation.validationPassword`: Este método recibe un `String value` y retorna un bool.
-			- `AwsValidation.register`: Este método realiza el registro y espera unos parámetros como:
-					- form (bool)
-					- isLoading (Function(bool))
-					- authService (AwsAuth)
-					- email (String)
-					- password (String)
-					- result (Function(bool))
-					regresa los resultados en los paramento indicados y ejecuta un GetSnackBar dependiendo de las validaciones internas realizadas.
-		_Nota: los métodos `login()` y `register()`, funciona con **firebase**._
+			- `AwsFormatter.parseDateTime` esta funcion que retorna un datatime a partir de un datatime y un time lo cual los fusiona en un datatime.
 ---- 
 ### Generators
-	- `AwsGenerator.year(…)`: 
-		genera un rango de años desde 1923 hasta la actualidad, puede ingresar el `int start `y `int finish` como parámetros.
+	- AwsGenerator: 
+		- year: es un metodo estatico que genera un rango de años desde 1923 hasta la actualidad, puede ingresar el `int start `y `int finish` como parámetros.
 ---- 
-### Models
+### Arguments
 	- AwsArguments:
 		Es una clase que puede contener:
 		- string (String)
@@ -75,59 +32,21 @@ AwesoneStyle funciona en casi todas las plataformas sin problemas y trabaja con 
 		- email (String)
 		- password (String)
 		- result (Object)
-		se usa para enviar argumentos en el Navigator o con Getx.
-	- DateSettings:
-		 Es una clase que se usa en el widget AwsDatePicker.
-	- Date:
-		Es una clase que puede contener:
-		- day (String)
-		- moth (String)
-		- year (String)
-		y tiene el metodo `isEmpty()`.
-	- GradientSettings:
-			es una clase que se usa para configurar el gradiente en el widget AwsGradientButton.
-	- BoxShadowSettings
-			es una clase que se usa para configurar el Shadow en el widget AwsGradientButton.
-	- AwsAnimationProperty: es establecedor de propiedades de AwsAnimationWidget.
----- 
-### Router
-	- AwsRouter:
-	- `AwsRouter.routeIsDeviceName`: Es un método estático que espera los dispositivos que soportara la aplicación como también el tamaño de la pantalla y retornara routeName respectivo a cada plataforma.
----- 
+		se usa para enviar argumentos de una pantalla a otra.
+----
 ### Services
 	- AwsConnection:
-		Es una clase de tipo GetxController que verifica la conectividad a una red y la conexión a una url por defecto hace ping a la url de google. 
+		Es una clase que verifica la conectividad a una red y la conexión a una url por defecto hace ping a la url de google. 
 	- AwsScreenSize:
 		Es una clase que retorna un width o height, dependiendo de lo que necesites usando el contexto para obtener el tamaño de la pantalla y se usan en base a porcentajes.
-		- Se debe crear el `AwsScreenSize(context)`, de bajo del método `build(BuildContext context)`.
-		Después de crear `AwsScreenSize(context)`, puedes usar.
-		- `AwsScreenSize.width(100)`, Es similar a un double.infinity
-		- `AwsScreenSize.height(60)`, Es el 60% de toda la pantalla en altura.
 	- AwsStorage: crea, copia y elimina directorios o files.
----- 
-### Style
-	-AwsStyle: Contiene diferentes estilos que se pueden usar:
-		- BoxDecoration
-		- Random
-		- Color
-		- InputDecoration
-		- y otros.
-	- AwsAnimationButtonStyle: contiene los estilos de nulls, actions, ok, error.
 ---- 
 ### Widgets
 	- Animation:
 		- AwsAniWidget:
-			Es un widget universal para que es compatible con animete_do y contiene todas sus animaciones y sus configuraciones para facilitar su usó.
-				AniWidget(
-					animation: AwsAnimationDo.spin,
-					child: GradientButton.text(
-					  boxShadow: true,
-					  text: Text(‘text’,style: TextStyle(color: Colors.white),),
-					  onPressed: () \{},
-					),
-				  ),
+			Es un widget universal que contiene distintas animaciones, más de 40 animaciones extraidas de animate_do.
 		- AwsAnimation: es un Widget de animacion que se actualiza si hay cambios en su controller.
-		- AwsAnimationWidget: es un widget de animacion que se actualiza si hay cambios en su controller sin la necesidad de usar un statefullwidget para iniciar el controlador ya que dispone de AwsAnimationProperty para su definición y para acceder a su propiedades se debe usar AwsAnimation(ejemplo:AwsAnimation.of.value) y para usarlo se usar un Anumation controller.
+		- AwsAnimationWidget: es un widget de animacion que se actualiza si hay cambios en su controller sin la necesidad de usar un statefullwidget para iniciar el controlador ya que dispone de AwsAnimationProperty para su definición y para acceder a su propiedades se debe usar AwsAnimation(ejemplo:AwsAnimation.of.value) y para usarlo se usar un AnimationController.
 
 	- Buttons:
 		- AwsBuildPressMenu:
@@ -152,11 +71,6 @@ AwesoneStyle funciona en casi todas las plataformas sin problemas y trabaja con 
 				Es un button que se compone de 3 fases,cada fase tiene su animación, se puede usar para peticiones que requieran un tiempo de respuesta.
 		-AwsTextRowButton:
 				Es un widget que contiene un texto y un button
-	- Calendar:
-		- details:
-			- `AwsMultiCalendarEventDetails`.
-			- `AwsCalendarEventDetails`.
-			Contiene widgets para calendar_view, son similares o iguales y se pueden usar agregando `Aws`, antes del nombre del widget de calendar_view.
 	- Form:
 		- AwsDateFormField:
 				Es un Widget que puede manejar la fecha dentro de un form.
@@ -175,9 +89,14 @@ AwesoneStyle funciona en casi todas las plataformas sin problemas y trabaja con 
 		- AwsTimePicker:
 				Es un widget que se usa para horas y minutos desde un dialog como Get.dialog().
 ---- 
+### Riverpod
+	- AwsRiverpodController: es una clase para unificar un provider de riverpod.
+	- AwsRiverpodMultiController: es una clase que reuni todos los providers de riverpod en un mapa.
+	- AwsRiverpodWidget: es un widget que nos permite acceder de forma mas sencilla a un provider(riverpod) o varios.
 ### Enlaces:
 se puede acceder los componentes de AwesoneStyle desde el enlace principal o desde el enlace de su categoría.		
 ---- 
 ### Nota Importante
-calendar_view fue eliminado de este paquete.
-Los paquetes como animate_do, calendar_view y sus widgets o otros dependientes puede quedar fuera del paquete en futuras actualizaciones de momento no hay un plan inmediato de reemplazo pero sí se asegura que tendrán un reemplazo.
+calendar_view y animate_do fueron eliminados de este paquete.
+animate_do se implemento de forma nativa para no requerir su dependencia.
+

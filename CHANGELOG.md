@@ -1,3 +1,11 @@
+## [2.0.0] - Stable
+- delete getx and other dependencies
+- animate_do was included natively and its dependency was removed
+- removed some things like abstract classes
+- the style class was removed
+- the constants were removed and included directly in their dependencies
+- add plugins for riverpod
+- bugs fixed
 ## [1.3.9+2] - Stable
 - fixed
 ## [1.3.9+1] - Stable

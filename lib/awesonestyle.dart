@@ -1,15 +1,9 @@
+///Enlace Principal del paquete
 library awesonestyle;
 
-///Enlace Principal del paquete
-export 'package:awesonestyle/router.dart';
-export 'package:awesonestyle/style.dart';
-export 'package:awesonestyle/abstract.dart';
-export 'package:awesonestyle/function.dart';
-export 'package:awesonestyle/models.dart';
-export 'package:awesonestyle/generators.dart';
+export 'package:awesonestyle/src/arguments/aws_arguments.dart';
+export 'package:awesonestyle/src/Generators/aws_generators.dart';
 export 'package:awesonestyle/widgets.dart';
-export 'package:awesonestyle/constant.dart';
+export 'package:awesonestyle/src/formatter/aws_formatter.dart';
 export 'package:awesonestyle/services.dart';
-
-///getx Incluido
-export 'package:get/get.dart';
+export 'package:awesonestyle/riverpod.dart';

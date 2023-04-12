@@ -33,7 +33,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-              animation: AwsAnimationDo.bounce,
+              animation: AwsAnimation.bounce,
               child: Row(
                 children: const [Icon(Icons.ac_unit), Text('bounce')],
               ),
@@ -43,7 +43,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-              animation: AwsAnimationDo.bounceInDown,
+              animation: AwsAnimation.bounceInDown,
               child: Row(
                 children: const [Icon(Icons.ac_unit), Text('bounceInDownb')],
               ),
@@ -53,7 +53,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-              animation: AwsAnimationDo.bounceInLeft,
+              animation: AwsAnimation.bounceInLeft,
               child: Row(
                 children: const [Icon(Icons.ac_unit), Text('bounceInLef')],
               ),
@@ -63,7 +63,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-              animation: AwsAnimationDo.bounceInUp,
+              animation: AwsAnimation.bounceInUp,
               child: Row(
                 children: const [Icon(Icons.ac_unit), Text('bounceInUp')],
               ),
@@ -73,7 +73,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-              animation: AwsAnimationDo.dance,
+              animation: AwsAnimation.dance,
               child: Row(
                 children: const [Icon(Icons.ac_unit), Text('dance')],
               ),
@@ -83,7 +83,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-              animation: AwsAnimationDo.elasticIn,
+              animation: AwsAnimation.elasticIn,
               child: Row(
                 children: const [Icon(Icons.ac_unit), Text('elasticIn')],
               ),
@@ -93,7 +93,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.elasticInDown,
+                animation: AwsAnimation.elasticInDown,
                 child: Row(children: const [
                   Icon(Icons.ac_unit),
                   Text('elasticInDown')
@@ -103,7 +103,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.elasticInLeft,
+                animation: AwsAnimation.elasticInLeft,
                 child: Row(children: const [
                   Icon(Icons.ac_unit),
                   Text('elasticInLeft')
@@ -113,7 +113,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-              animation: AwsAnimationDo.elasticInRight,
+              animation: AwsAnimation.elasticInRight,
               child: Row(
                 children: const [Icon(Icons.ac_unit), Text('elasticInRight')],
               ),
@@ -123,7 +123,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-              animation: AwsAnimationDo.elasticInUp,
+              animation: AwsAnimation.elasticInUp,
               child: Row(
                 children: const [Icon(Icons.ac_unit), Text('elasticInUp')],
               ),
@@ -133,7 +133,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.fadeIn,
+                animation: AwsAnimation.fadeIn,
                 child:
                     Row(children: const [Icon(Icons.ac_unit), Text('fadeIn')])),
           ),
@@ -141,7 +141,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.fadeInDown,
+                animation: AwsAnimation.fadeInDown,
                 child: Row(
                     children: const [Icon(Icons.ac_unit), Text('fadeInDown')])),
           ),
@@ -149,7 +149,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.fadeInDownBig,
+                animation: AwsAnimation.fadeInDownBig,
                 child: Row(children: const [
                   Icon(Icons.ac_unit),
                   Text('fadeInDownBig')
@@ -159,7 +159,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.fadeInLeft,
+                animation: AwsAnimation.fadeInLeft,
                 child: Row(
                     children: const [Icon(Icons.ac_unit), Text('fadeInLeft')])),
           ),
@@ -167,7 +167,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.fadeInLeftBig,
+                animation: AwsAnimation.fadeInLeftBig,
                 child: Row(children: const [
                   Icon(Icons.ac_unit),
                   Text('fadeInLeftBig')
@@ -177,7 +177,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.fadeInRight,
+                animation: AwsAnimation.fadeInRight,
                 child: Row(children: const [
                   Icon(Icons.ac_unit),
                   Text('fadeInRight')
@@ -187,7 +187,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.fadeInRightBig,
+                animation: AwsAnimation.fadeInRightBig,
                 child: Row(children: const [
                   Icon(Icons.ac_unit),
                   Text('fadeInRightBig')
@@ -197,7 +197,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.fadeInUp,
+                animation: AwsAnimation.fadeInUp,
                 child: Row(
                     children: const [Icon(Icons.ac_unit), Text('fadeInUp')])),
           ),
@@ -205,7 +205,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.fadeInUpBig,
+                animation: AwsAnimation.fadeInUpBig,
                 child: Row(children: const [
                   Icon(Icons.ac_unit),
                   Text('fadeInUpBig')
@@ -215,7 +215,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.fadeOut,
+                animation: AwsAnimation.fadeOut,
                 child: Row(
                     children: const [Icon(Icons.ac_unit), Text('fadeOut')])),
           ),
@@ -223,7 +223,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.fadeOutDown,
+                animation: AwsAnimation.fadeOutDown,
                 child: Row(children: const [
                   Icon(Icons.ac_unit),
                   Text('fadeOutDown')
@@ -233,7 +233,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.fadeOutDownBig,
+                animation: AwsAnimation.fadeOutDownBig,
                 child: Row(children: const [
                   Icon(Icons.ac_unit),
                   Text('fadeOutDownBig')
@@ -243,7 +243,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.fadeOutLeft,
+                animation: AwsAnimation.fadeOutLeft,
                 child: Row(children: const [
                   Icon(Icons.ac_unit),
                   Text('fadeOutLeft')
@@ -253,7 +253,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.fadeOutLeftBig,
+                animation: AwsAnimation.fadeOutLeftBig,
                 child: Row(children: const [
                   Icon(Icons.ac_unit),
                   Text('fadeOutLeftBig')
@@ -263,7 +263,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.fadeOutRight,
+                animation: AwsAnimation.fadeOutRight,
                 child: Row(children: const [
                   Icon(Icons.ac_unit),
                   Text('fadeOutRight')
@@ -273,7 +273,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.fadeOutRightBig,
+                animation: AwsAnimation.fadeOutRightBig,
                 child: Row(children: const [
                   Icon(Icons.ac_unit),
                   Text('fadeOutRightBig')
@@ -283,7 +283,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.fadeOutUp,
+                animation: AwsAnimation.fadeOutUp,
                 child: Row(
                     children: const [Icon(Icons.ac_unit), Text('fadeOutUp')])),
           ),
@@ -291,7 +291,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.fadeOutUpBig,
+                animation: AwsAnimation.fadeOutUpBig,
                 child: Row(children: const [
                   Icon(Icons.ac_unit),
                   Text('fadeOutUpBig')
@@ -301,7 +301,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.flash,
+                animation: AwsAnimation.flash,
                 child:
                     Row(children: const [Icon(Icons.ac_unit), Text('flash')])),
           ),
@@ -309,7 +309,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.flipInX,
+                animation: AwsAnimation.flipInX,
                 child: Row(
                     children: const [Icon(Icons.ac_unit), Text('flipInX')])),
           ),
@@ -317,7 +317,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.flipInY,
+                animation: AwsAnimation.flipInY,
                 child: Row(
                     children: const [Icon(Icons.ac_unit), Text('flipInY')])),
           ),
@@ -325,7 +325,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.jelloIn,
+                animation: AwsAnimation.jelloIn,
                 child: Row(
                     children: const [Icon(Icons.ac_unit), Text('jelloIn')])),
           ),
@@ -333,7 +333,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.pulse,
+                animation: AwsAnimation.pulse,
                 child:
                     Row(children: const [Icon(Icons.ac_unit), Text('pulse')])),
           ),
@@ -341,7 +341,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 50,
             width: 50,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.roulette,
+                animation: AwsAnimation.roulette,
                 to: 5,
                 child: Row(
                     children: const [Icon(Icons.ac_unit), Text('roulette')])),
@@ -350,7 +350,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.slideInDown,
+                animation: AwsAnimation.slideInDown,
                 child: Row(children: const [
                   Icon(Icons.ac_unit),
                   Text('slideInDown')
@@ -360,7 +360,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.slideInLeft,
+                animation: AwsAnimation.slideInLeft,
                 child: Row(children: const [
                   Icon(Icons.ac_unit),
                   Text('slideInLeft')
@@ -370,7 +370,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.slideInRight,
+                animation: AwsAnimation.slideInRight,
                 child: Row(children: const [
                   Icon(Icons.ac_unit),
                   Text('slideInRight')
@@ -380,7 +380,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.slideInUp,
+                animation: AwsAnimation.slideInUp,
                 child: Row(
                     children: const [Icon(Icons.ac_unit), Text('slideInUp')])),
           ),
@@ -388,7 +388,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.spin,
+                animation: AwsAnimation.spin,
                 child:
                     Row(children: const [Icon(Icons.ac_unit), Text('spin')])),
           ),
@@ -396,7 +396,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.spinPerfect,
+                animation: AwsAnimation.spinPerfect,
                 child: Row(children: const [
                   Icon(Icons.ac_unit),
                   Text('spinPerfect')
@@ -406,7 +406,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 50,
             width: 50,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.swing,
+                animation: AwsAnimation.swing,
                 to: 5,
                 child:
                     Row(children: const [Icon(Icons.ac_unit), Text('swing')])),
@@ -415,7 +415,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.zoomIn,
+                animation: AwsAnimation.zoomIn,
                 child:
                     Row(children: const [Icon(Icons.ac_unit), Text('zoomIn')])),
           ),
@@ -423,7 +423,7 @@ class WidgetsScreenLocal extends StatelessWidget {
             height: 300,
             width: 300,
             child: AwsAniWidget(
-                animation: AwsAnimationDo.zoomOut,
+                animation: AwsAnimation.zoomOut,
                 child: Row(
                     children: const [Icon(Icons.ac_unit), Text('zoomOut')])),
           ),
