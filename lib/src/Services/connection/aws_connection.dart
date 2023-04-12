@@ -14,13 +14,13 @@ class AwsConnection {
   /// El puerto predeterminado de conexión es 53.
   ///
   /// Para más información consulte "https://www.google.com/search?q=dns+server+port".
-  static const int default_port = 53;
+  static const int defaultPort = 53;
 
   /// El tiempo de espera predeterminado es de 10 segundos antes de que se elimine una solicitud inalcanzable.
-  static const Duration default_time_out = Duration(seconds: 10);
+  static const Duration defaultTimeOut = Duration(seconds: 10);
 
   /// El intervalo de solicitudes se realiza cada 10 segundos por defecto.
-  static const Duration default_interval = Duration(seconds: 10);
+  static const Duration defaultInterval = Duration(seconds: 10);
 
   set alternateInterval(Duration interval) => checkInterval = interval;
 
@@ -28,25 +28,25 @@ class AwsConnection {
   /// google: "1.1.1.1" y "8.8.4.4".
   /// opendns: "208.67.222.222".
 
-  static final List<AwsConnectionOption> default_addresses = List.unmodifiable([
+  static final List<AwsConnectionOption> defaultAddresses = List.unmodifiable([
     AwsConnectionOption(
       address: InternetAddress('1.1.1.1'),
-      port: default_port,
-      timeout: default_time_out,
+      port: defaultPort,
+      timeout: defaultTimeOut,
     ),
     AwsConnectionOption(
       address: InternetAddress('8.8.4.4'),
-      port: default_port,
-      timeout: default_time_out,
+      port: defaultPort,
+      timeout: defaultTimeOut,
     ),
     AwsConnectionOption(
       address: InternetAddress('208.67.222.222'),
-      port: default_port,
-      timeout: default_time_out,
+      port: defaultPort,
+      timeout: defaultTimeOut,
     ),
   ]);
 
-  List<AwsConnectionOption> addresses = default_addresses;
+  List<AwsConnectionOption> addresses = defaultAddresses;
   //final List<AwsConnectionOption>? alternateAddresses;
   set alternateAddresses(List<AwsConnectionOption> addresses) =>
       this.addresses = addresses;
@@ -131,8 +131,8 @@ class AwsConnection {
   /// Si ese es el caso [onStatusChange] emite una actualización sólo si
   /// hay cambio desde el estado anterior.
   ///
-  /// Por defecto es [default_interval] (10 segundos).
-  Duration checkInterval = default_interval;
+  /// Por defecto es [defaultInterval] (10 segundos).
+  Duration checkInterval = defaultInterval;
 
   // Comprueba el estado actual, lo compara con el anterior y emite
   // un evento solo si hay un cambio y hay oyentes adjuntos
@@ -173,8 +173,7 @@ class AwsConnection {
   /// [AwsConnectionStatus] cambios. Cuando un oyente está conectado
   /// se realiza una comprobación inmediatamente y el estado([AwsConnectionStatus])
   /// se emite. Después de eso, se inicia un temporizador que realiza
-  /// verifica con el intervalo especificado -[checkInterval].
-  /// El valor predeterminado es[default_interval].
+  /// verifica con el intervalo especificado.
   ///
   /// *Mientras haya un oyente adjunto, se realizan comprobaciones,
   /// así que recuerda desechar las suscripciones cuando ya no las necesites.*
