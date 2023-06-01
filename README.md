@@ -38,7 +38,7 @@ AwesoneStyle es un paquete multiplataforma que contiene un conjunto de herramien
 	- AwsConnection:
 		Es una clase que verifica la conectividad a una red y la conexión a una url por defecto hace ping a la url de google. 
 	- AwsScreenSize:
-		Es una clase que retorna un width o height, dependiendo de lo que necesites usando el contexto para obtener el tamaño de la pantalla y se usan en base a porcentajes.
+		Es una extension del context al cual podemos acceder mediante los metodos width o height los cuales retornan un width o height dinamico, solo es necesario establecer el tamaño en porcentajes.
 	- AwsStorage: crea, copia y elimina directorios o files.
 ---- 
 ### Widgets
@@ -99,4 +99,5 @@ se puede acceder los componentes de AwesoneStyle desde el enlace principal o des
 ### Nota Importante
 calendar_view y animate_do fueron eliminados de este paquete.
 animate_do se implemento de forma nativa para no requerir su dependencia.
+implementación modificada de chornthorn.data_connection_checker.
 

@@ -224,7 +224,7 @@ class AwsAreaTextField extends StatelessWidget {
             borderRadius: BorderRadius.circular(34),
           ),
       padding: _padding ?? EdgeInsets.all(10),
-      width: AwsScreenSize.width(_width ?? 100),
+      width: context.width(_width ?? 100),
       child: TextField(
         focusNode: _focusNode,
         textInputAction: _textInputAction,

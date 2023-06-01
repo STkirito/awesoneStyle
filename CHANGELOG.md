@@ -1,3 +1,6 @@
+## [2.0.1] - Stable
+- Delete AwsScreenSize
+- New Extensión AwsScreenSize desde el constext.
 ## [2.0.0] - Stable
 - delete getx and other dependencies
 - animate_do was included natively and its dependency was removed

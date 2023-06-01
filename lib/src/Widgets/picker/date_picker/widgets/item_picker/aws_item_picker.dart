@@ -52,12 +52,11 @@ class AwsItemPicker extends StatelessWidget {
         super(key: key);
   @override
   Widget build(context) {
-    AwsScreenSize(context);
     return GestureDetector(
       child: Container(
         alignment: Alignment.center,
-        height: AwsScreenSize.height(_height ?? 5),
-        width: AwsScreenSize.width(_width ?? 20),
+        height: context.height(_height ?? 5),
+        width: context.width(_width ?? 20),
         padding: _padding,
         margin: _margin ?? const EdgeInsets.all(10),
         decoration: BoxDecoration(
